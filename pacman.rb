@@ -12,7 +12,7 @@ class Parser
 
   def parse(file_name)
     parsed_doc = parse_file(file_name)
-    # extract_content(parsed_doc)
+    extract_content(parsed_doc)
   end
 
   private
@@ -25,12 +25,25 @@ class Parser
     end
 
     def extract_content(doc)
+      # get rows
       rows = get_rows(doc)
-      rows.map { |row| }
+
+      # remove rows that are not relevant
+      relevant_rows(rows)
+
+      # loop thru relevant rows and write values
     end
 
-    def get_rows
+    def get_rows(doc)
       doc.css('table.TRNfundo tr')
+    end
+
+    def relevant_rows(rows)
+      rows.select { |row| is_relevant?(row) }
+    end
+
+    def is_relevant?(row)
+      true
     end
 end
 
