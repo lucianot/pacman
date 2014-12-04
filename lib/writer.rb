@@ -6,8 +6,8 @@ class Writer
   end
 
   def write_to_csv(transactions, file_name)
-    csv = generate_csv(transations)
-    File.open(file_name) { |file| file.write(csv) }
+    csv = generate_csv(transactions)
+    File.open(file_name, 'w') { |file| file.write(csv) }
   end
 
   def generate_csv(transactions)

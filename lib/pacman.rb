@@ -1,8 +1,16 @@
-require 'parser'
+require_relative 'parser'
+require_relative 'writer'
 
-FILE_NAME = File.join(Dir.home, 'Downloads', '30 horas.html')
+INPUT_FILE = File.join(Dir.home, 'Downloads', '30 horas.html')
+OUTPUT_FILE = File.join(Dir.home, 'Downloads', 'transactions.csv')
 
-puts Parser.parse(FILE_NAME)
+class Pacman
+  def self.munch
+    Pacman.new.munch
+  end
 
-# parse file
-# write csv
+  def munch
+    transactions = Parser.parse(INPUT_FILE)
+    Writer.write_to_csv(transactions, OUTPUT_FILE)
+  end
+end

@@ -1,4 +1,5 @@
 require 'nokogiri'
+require_relative 'transaction'
 
 class Parser
   def self.parse(file_name)
@@ -21,7 +22,7 @@ class Parser
     end
 
     def extract_transactions(doc)
-      transaction_rows(get_rows(doc))
+      rows = transaction_rows(get_rows(doc))
     end
 
     def format_transactions(transactions)

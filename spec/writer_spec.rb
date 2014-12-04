@@ -1,4 +1,4 @@
-require_relative '../lib/writer.rb'
+require './lib/writer.rb'
 
 RSpec.describe Writer do
   describe '#generate_csv' do
