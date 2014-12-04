@@ -5,9 +5,6 @@ class Writer
     Writer.new.write_to_csv(transactions, file_name)
   end
 
-  def initialize
-  end
-
   def write_to_csv(transactions, file_name)
     csv = generate_csv(transations)
     File.open(file_name) { |file| file.write(csv) }

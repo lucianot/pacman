@@ -1,34 +1,37 @@
 require 'nokogiri'
-require 'csv'
 
 class Parser
   def self.parse(file_name)
     self.new.parse(file_name)
   end
 
-  def initialize
-  end
-
   def parse(file_name)
     parsed_doc = parse_file(file_name)
-    extract_transactions(parsed_doc)
+    transactions = extract_transactions(parsed_doc)
+    format_transactions(transactions)
   end
 
   private
 
     def parse_file(file_name)
-      file = File.open(file_name, "r")
+      file = File.open(file_name, 'r')
       doc = Nokogiri::HTML(file)
       file.close
       doc
     end
 
     def extract_transactions(doc)
-      # get rows
-      rows = get_rows(doc)
+      transaction_rows(get_rows(doc))
+    end
 
-      # remove rows that are not relevant
-      transaction_rows(rows)
+    def format_transactions(transactions)
+      transactions.map do |transaction|
+        [
+          format_date(transaction[0]),
+          format_description(transaction[1]),
+          format_value(transaction[2])
+        ]
+      end
     end
 
     def get_rows(doc)
@@ -61,5 +64,18 @@ class Parser
     def last_element_is_number?(elements)
       number_regex = /^-?[\d.]+,\d{2}$/
       number_regex.match(elements.last)
+    end
+
+    def format_date(date)
+      # TODO: check if refers to date from previous year
+      Date.strptime(date, '%d/%m').strftime('%d/%m/%Y')
+    end
+
+    def format_description(description)
+      description
+    end
+
+    def format_value(value)
+      value.delete('.').sub(',', '.')
     end
 end
