@@ -21,4 +21,17 @@ RSpec.describe Transaction do
     transaction = Transaction.new(*debit_row)
     expect(transaction.value).to eq(negative_value)
   end
+
+  describe '#to_array' do
+    it 'converts to array' do
+      expected_array = ["03/11/2014", "DISK COOK", "1234.90"]
+      expect(transaction.to_array).to eq(expected_array)
+    end
+
+    it 'converts to array with negative value' do
+      transaction = Transaction.new(*debit_row)
+      expected_array = ["03/11/2014", "DISK COOK", "-1234.90"]
+      expect(transaction.to_array).to eq(expected_array)
+    end
+  end
 end

@@ -8,8 +8,7 @@ class Parser
 
   def parse(file_name)
     parsed_doc = parse_file(file_name)
-    transactions = extract_transactions(parsed_doc)
-    format_transactions(transactions)
+    extract_transactions(parsed_doc)
   end
 
   private
@@ -23,16 +22,7 @@ class Parser
 
     def extract_transactions(doc)
       rows = transaction_rows(get_rows(doc))
-    end
-
-    def format_transactions(transactions)
-      transactions.map do |transaction|
-        [
-          format_date(transaction[0]),
-          format_description(transaction[1]),
-          format_value(transaction[2])
-        ]
-      end
+      rows.map { |row| Transaction.new(*row) }
     end
 
     def get_rows(doc)
@@ -65,18 +55,5 @@ class Parser
     def last_element_is_number?(elements)
       number_regex = /^-?[\d.]+,\d{2}$/
       number_regex.match(elements.last)
-    end
-
-    def format_date(date)
-      # TODO: check if refers to date from previous year
-      Date.strptime(date, '%d/%m').strftime('%d/%m/%Y')
-    end
-
-    def format_description(description)
-      description
-    end
-
-    def format_value(value)
-      value.delete('.').sub(',', '.')
     end
 end
