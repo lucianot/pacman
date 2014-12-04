@@ -1,7 +1,5 @@
 require 'nokogiri'
 
-FILE_NAME = File.join(Dir.home, 'Downloads', '30 horas.html')
-
 class Parser
   def self.parse(file_name)
     self.new.parse(file_name)
@@ -11,8 +9,9 @@ class Parser
   end
 
   def parse(file_name)
-    parsed_doc = parse_file(file_name)
-    extract_content(parsed_doc)
+    # parsed_doc = parse_file(file_name)
+    # extract_transactions(parsed_doc)
+    1
   end
 
   private
@@ -24,7 +23,7 @@ class Parser
       doc
     end
 
-    def extract_content(doc)
+    def extract_transactions(doc)
       # get rows
       rows = get_rows(doc)
 
@@ -46,8 +45,3 @@ class Parser
       true
     end
 end
-
-# puts Parser.parse(FILE_NAME)
-
-# parse file
-# write csv

@@ -1,0 +1,1416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 //EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+<title>30 horas</title>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-control" content="no-store">
+<link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/PERS/styleComprovante.css?12122008" />
+<link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/PERS/styleTRN.css?25102014" />
+<link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/PERS/styleHDFT.css?22112014" />
+<link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/PERS/styleMENU.css?26102013" />
+<link rel="SHORTCUT ICON" href="/V1/PERS/IMG/favicon.ico" type="image/x-icon">
+<link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/PERS/styleHO.css?19072014" />
+<link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/PERS/styleDSC.css?09082007" />
+<link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/PERS/styleBusca.css?09082007" />
+<script language="javascript" src="/vsnet/GenericF.js?15112014"></script>
+<script language="javascript" src="/vsnet/jquery.js?20082011"></script>
+<script language="javascript" src="/vsnet/ga/ga_itau_bkl_PersPF.js?17052014"></script>
+<script language="javascript" src="/vsnet/ga/funcoesAnalytics.js?26102013"></script>
+<script language="javascript">
+var ExisteScroll=0;
+var ISATIVO = 1;
+var EhVersaoImpressao=0;
+window.history.go(2);
+function mOvr(src,clrOver) { if (!src.contains(event.fromElement)) {  src.bgColor = clrOver;  }  } 
+function mOut(src,clrIn) {  if (!src.contains(event.toElement)) {  src.bgColor = clrIn;  }  } 
+function popup(url,janela,parametros) {  window.open(url,janela,parametros);  } 
+function popupframe(url, janela, parametros) { parent.CORPO.document.location.href=url; } 
+function INStoUni2(trn, quick, op) {  document.formBklUni2.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formBklUni2.op.value = op; document.formBklUni2.submit(); }
+function INStoUni2C(idCdg, trn, quick, op) {  document.formBklUni2Cdg.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formBklUni2Cdg.cdg.value = idCdg; document.formBklUni2Cdg.op.value = op; document.formBklUni2Cdg.submit(); }
+function INStoUni2CAjax(idCdg, trn, quick, op) {  document.formBklUni2CdgAjax.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formBklUni2CdgAjax.cdg.value = idCdg; document.formBklUni2CdgAjax.op.value = op;executaRequest("formBklUni2CdgAjax", null, null, true);}
+function INStoUni2Ajax(trn, quick, op) {  document.formBklUni2Ajax.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formBklUni2Ajax.op.value = op;executaRequest("formBklUni2Ajax", null, null, true);}
+function INStoUni2AjaxDiv(trn, quick, op, divDest) {  document.formBklUni2.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formBklUni2.op.value = op;executaTRNDiv("formBklUni2", divDest, true);}
+function INStoUni2AjaxDivSI(trn, quick, op, divDest) {  document.formBklUni2.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formBklUni2.op.value = op;executaTRNDiv("formBklUni2", divDest, false);}
+function INStoUni2CAjaxDiv(idCdg, trn, quick, op, divDest) {  document.formBklUni2Cdg.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formBklUni2Cdg.cdg.value = idCdg; document.formBklUni2Cdg.op.value = op;executaTRNDiv("formBklUni2Cdg", divDest, true);}
+function INStoPopupUni2(trn, quick, op) {  document.formPopupUni2.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72";  document.formPopupUni2.op.value = op; document.formPopupUni2.submit(); }
+function INStoPopupUni2cdg(idCdg, trn, quick, op) {  document.formPopupUni2cdg.id.value=trn + "CFLNMKCGHCAHGFNJMGEDBJFNINSI" + quick + "0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formPopupUni2cdg.cdg.value = idCdg; document.formPopupUni2cdg.op.value = op; document.formPopupUni2cdg.submit(); }
+function INStoLKN(idCdg, link, parOpcao) { document.formLinkExterno.elements[1].value = link; document.formLinkExterno.elements[2].value = parOpcao; document.formLinkExterno.elements[3].value = idCdg; document.formLinkExterno.submit(); } 
+function INStoM(dados) { document.formMontaMenu.elements[0].value = document.formMontaMenu.elements[0].value.substring(0,27) + dados + "[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formMontaMenu.submit(); } 
+function INStoMC(dados, idCdg) { document.formMontaMenuCdg.elements[0].value = document.formMontaMenuCdg.elements[0].value.substring(0,27) + dados + "[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"; document.formMontaMenuCdg.elements[1].value = idCdg; document.formMontaMenuCdg.submit(); } 
+</script>
+<LINK href="/VSnet/css/pers/bankline.css" rel="STYLESHEET" type="text/css"></head>
+<body leftmargin="0" topmargin="0"  marginwidth="0" marginheight="0" onLoad="SetaFoco()">
+<div id="HOVideo" onclick="javascript:fechaVideo();"></div>
+<div id="MioloVideo">
+</div>
+<FORM NAME="formMontaMenu" id="formMontaMenu" METHOD="POST" ACTION="/GRIPNET/bklcom.dll"><INPUT TYPE="hidden" NAME="id" VALUE="FLNMKCGHCAHGFNJMGEDBJFNINSI"></FORM>
+<FORM NAME="formMontaMenuCdg" id="formMontaMenuCdg" METHOD="POST" ACTION="/GRIPNET/bklcom.dll"><INPUT TYPE="hidden" NAME="id" VALUE="FLNMKCGHCAHGFNJMGEDBJFNINSI"><INPUT TYPE="hidden" NAME="cdg" VALUE=""></FORM>
+<FORM NAME="formBklUni2" id="formBklUni2" METHOD="POST" ACTION="/GRIPNET/bklcom.dll"><INPUT TYPE="hidden" NAME="id" VALUE=""><INPUT TYPE="hidden" NAME="op" VALUE=""></FORM><FORM NAME="formMENU" id="formMENU" METHOD="POST" ACTION="/GRIPNET/bklcom.dll"><INPUT TYPE="hidden" NAME="id" VALUE="U20CFLNMKCGHCAHGFNJMGEDBJFNINSIGNIHJCDB6BLG0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72"><INPUT TYPE="hidden" NAME="op" VALUE="00276775921BD8776364E3AD7CC238CA1DFBB053DFBFE2607EB36F4DAE730143"></FORM>
+<FORM NAME="formBklUni2Cdg" id="formBklUni2Cdg" METHOD="POST" ACTION="/GRIPNET/bklcom.dll"><INPUT TYPE="hidden" NAME="id" VALUE=""><INPUT TYPE="hidden" NAME="op" VALUE=""><INPUT TYPE="hidden" NAME="cdg" VALUE=""></FORM>
+<FORM NAME="formBklUni2Ajax" id="formBklUni2Ajax" METHOD="POST" ACTION="/GRIPNET/bklcom.dll"><INPUT TYPE="hidden" NAME="id" VALUE=""><INPUT TYPE="hidden" NAME="op" VALUE=""></FORM>
+<FORM NAME="formBklUni2CdgAjax" id="formBklUni2CdgAjax" METHOD="POST" ACTION="/GRIPNET/bklcom.dll"><INPUT TYPE="hidden" NAME="id" VALUE=""><INPUT TYPE="hidden" NAME="op" VALUE=""><INPUT TYPE="hidden" NAME="cdg" VALUE=""></FORM>
+<FORM NAME="formPopupUni2cdg" id="formPopupUni2cdg" METHOD="POST" ACTION="/GRIPNET/bklcom.dll" target="PopupBankline"><INPUT TYPE="hidden" NAME="id" VALUE=""><INPUT TYPE="hidden" NAME="op" VALUE=""><INPUT TYPE="hidden" NAME="cdg" VALUE=""></FORM>
+<FORM NAME="formPopupUni2" id="formPopupUni2" METHOD="POST" ACTION="/GRIPNET/bklcom.dll" target="PopupBankline"><INPUT TYPE="hidden" NAME="id" VALUE=""><INPUT TYPE="hidden" NAME="op" VALUE=""></FORM>
+<FORM ACTION="/VSNet/clica.asp" METHOD="POST" target="DestaqueBankline" name="formLinkExterno" id="formLinkExterno"><INPUT TYPE="hidden" NAME="idSessao" VALUE="FLNMKCGHCAHGFNJMGEDBJFNINSI"><INPUT TYPE="hidden" NAME="link" VALUE=""><INPUT TYPE="hidden" NAME="dadosCriptografados" VALUE=""><INPUT TYPE="hidden" NAME="cdg" VALUE=""><INPUT TYPE="hidden" NAME="EstatPriv" VALUE="C"></FORM>
+<div id="Container">
+<a name="inicio"></a>
+<div class="contentHeader">
+<div class="bklDadosClientes"><p class="txtBklDadosClientes clientePers">LUCIANO MASCARENHAS TAVARES   </p><p class="txtBklDadosClientes numAgencia">Agência: <span class="dadosCliente">7055</span></p><p class="txtBklDadosClientes numConta">Conta: <span class="dadosCliente">01630-2</span></p><p class="txtBklDadosClientes linkSeta"><a href="javascript:INStoUni2C('WN3LNKACSMN M O4100','U20','MEIPJCDB6BPF','DE9032CC0209A1D01AB4074B8DF4461BA3FEB4819AE764491D02293A8F9D000C9EB4AC508601AB6BC04080BAE86F2EC5');" class="TOPlink" OnMouseMove="status='Bankline'" title="Acessar outras contas">Acessar outras contas</a></p><a href="javascript:INStoUni2C('WN3LNKENSMN M O4100','U20','KIIHJCEB2GLJ','36941340E2ABB23F1AB4074B8DF4461B8DDD590E53F9BCC7F47DB9BDB1299552'); " OnMouseMove="status='30 horas'" title="Encerrar sessão"><img src="/V1/PERS/IMG/btn_sairNovo.gif" border="0" class="btnSair" alt="Encerrar sessão"/></a>
+</div>
+<div class="logoPersonnalite1"><a href="javascript:void(0);" onclick="INStoUni2C('WN3M156','U20','JHILJCDB6BNI','F8DBD1348F72E1A36364E3AD7CC238CA39235C5AA4DB1F030784F4AF6D693A1E'); "><img src="/V1/PERS/IMG/LOGO_PERS.jpg" border="0" alt="Itaú Personnalite" title="Itaú Personnalite" /></a></div>
+<div class="menuPers1"></div>
+<script language="JavaScript">window.defaultStatus="30 horas";</script>
+
+<div id="calend_layer" style="position:absolute; visibility:hidden; z-index:200; overflow:show;"></div>
+<div id="dekajuda" style="position:absolute; visibility:hidden; z-index:200; overflow:show;"><table border="0" cellpadding="0" cellspacing="0" width="205"><tr><td colspan="3" style="height:24px;background-image:url(/V1/PERS/IMG/aj_sup.jpg);"><img src="/V1/PERS/IMG/spacer.gif" alt="" id="aj_sup" name="aj_sup" width="205" height="20" border="0" usemap="#ajuda_supMap" /></td></tr></tr><tr><td width="1" bgcolor="#ab8e48"><img src="/V1/PERS/IMG/spacer.gif" width="1" /></td><td width="203" valign="top" bgcolor="#fbf8f1"><table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#fbf8f1"><tr><td width="1"><img src="/V1/PERS/IMG/spacer.gif" width="1" height="10" /></td></tr><tr><td class="TRNtextoe"><div id="dekajudamsg"></div></td></tr><tr><td class="TRNtextoe"><img src="/V1/PERS/IMG/spacer.gif" width="1" height="5" /></td></tr></table></td><td width="1" bgcolor="#ab8e48" ></td></tr><tr><td colspan="3" style="height:5px;background-image:url(/V1/PERS/IMG/aj_inf.jpg);background-repeat:no-repeat;"><img src="/V1/PERS/IMG/spacer.gif" width="205" height="5" border="0" alt="" /></td></tr></table><map name="ajuda_supMap"><area shape="rect" coords="182,1,213,29" href="javascript:void(0);" onClick="killajuda();" /></map>
+</div>
+<script language="javascript">
+var sknajuda,yyyajuda=-1000;
+var ns4ajuda=document.layers;
+var ns6ajuda=document.getElementById&&!document.all;
+var Xoffsetajuda;
+var Yoffsetajuda;
+var ie4ajuda=document.all;
+var ajudamenu=true,contador=0,vkillcalend=0;
+if (ns6ajuda) { Xoffsetajuda=0; Yoffsetajuda=-110; } else { Xoffsetajuda=25; Yoffsetajuda=35; }
+if (ns4ajuda) sknajuda=document.dekajuda; else if (ns6ajuda) sknajuda=document.getElementById("dekajuda").style; else if (ie4ajuda) sknajuda=document.all.dekajuda.style; if(ns4ajuda) document.captureEvents(Event.MOUSEMOVE); else { sknajuda.visibility="hidden";  }
+document.onclick=get_mouseajuda;document.onkeydown=KeyPressajuda;
+function legendaajuda(contentajuda){ajudamenu=true;contador=0;
+yyyajuda=Yoffsetajuda
+if(ns4ajuda){sknajuda.document.open();sknajuda.visibility="visible"; sknajuda.document.write(contentajuda);sknajuda.document.close();};
+if(ns6ajuda){sknajuda.visibility="visible"; document.getElementById("dekajudamsg").innerHTML=contentajuda;};
+if(ie4ajuda){sknajuda.visibility="visible"; document.all("dekajudamsg").innerHTML=contentajuda;};
+}
+function legendaajuda2(titulo_ajuda,texto_ajuda,xtam,ytam,xpos,ypos,imagem){if(vkillcalend==1)killcalend();ajudamenu=false;contentajuda="<table width='100%' border='0' align='center' cellpadding='0' cellspacing='0' bgcolor='#FFFFFF'><tr><td class='TRNtexto'><label class='TRNTituloAjuda'>"+titulo_ajuda+"</label><br />"+texto_ajuda+"<br />"+imagem+"</td>";
+sknajuda.width=xtam+"px";sknajuda.height=ytam+"px";sknajuda.left=xpos+"px";sknajuda.top=ypos+"px";
+if(ns4ajuda){sknajuda.document.open();sknajuda.visibility="visible";sknajuda.document.write(contentajuda);sknajuda.document.close();}
+if(ns6ajuda){sknajuda.visibility="visible";document.getElementById("dekajudamsg").innerHTML=contentajuda;}
+if(ie4ajuda){sknajuda.visibility="visible";document.all("dekajudamsg").innerHTML=contentajuda;}}
+function get_mouseajuda(e){if(contador<=1){contador++;}
+if(contador==0&&sknajuda.visibility=="hidden"){contador=0};if(ajudamenu&&contador==1){
+var x=(ns4ajuda||ns6ajuda)?e.pageX:event.x+document.body.scrollLeft;
+var y=(ns4ajuda||ns6ajuda)?e.pageY:event.y+document.body.scrollTop;
+if ((x + Xoffsetajuda) < 580 )
+  sknajuda.left=x+Xoffsetajuda+"px";
+sknajuda.top=y+yyyajuda+"px";
+}}
+function killajuda(){
+yyyajuda=-1000;
+if(ns4ajuda){sknajuda.visibility="hidden";}
+else if (ns6ajuda||ie4ajuda)
+sknajuda.visibility="hidden";}
+function KeyPressajuda(e){var keyajuda;
+if(ie4ajuda){e=window.event;keyajuda=e.keyCode;}
+if(ns4ajuda||ns6ajuda){keyajuda=e.which;}
+if(keyajuda==27){killajuda();}}
+</script>
+<div id="dekerro" style="position:absolute; visibility:hidden; z-index:200; overflow:show;"><table border="0" cellpadding="0" cellspacing="0" width="205"><tr><td colspan="3"><div style="width:205px;height:24px;"><img src="/V1/PERS/IMG/erro_sup_pers.gif" alt="" id="aj_sup" name="aj_sup" width="205" height="24" border="0" usemap="#erro_supMap" /></div></td></tr><tr><td width="1" bgcolor="#5c0206"><img src="/V1/PERS/IMG/spacer.gif" width="1" /></td><td width="203" valign="top" bgcolor="#ffffff"><table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff"><tr><td width="1"><img src="/V1/PERS/IMG/spacer.gif" width="1" height="10" /></td></tr><tr><td class="TRNtextoe"><div id="dekerromsg"></div></td></tr><tr><td class="TRNtextoe"><img src="/V1/PERS/IMG/spacer.gif" width="1" height="10" /></td></tr></table></td><td width="1" bgcolor="#5c0206" ></td></tr><tr><td colspan="3"><div style="width:205px;height:5px;background:url(/V1/PERS/IMG/erro_inf_pers.gif)"></div></td></tr></table><map name="erro_supMap"><area shape="rect" coords="182,1,213,29" href="javascript:void(0);" onClick="killerro();" /></map>
+</div>
+<script language="javascript">
+var sknerro,yyyerro=-1000;
+var ns4erro=document.layers;
+var ns6erro=document.getElementById&&!document.all;
+var Xoffseterro;
+var Yoffseterro;
+var ie4erro=document.all;
+var erromenu=true,contadorerro=0,vkillcalenderro=0;
+if (ns6erro) { Xoffseterro=0; Yoffseterro=335; } else { Xoffseterro=25; Yoffseterro=335; }
+if (ns4erro) sknerro=document.dekerro; else if (ns6erro) sknerro=document.getElementById("dekerro").style; else if (ie4erro) sknerro=document.all.dekerro.style; if(ns4erro) document.captureEvents(Event.MOUSEMOVE); else { sknerro.visibility="hidden";  }
+function legendaerro(contenterro){erromenu=true;contadorerro=0;
+if(ie4ajuda){
+var x=(ns4erro||ns6erro)?e.pageX:event.x+document.body.scrollLeft;
+var y=(ns4erro||ns6erro)?e.pageY:event.y+document.body.scrollTop;
+} else{	var x=6;var y=200; }
+yyyerro=Yoffseterro
+if(ns4erro){sknerro.document.open();sknerro.visibility="visible"; sknerro.document.write(contenterro);sknerro.document.close();};
+if(ns6erro){sknerro.visibility="visible"; document.getElementById("dekerromsg").innerHTML=contenterro;};
+if(ie4erro){sknerro.visibility="visible"; document.all("dekerromsg").innerHTML=contenterro;};
+   if (x > 650) x = x - 300;
+  sknerro.left=x+Xoffseterro+"px";
+if (y > 200) { sknerro.top=y+"px"; } else { sknerro.top=y+yyyerro+"px";}
+}
+function legendaerro2(contenterro, posX, posY){erromenu=true;contadorerro=0;
+if(ns4erro){sknerro.document.open();sknerro.visibility="visible"; sknerro.document.write(contenterro);sknerro.document.close();};
+if(ns6erro){sknerro.visibility="visible"; document.getElementById("dekerromsg").innerHTML=contenterro;};
+if(ie4erro){sknerro.visibility="visible"; document.all("dekerromsg").innerHTML=contenterro;};
+  sknerro.left=posX+"px";
+  sknerro.top=posY+"px";
+}
+function killerro(){
+yyyerro=-1000;
+if(ns4erro){sknerro.visibility="hidden";}
+else if (ns6erro||ie4erro)
+sknerro.visibility="hidden";}
+</script>
+<div class="mnuPersonnalite"><ul><li><a href="javascript:INStoUni2C('WN3HOMBKLTT0M1O4100','U20','KJINJCDB5BJO','5AEA357F952F03FB6364E3AD7CC238CA4B277DEA57886BE5BBA91DD37C2981C9');" class="menusup" OnMouseMove="status='Bankline'" title="Home"><span>Home</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('JHINJCDC5EON','WN3MNUCC TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Conta Corrente"><span>Conta Corrente</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('GLIJJCFC0CMN','WN3MNUCP TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Poupança"><span>Poupança</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('HKINJCHC8DJH','WN3MNUIN TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Investimentos"><span>Investimentos</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('HIIHJCDC4JLL','WN3MNUPG TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Pagamentos"><span>Pagamentos</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('FMINJCDB4DJF','WN3MNUFN TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Crédito"><span>Crédito</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('KJIJJCDC4CMN','WN3MNUCR TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Cartões"><span>Cartões</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('NJINJCDB2JOH','WN3MNUSG TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Seguros"><span>Seguros</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('OHINJCFC0DOL','WN3MNUTF TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Transferência, DOC e TED"><span>Transferência, DOC e TED</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('MJIJJCGC4IMF','WN3MNUPR TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Previdência"><span>Previdência</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('LGIPJCGC8GPM','WN3MNUSV TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Conveniência"><span>Conveniência</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoUni2C('WN3M13821TT0M1O4100','U20','GJIPJCGC3IPF','3E6C61F3D05D51C503CAE0BC3E203626C3F31132F3C05346A771E8B5F00B381DEF32766D901EB757CBE788F3419173DA9786960FBC31496ADAE29C9C91392CE9210DA223BCCB6920');" class="menusup" OnMouseMove="status='Bankline'" title="Experiência Personnalité"><span>Experiência Personnalité</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoMC('FLIHJCGC4JLN','WN3MNUMP TT0M1O4100');" class="menusup" OnMouseMove="status='Bankline'" title="Mais Produtos"><span>Mais Produtos</span></a></li><li class="mnuSepara">|</li><li><a href="javascript:INStoUni2CAjax('WN3M15145TT0M1O4100','U20','OKIJJCIC5BMG','B43C62221D7B295DCD644C6BEAE0CF6CBAE522D1EC3A48711E0EDBE99EE8EE13C04080BAE86F2EC5'); popup('https://www.itau.com.br/personnalite/experiencia/gastronomia/promocao-le-creuset.html', '', ''); " class="menucamp" OnMouseMove="status='Bankline'" title="Promoção"><span id="spancamp">Promoção</span></a><img src="/V1/PERS/IMG/ico_novidade2b.gif" align="absmiddle" border="0" alt="" style="margin-top: 5px;">&nbsp;</li></ul></div><div class="buscaPers"><form name="boxmeuitau" onsubmit="javascript: if(document.boxmeuitau.buscabox.value !== '' && document.boxmeuitau.buscabox.value !== busca.textoBuscaBox){ INStoUni2C('WN3LNKFBSHO M O4100','U20','MGIHJCEB2GLI','C568DF9A2274CFC11AB4074B8DF4461BD6854E36F023BF247A6886B91B4B2A49333A4A4767895284' + '@' + document.boxmeuitau.buscabox.value.htmlRemoveAcento().htmlEncodeArroba() + '@' + document.boxmeuitau.tipobusca.value); } return false;"><input type="text" value="Olá LUCIANO, que tal realizar uma Busca? (ex.: extrato, recarga, saldo etc.)" class="HOpesquisar ui-autocomplete-input" id="buscabox" name="buscabox" maxlength="200" title="Digite a palavra para busca"/><input type="hidden" name="tipobusca" id="tipobusca" value="" /><div class="btnBusca"><input type="image" src="/V1/PERS/IMG/botao_dourado.png" border="0" alt="Executar a busca" class="pesquisarBtn" /></div></form></div>
+<div id="menuatalho"><a href="javascript:INStoUni2C('WN3HOMBKLQL M O4100','U20','KIINJCDB6BOJ','45248C2633D7C72C6364E3AD7CC238CA3E6BFCAC1F8BB3C467505DFADF285F16');" class="menuatalhoitem" OnMouseMove="status='Bankline'" title="Home"><span>Home</span></a>&nbsp;>&nbsp;<a href="javascript:INStoMC('IEILJCDC4CNO','WN3MNUCR QL M O4100');" class="menuatalhoitem" OnMouseMove="status='Bankline'" title="Cartões"><span>Cartões</span></a>&nbsp;>&nbsp;<span class="menuatalhodestaque">Fatura dos meus cartões</span>&nbsp;>&nbsp;<span class="menuatalhodestaque">Consultar</span></div>
+<!--##MONTADIVUN2OLD-->
+<script language="javascript">
+_gaq.push(['_trackPageview', '/30horas/' + 'IL67\SPNBF\Tela_NovaFaturaM17']);
+</script><link rel="stylesheet"  media="all" href="/VSNET/CSS/V1/styleFatura.css" />
+<form name="formFatura" id="formFatura" action="/GRIPNET/bklcom.dll?3429" METHOD="POST" onsubmit="ApagaSenha()" autocomplete="off">
+	<input type="hidden" name="id" value="U23CFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="B3AF79999E74FB5E40BC86237213A71BF7DE57F4BBCA6A855015240644B1B01DF98135F492ED9D32F5153091890119D81ACEAB6D964A3FD4FBAC40C0EF668DD90B29D24F487944210E7A833E4AA6E23FECFF5ADB8F555167" />
+
+	<input type="hidden" name="periodofat" value="3" />
+	
+	<script>
+                //teste código que ficava no layout antigo		
+                var segmento= "4";
+		var caminhoMenuClassicos= "";
+		var caminhoMenuParcerias= "";
+	</script>
+	<script language="JavaScript">
+	var rotaM17 = 'N';
+	// fctAlteracaoCadastral
+		function fctAlteracaoCadastral()
+		{
+			document.formAlteracaoCadastral.submit();
+			
+		}
+	// fctOutrasDatas
+		function fctOutrasDatas(periodo)
+		{
+			document.formFatura.periodofat.value = periodo;
+			document.formFatura.submit();
+			//fctContinuar('formFatura', rotaM17);
+		}
+		
+	// fctOutrosCartoes
+		function fctOutrosCartoes(cartao)
+		{
+			document.formOutrosCartoes.hCartao.value = cartao;
+			document.formOutrosCartoes.hCartaoCombo.value = document.formFatura.cboOutrosCartoes.value;
+			if(cartao == 'XX'){
+				legendaerro2('Selecione um cartão', 300, 300);
+				setaFoco('cboOutrosCartoes');
+				return false;
+			}
+			//document.formOutrosCartoes.submit();
+			fctContinuar('formOutrosCartoes', rotaM17);
+		}
+		
+	// fctFatura
+		function fctFatura(fat)
+		{
+			alert('fctFatura(' + fat + ')');
+		}
+		
+		
+		function fctContinuar(form , ajax){
+			if (ajax == 'S'){
+				executaTRNDiv(form , "divContinuar", false);
+				document.getElementById('TRNcontainer01').style.display = 'none';
+				document.getElementById('divContinuar').style.display = 'block';
+				document.getElementById('divContinuar').innerHTML = "<p class='TRNtexto'><img src='../imagens/load_circ.gif' alt='' /> Aguarde carregando...</p>";
+			}
+			else{
+				document.getElementById(form).submit();
+				if (form == 'formAux2Fatura'){
+					document.getElementById('divContinuar').style.display = 'block';
+					document.getElementById('divContinuar').innerHTML = "<p class='TRNtexto'><img src='../imagens/load_circ.gif' alt='' /> Aguarde carregando...</p>";
+				}
+			}
+		}
+	</script>
+	
+	<br>
+         
+
+         
+
+<div style="width:780px; height:70px; margin:0 0 0 6px; cursor: pointer; display:none;">
+		<img src="/V1/PERS/IMG/appitau/BannerCartao.jpg" alt="Instale maior segurança" width="760" height="63" onclick="document.frmSaibaMais.submit();"/>
+	</div>
+	<h1>Consulta à fatura</h1>
+	<div id="TRNcontainer01">
+		<table border="0" cellpadding="0" cellspacing="0" class="TRNfundo">
+
+			<!-- Inicio Data Navegação -->
+			<tr>
+	<td class="TRNDivEsconde">	
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<a href="JavaScript:fctOutrasDatas('1')">
+						<img alt="Fatura anterior" src="/V1/PERS/IMG/aba_nfatura_anterior.jpg" width="170" height="32" border="0">
+					</a>
+				</td>
+				<td>
+					<a href="JavaScript:fctOutrasDatas('2')">
+						<img alt="Fatura atual" src="/V1/PERS/IMG/aba_nfatura_atual.jpg" width="170" height="32" border="0">
+					</a>
+				</td>
+				<td>
+					<img src="/V1/PERS/IMG/aba_nfatura_proxima_sel.jpg" width="170" height="32" border="0">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+			
+			<!-- Inicio Dados Cartão -->
+			<tr class="TRNDivEsconde">
+	<td>
+		<table width="97%" align="center" border="0" cellpadding="1" cellspacing="2">
+			<!--tr><td rowspan="5" style="text-align:top;" width="1%">&nbsp;</td></tr>
+			<tr> 
+				<td rowspan="4" style="text-align:top;" width="22%"><img style="image-align:center" alt="Cartão de crédito" src="/imagens//imagens/cartoes/01341_000.jpg"  width="96px" height="60px" border="0"></td>
+			</tr-->
+			<tr>
+				<td>
+					<table width="100%" border="0" cellpadding="1" cellspacing="1">
+						<tr> 
+							<td class="TRNtitcampo" style="text-align:right; width:61%" nowrap>Meus cart&otilde;es:&nbsp;</td>
+							<td class="TRNcampo" width="30%">
+								<select name="cboOutrosCartoes" class="TRNselect" onChange="javaScript: fctOutrosCartoes(document.formFatura.cboOutrosCartoes.value);">
+									<option value="XX" selected>Selecione</option>
+									<option value="1">PERSONNALITE VISA PLATINUM                    - final 4030</option><option value="2">PERSONNALITE MULTIPLO MASTERCARD PLATINUM     - final 8517</option>
+								</select>
+								<script language="javascript">document.formFatura.cboOutrosCartoes.value='2';</script>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+		</table>
+		
+		<!-- Resumo da Fatura -->
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNbordasup"><tr class="TRNlin"><td></td></tr></table>
+		<table width="510" cellpadding="0" cellspacing="0" border="0"  class="TRNfundo" style="display: none;">
+			<tr>
+				<td class="TRNDivEsconde" colspan="3" valign="baseline"><img src="/V1/PERS/IMG/logotop.jpg" border="0" /></td>
+			</tr>
+		</table>
+		<table width="510" cellpadding="0" cellspacing="0" border="0"  class="TRNfundo">
+			<tr>
+				<!--td class="TRNDivEsconde" width="239" valign="top"><img src="/V1/PERS/IMG/logobandeira.jpg" border="0" /></td-->
+				<td rowspan="4" width="30">&nbsp;</td>
+				<td rowspan="4" class="TRNDivEsconde" align="left" width="219"><img alt="Cartão de crédito" src="/imagens/cartoes/01341_000.jpg"  width="96px" height="60px" border="0"></td>
+
+				<td width="271" align="left">
+				  <table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%" style="border-style: solid; border-width: 0px; border-color: #333333;" ID="Table1">
+						<tr><td height="10px" colspan="2"></td><tr>
+						<tr>
+	<td class="TRNpassotextoa" colspan="2">Resumo da fatura em R$</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">Total da fatura anterior</td>
+	<td class="TRNtitcampo_linha">56.416,21</td >
+</tr>
+<tr>
+	<td class="TRNcampo_linha">Créditos e Pagamentos</td>
+	<td class="TRNtitcampo_linha">56.442,71</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">Débitos e despesas nacionais</td>
+	<td class="TRNtitcampo_linha">19.221,53</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linhaResumo"><b>Total parcial desta fatura</b></td>
+	<td class="TRNtitcampo_linhaResumo"><b>19.195,03</b></td>
+</tr>
+					</table>
+				</td>
+				<td width="7px">&nbsp;</td>
+			</tr>
+		</table>
+		
+		<!-- Dados Titular -->
+		<table border="0" cellpadding="0" cellspacing="0" class="TRNfundo" width="100%"><tr><td>&nbsp;</td></tr></table>
+		<table border="0" cellpadding="0" cellspacing="0" class="TRNfundo" width="100%">
+			<tr>
+				<td width="15px">&nbsp;</td>
+				<td class="TRNcampo" width="50px" nowrap>Titular:&nbsp;</td>
+				<td class="TRNdado">LUCIANO M TAVARES                       </td>
+			</tr>
+			<tr>
+				<td width="15px">&nbsp;</td>
+				<td class="TRNcampo" width="50px" nowrap>Cartão:&nbsp;</td>
+				<td class="TRNdado">5491.XXXX.XXXX.8517</td>
+			</tr>
+		</table>
+		
+		<!-- Box Resumo da Fatura -->
+		<table border="0" cellpadding="0" cellspacing="0" class="TRNfundo" width="100%"><tr><td>&nbsp;</td></tr></table>
+		<!--table border="0" cellpadding="0" cellspacing="0" class="TRNfundo" width="100%" height="5%"-->
+			
+		<!--/table-->
+<!--Teste Novo Box-->
+	<div id="divBoxFatura">
+		<div id="imgFundoBoxFatura">
+			<img src="/V1/PERS/IMG/fatura\box2.gif" />
+	
+			<div class="box21-1">vencimento</div> 		
+			<div class="box21-2">15/12/2014</div> 		
+	
+			<div class="box22-1">total parcial</div> 		
+			<div class="box22-2">19.195,03</div> 		
+			<div class="box22-3">R$</div> 		
+			
+			<div class="box23-1">O total desta fatura é parcial, sujeito a<br>atualização até o seu fechamento.</div> 					
+		</div>
+	</div>					
+		<!--table border="0" cellpadding="0" cellspacing="0" class="TRNfundo" width="100%">
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+		</table-->
+		
+		<table border="0" cellpadding="0" cellspacing="0" class="TRNfundo" width="100%"><tr><td>&nbsp;</td></tr></table>
+		<table border="0" cellpadding="0" cellspacing="0" class="TRNfundo" width="100%">
+			<tr>
+				<!-- PRIMEIR COLUNA -->
+				<td width="7px">&nbsp;</td>
+				<td width="179px" valign="top">
+					<!-- Início Limite de crédito R$ -->
+					<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+						<tr>
+							<td class="TRNpassotextoa" colspan="2">Limites de crédito R$ <sup></sup></td>
+						</tr>
+						<tr height="16px">
+							<td class="TRNcampo" colspan="2">Limite total</td>
+                        </tr>
+                        <tr height="16px">
+                            <td class="TRNcampo_linha">de crédito</td>
+							<td class="TRNtitcampo_linha">62.400,00</td>
+						</tr>
+									<tr height="16px">
+                            <td class="TRNcampo" colspan="2">De retirada de recursos </td>
+                        </tr>
+                        <tr height="16px">
+                            <td class="TRNcampo_linha">País (saque)</td>
+                            <td class="TRNtitcampo_linha">1.000,00</td>
+                        </tr>
+			<tr height="16px">
+                            <td class="TRNcampo" colspan="2">De retirada de recursos </td>
+                        </tr>
+                        <tr height="16px">
+                            <td class="TRNcampo_linha">Exterior (saque)</td>
+                            <td class="TRNtitcampo_linha">7.000,00</td>
+                        </tr>
+
+                                        
+
+                                      
+					</table>
+					<!-- Limite de parcela R$ -->
+
+					<!-- Término Limite de crédito R$ -->
+					<!--Recompensas-->
+					<!-- Início Encargos desta fatura -->
+					
+					<!-- Término Encargos desta fatura -->
+					<br />
+					<!-- Início Encargos para este/próximo/este  período -->
+
+						<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%" style="display:">
+	<tr>
+  	<td class="TRNpassotextoa" colspan="3">Fique atento aos encargos entre 16/11/14 e 15/12/14</td>
+	</tr>
+    <tr height="16px" style="display:">
+        <td class="TRNcampo">Juros máximos</td>
+        <td class="TRNtitcampo">4,15% a.m.</td>
+    </tr>
+    <tr height="16px" style="display:">
+        <td class="TRNcampo_linha">do contrato</td>
+        <td class="TRNtitcampo_linha">64,00% a.a.</td> 
+    </tr>
+
+
+</table>
+
+					<!-- Término Encargos para este/próximo período -->
+					<br />
+					<!-- Início Custo efetivo total - CET -->
+					
+					<!-- Término Custo efetivo total - CET -->
+
+					<!-- Início Bloco Financiamento-->
+					<br />
+<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%" style="display:">
+	<tr>
+        <td class="TRNpassotextoa" colspan="2">Financiamento da Fatura</td>
+    </tr>
+    <tr height="16px" style="display:">
+        <td class="TRNcampo_linha" width="60%">Valor da fatura<br/>atual</td>
+		<td class="TRNtitcampo_linha">R$ 19.195,03</td> 
+    </tr>
+    <tr height="16px" style="display:">
+        <td class="TRNcampo">Juros de</td>
+		<td class="TRNtitcampo">4,15% a.m.</td>
+    </tr>
+    <tr height="16px" style="display:">
+        <td class="TRNcampo_linha">financiamento</td>
+        <td class="TRNtitcampo_linha">64,00% a.a.</td>
+    </tr>
+    <tr height="16px" style="display:none">
+        <td class="TRNcampo_linha">Encargos em caso<br/>de pgto. mínimo (R$)</td>
+		<td class="TRNtitcampo_linha">0,00</td>
+    </tr>
+    <tr height="16px" style="display:">
+        <td class="TRNcampo">CET do financiamento</td>
+		<td class="TRNtitcampo">4,65% a.m.</td>
+    </tr>
+    <tr height="16px" style="display:">
+        <td class="TRNcampo_linha">da fatura</td>
+        <td class="TRNtitcampo_linha">73,90% a.a.</td>
+    </tr>
+	<tr height="16px" style="display:none">
+        <td class="TRNcampo">Valor total</td>
+		<td class="TRNtitcampo">R$ 0,00</td>
+    </tr>
+    <tr height="16px" style="display:none">
+        <td class="TRNcampo_linha">financiado</td>
+        <td class="TRNtitcampo_linha">(0,00%)</td>
+    </tr>
+    <tr height="16px" style="display:none">
+        <td class="TRNcampo_linha">Valor do IOF</td>
+		<td class="TRNtitcampo_linha">R$ 0,00</td> 
+    </tr>
+	    <tr height="16px" style="display:none">
+        <td class="TRNcampo_linha" width="60%">Valor total a<br/>pagar</td>
+		<td class="TRNtitcampo_linha">R$ 0,00</td> 
+    </tr>
+</table>
+					<!-- Término Bloco Financiamento -->
+
+
+					<br />
+					<!-- Início Bloco Compras parceladas com juros-->
+					
+					<!-- Término Bloco Compras parceladas com juros -->
+
+					<br />
+					<!-- Início Bloco Demais Taxas-->
+					
+					<!-- Término Bloco Demais Taxas-->
+
+					<br />
+					<!-- Início Tabela de desconto na anuidade -->
+					<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%" style="display:none">
+            <tr>
+                <td class="TRNpassotextoa" colspan="2">Demais Taxas de Juros</td>
+            </tr>
+
+            <tr height="16px" style="display:none">
+                <td class="TRNcampo">De retirada de</td>
+                <td class="TRNtitcampo">&nbsp;</td>
+            </tr>
+            <tr height="16px" style="display:none">
+                <td class="TRNcampo_linha">recursos país</td>
+                <td class="TRNtitcampo_linha">0,00% a.m.</td> 
+            </tr>
+            <tr height="16px" style="display:none">
+                <td class="TRNcampo">De pagamento</td>
+                <td class="TRNtitcampo">&nbsp;</td>
+            </tr>
+            <tr height="16px" style="display:none">
+                <td class="TRNcampo_linha">de contas</td>
+                <td class="TRNtitcampo_linha">0,00% a.m.</td> 
+            </tr>
+			            <tr height="16px" style="display:none">
+                <td class="TRNcampo">De pagamento</td>
+                <td class="TRNtitcampo">&nbsp;</td>
+            </tr>
+            <tr height="16px" style="display:none">
+                <td class="TRNcampo_linha">de contas aut.</td>
+                <td class="TRNtitcampo_linha">0,00% a.m.</td> 
+            </tr>
+        </table>
+
+					<!-- Término Tabela de desconto na anuidade -->
+                    
+					
+					<!--Mensagem EA1-->
+						
+						
+						<!--Mensagem EA2-->
+						
+						
+						<!--Mensagem EA3-->
+						
+				</td>
+				
+				<!-- COLUNA ESPAÇAMENTO -->
+				<td width="10px">&nbsp;</td>
+				
+				<!-- SEGUNDA COLUNA -->
+				<td width="307px" valign="top">
+					<!-- Início Créditos e Pagamentos - Movimentações -->
+					
+					<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+	<tr>
+		<td class="TRNpassotextoa" colspan="3">Movimentações</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" nowrap>DATA</td>
+		<td class="TRNdado_linha" nowrap>MOVIMENTAÇÃO</td>
+		<td class="TRNtitcampo_linha" nowrap><b>VALOR EM R$</b></td>
+	</tr>
+        <tr>
+	        <td class="TRNcampo_linha">15/11</td>
+	        <td class="TRNcampo_linha">AVAL.EMERG.CREDITO        </td>
+	        <td class="TRNtitcampo_linha">18,90</td>
+        </tr><tr>
+	<td class="TRNcampo_linha">17/11</td>
+	<td class="TRNcampo_linha">PAGAMENTO EFETUADO        </td>
+	<td class="TRNtitcampo_linha">-56.416,21</td>
+</tr>
+	<tr>
+		<td class="TRNdado_linha" colspan="2" nowrap><b>Total de créditos efetuados</b></td>
+		<td class="TRNtitcampo_linha"><b>-56.416,21</b></td>
+	</tr>
+<tr>
+		<td class="TRNdado_linha" colspan="2" nowrap><b>Total de débitos efetuados</b></td>
+		<td class="TRNtitcampo_linha"><b>18,90</b></td>
+	</tr>
+</table>
+<br>
+					
+					<!-- Término Créditos e Pagamentos -  Movimentações -->
+					
+					<!-- Início Débitos e despesas nacionais -->
+					
+					<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+	<tr>
+		<td class="TRNpassotextoa" colspan="3">Lançamentos nacionais</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" colspan="3">LUCIANO M TAVARES         (5368)</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" width="14%" nowrap>DATA</td>
+		<td class="TRNdado_linha" width="56%" nowrap>MOVIMENTAÇÃO</td>
+		<td class="TRNtitcampo_linha" width="30%" nowrap><b>VALOR EM R$</b></td>
+	</tr>
+	<tr>
+		<td class="TRNcampo_linha">21/11</td>
+		<td class="TRNcampo_linha" nowrap>VDA A VALOR ECONOMICO     </td>
+		<td class="TRNtitcampo_linha">63,90</td>
+	</tr>
+        <tr>
+		<td class="TRNdado_linha" colspan="2">Crédito do cartão final (5368)</td>
+		<td class="TRNtitcampo_linha"><b>0,00</b></td>
+        </tr>        <tr>
+		<td class="TRNdado_linha" colspan="2">Débito do cartão final (5368)</td>
+		<td class="TRNtitcampo_linha"><b>63,90</b></td>
+	</tr>
+</table>
+<br/>
+<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+	<tr>
+		<td class="TRNpassotextoa" colspan="3">Lançamentos nacionais</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" colspan="3">LUCIANO M TAVARES         (8517)</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" width="14%" nowrap>DATA</td>
+		<td class="TRNdado_linha" width="56%" nowrap>MOVIMENTAÇÃO</td>
+		<td class="TRNtitcampo_linha" width="30%" nowrap><b>VALOR EM R$</b></td>
+	</tr>
+	<tr>
+		<td class="TRNcampo_linha">20/10</td>
+		<td class="TRNcampo_linha" nowrap>IFOOD AGENCIA DE SERV     </td>
+		<td class="TRNtitcampo_linha">160,50</td>
+	</tr>
+<tr>
+	<td class="TRNcampo_linha">03/11</td>
+	<td class="TRNcampo_linha">DISK COOK                 </td>
+	<td class="TRNtitcampo_linha">80,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">04/11</td>
+	<td class="TRNcampo_linha">GI RESTAURANTES           </td>
+	<td class="TRNtitcampo_linha">34,81</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">05/11</td>
+	<td class="TRNcampo_linha">STREET FOOD               </td>
+	<td class="TRNtitcampo_linha">20,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">05/11</td>
+	<td class="TRNcampo_linha">SUSHI BAR HAMATYO         </td>
+	<td class="TRNtitcampo_linha">170,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">06/11</td>
+	<td class="TRNcampo_linha">ICO ESTACIONAM            </td>
+	<td class="TRNtitcampo_linha">24,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">NOU GASTRONOMIA           </td>
+	<td class="TRNtitcampo_linha">43,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">JAPENGO                   </td>
+	<td class="TRNtitcampo_linha">187,33</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">INGRESSO.COM              </td>
+	<td class="TRNtitcampo_linha">119,84</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">PITZI*ProtecaoiPhon       </td>
+	<td class="TRNtitcampo_linha">30,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">09/11</td>
+	<td class="TRNcampo_linha">RODEIO                    </td>
+	<td class="TRNtitcampo_linha">541,20</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">10/11</td>
+	<td class="TRNcampo_linha">DROGARIA IGUATEMI         </td>
+	<td class="TRNtitcampo_linha">172,77</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">10/11</td>
+	<td class="TRNcampo_linha">DISK COOK                 </td>
+	<td class="TRNtitcampo_linha">102,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">11/11</td>
+	<td class="TRNcampo_linha">PAO DE ACUCAR LJ 1292     </td>
+	<td class="TRNtitcampo_linha">108,56</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">11/11</td>
+	<td class="TRNcampo_linha">SI SENOR BAR E LANCHES    </td>
+	<td class="TRNtitcampo_linha">61,79</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">12/11</td>
+	<td class="TRNcampo_linha">BEFRESH                   </td>
+	<td class="TRNtitcampo_linha">68,35</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">14/11</td>
+	<td class="TRNcampo_linha">OLLIVA RESTAURANTE        </td>
+	<td class="TRNtitcampo_linha">94,71</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">14/11</td>
+	<td class="TRNcampo_linha">NAGAYAMA CAFE             </td>
+	<td class="TRNtitcampo_linha">307,40</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">14/11</td>
+	<td class="TRNcampo_linha">INGRESSO.COM              </td>
+	<td class="TRNtitcampo_linha">67,22</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">16/11</td>
+	<td class="TRNcampo_linha">FRUTARIA EXPRESS E DEL    </td>
+	<td class="TRNtitcampo_linha">85,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">17/11</td>
+	<td class="TRNcampo_linha">REST. ARABIA JK           </td>
+	<td class="TRNtitcampo_linha">46,20</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">18/11</td>
+	<td class="TRNcampo_linha">Z DELI SANDUICHES         </td>
+	<td class="TRNtitcampo_linha">60,94</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">19/11</td>
+	<td class="TRNcampo_linha">REGISTRO.BR               </td>
+	<td class="TRNtitcampo_linha">30,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">19/11</td>
+	<td class="TRNcampo_linha">RESTAURANTE STA MARIA     </td>
+	<td class="TRNtitcampo_linha">320,87</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">20/11</td>
+	<td class="TRNcampo_linha">TON-HOI RESTAURANTE       </td>
+	<td class="TRNtitcampo_linha">260,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">23/11</td>
+	<td class="TRNcampo_linha">FRUTARIA SAO PAULO        </td>
+	<td class="TRNtitcampo_linha">80,20</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">23/11</td>
+	<td class="TRNcampo_linha">RITZ 2                    </td>
+	<td class="TRNtitcampo_linha">110,50</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">NOU ENTREGAS              </td>
+	<td class="TRNtitcampo_linha">44,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">COSTELARIA MOEMA          </td>
+	<td class="TRNtitcampo_linha">83,87</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">SUSHI BAR HAMATYO         </td>
+	<td class="TRNtitcampo_linha">90,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">26/11</td>
+	<td class="TRNcampo_linha">OUTBACK BZ 07 ELDORADO    </td>
+	<td class="TRNtitcampo_linha">54,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">28/11</td>
+	<td class="TRNcampo_linha">NOU ENTREGAS              </td>
+	<td class="TRNtitcampo_linha">44,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">28/11</td>
+	<td class="TRNcampo_linha">TAM SITE                  </td>
+	<td class="TRNtitcampo_linha">17.791,74</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">30/11</td>
+	<td class="TRNcampo_linha">CORACAO MINEIRO           </td>
+	<td class="TRNtitcampo_linha">25,95</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">01/12</td>
+	<td class="TRNcampo_linha">OLLIVA RESTAURANTE        </td>
+	<td class="TRNtitcampo_linha">43,07</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">01/12</td>
+	<td class="TRNcampo_linha">MARIA F Z BARBOSA         </td>
+	<td class="TRNtitcampo_linha">540,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">02/12</td>
+	<td class="TRNcampo_linha">DESCONTO ANUIDADE 12/12   </td>
+	<td class="TRNtitcampo_linha">-26,50</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">02/12</td>
+	<td class="TRNcampo_linha">PARCELA DE ANUIDADE       </td>
+	<td class="TRNtitcampo_linha">26,50</td>
+</tr>
+        <tr>
+		<td class="TRNdado_linha" colspan="2">Crédito do cartão final (8517)</td>
+		<td class="TRNtitcampo_linha"><b>-26,50</b></td>
+        </tr>        <tr>
+		<td class="TRNdado_linha" colspan="2">Débito do cartão final (8517)</td>
+		<td class="TRNtitcampo_linha"><b>22.133,02</b></td>
+	</tr>
+</table>
+<br/>
+<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+	<tr>
+		<td class="TRNpassotextoa" colspan="3">Lançamentos nacionais</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" colspan="3">CECILIA STACIARINI        (2399)</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" width="14%" nowrap>DATA</td>
+		<td class="TRNdado_linha" width="56%" nowrap>MOVIMENTAÇÃO</td>
+		<td class="TRNtitcampo_linha" width="30%" nowrap><b>VALOR EM R$</b></td>
+	</tr>
+	<tr>
+		<td class="TRNcampo_linha">04/11</td>
+		<td class="TRNcampo_linha" nowrap>EMPORIO STA MARIA         </td>
+		<td class="TRNtitcampo_linha">469,29</td>
+	</tr>
+<tr>
+	<td class="TRNcampo_linha">05/11</td>
+	<td class="TRNcampo_linha">C & A MODAS LJ 180        </td>
+	<td class="TRNtitcampo_linha">845,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">05/11</td>
+	<td class="TRNcampo_linha">TAM MULTIPLUS             </td>
+	<td class="TRNtitcampo_linha">21,57</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">ST. MARCHE -  MORUMBI     </td>
+	<td class="TRNtitcampo_linha">455,38</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">MM MAXIMO                 </td>
+	<td class="TRNtitcampo_linha">152,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">10/11</td>
+	<td class="TRNcampo_linha">DUE CUOCCHI CUCINA        </td>
+	<td class="TRNtitcampo_linha">85,80</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">10/11</td>
+	<td class="TRNcampo_linha">BRASTEMP AGUA             </td>
+	<td class="TRNtitcampo_linha">79,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">12/11</td>
+	<td class="TRNcampo_linha">CENTAURO 46-ELDORADO      </td>
+	<td class="TRNtitcampo_linha">179,99</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">13/11</td>
+	<td class="TRNcampo_linha">CHEF VIVI                 </td>
+	<td class="TRNtitcampo_linha">77,35</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">13/11</td>
+	<td class="TRNcampo_linha">OHKA                      </td>
+	<td class="TRNtitcampo_linha">169,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">14/11</td>
+	<td class="TRNcampo_linha">ROSE E BLEU               </td>
+	<td class="TRNtitcampo_linha">333,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">14/11</td>
+	<td class="TRNcampo_linha">COMERCIO BECEL            </td>
+	<td class="TRNtitcampo_linha">223,75</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">14/11</td>
+	<td class="TRNcampo_linha">SARAIVA IGUATEMI SP 31    </td>
+	<td class="TRNtitcampo_linha">199,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">14/11</td>
+	<td class="TRNcampo_linha">KINOPLEX ITAIM            </td>
+	<td class="TRNtitcampo_linha">37,50</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">15/11</td>
+	<td class="TRNcampo_linha">PAYPAL DO BRASIL          </td>
+	<td class="TRNtitcampo_linha">5,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">17/11</td>
+	<td class="TRNcampo_linha">RAIA DROGASIL 538 FRAN    </td>
+	<td class="TRNtitcampo_linha">160,58</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">18/11</td>
+	<td class="TRNcampo_linha">SOFITEL JEQUITIMAR GUA    </td>
+	<td class="TRNtitcampo_linha">1.300,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">18/11</td>
+	<td class="TRNcampo_linha">LEROY MERLIN MORUMBI      </td>
+	<td class="TRNtitcampo_linha">132,80</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">20/11</td>
+	<td class="TRNcampo_linha">EMPORIO STA MARIA         </td>
+	<td class="TRNtitcampo_linha">180,16</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">20/11</td>
+	<td class="TRNcampo_linha">VARANDA FRUTAS            </td>
+	<td class="TRNtitcampo_linha">63,64</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">20/11</td>
+	<td class="TRNcampo_linha">DROGASIL 137              </td>
+	<td class="TRNtitcampo_linha">241,75</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">20/11</td>
+	<td class="TRNcampo_linha">RITZ IGUATEMI             </td>
+	<td class="TRNtitcampo_linha">70,51</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">SILMARA MATRIZ            </td>
+	<td class="TRNtitcampo_linha">267,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">SILMARA MATRIZ            </td>
+	<td class="TRNtitcampo_linha">148,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">ALO BEBE 1905             </td>
+	<td class="TRNtitcampo_linha">177,30</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">ALO BEBE 1905             </td>
+	<td class="TRNtitcampo_linha">21,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">ALO BEBE 1905             </td>
+	<td class="TRNtitcampo_linha">1.327,20</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">REGATTA                   </td>
+	<td class="TRNtitcampo_linha">2.626,64</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">27/11</td>
+	<td class="TRNcampo_linha">ADIDAS-SHOP.ELDORADO      </td>
+	<td class="TRNtitcampo_linha">149,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">27/11</td>
+	<td class="TRNcampo_linha">MM MAXIMO                 </td>
+	<td class="TRNtitcampo_linha">103,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">29/11</td>
+	<td class="TRNcampo_linha">SARAIVA MORUMBI 13        </td>
+	<td class="TRNtitcampo_linha">37,40</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">01/12</td>
+	<td class="TRNcampo_linha">OSCAR CAFE                </td>
+	<td class="TRNtitcampo_linha">83,27</td>
+</tr>
+        <tr>
+		<td class="TRNdado_linha" colspan="2">Crédito do cartão final (2399)</td>
+		<td class="TRNtitcampo_linha"><b>0,00</b></td>
+        </tr>        <tr>
+		<td class="TRNdado_linha" colspan="2">Débito do cartão final (2399)</td>
+		<td class="TRNtitcampo_linha"><b>10.426,38</b></td>
+	</tr>
+</table>
+<br/>
+<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+	<tr>
+		<td class="TRNpassotextoa" colspan="3">Lançamentos nacionais</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" colspan="3">ALEXSANDRO L COSTA        (3622)</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" width="14%" nowrap>DATA</td>
+		<td class="TRNdado_linha" width="56%" nowrap>MOVIMENTAÇÃO</td>
+		<td class="TRNtitcampo_linha" width="30%" nowrap><b>VALOR EM R$</b></td>
+	</tr>
+	<tr>
+		<td class="TRNcampo_linha">07/11</td>
+		<td class="TRNcampo_linha" nowrap>POSTO DE SERVICO METAL    </td>
+		<td class="TRNtitcampo_linha">177,00</td>
+	</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">NELSONS EMBALAGENS        </td>
+	<td class="TRNtitcampo_linha">55,10</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">SACOLAO VILA SONIA        </td>
+	<td class="TRNtitcampo_linha">77,24</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">RAIA DROGASIL 538 FRAN    </td>
+	<td class="TRNtitcampo_linha">64,07</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">DIA 9411                  </td>
+	<td class="TRNtitcampo_linha">5,16</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">DROGARIA SAO PAULO 069    </td>
+	<td class="TRNtitcampo_linha">67,80</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">07/11</td>
+	<td class="TRNcampo_linha">PET CENTER BUTANTA        </td>
+	<td class="TRNtitcampo_linha">95,94</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">09/11</td>
+	<td class="TRNcampo_linha">DROGASIL 137              </td>
+	<td class="TRNtitcampo_linha">14,53</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">12/11</td>
+	<td class="TRNcampo_linha">ISHAO TAGATA              </td>
+	<td class="TRNtitcampo_linha">16,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">12/11</td>
+	<td class="TRNcampo_linha">SACOLAO VILA SONIA        </td>
+	<td class="TRNtitcampo_linha">217,19</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">12/11</td>
+	<td class="TRNcampo_linha">RAIA DROGASIL 538 FRAN    </td>
+	<td class="TRNtitcampo_linha">10,10</td>
+</tr>
+        <tr>
+		<td class="TRNdado_linha" colspan="2">Crédito do cartão final (3622)</td>
+		<td class="TRNtitcampo_linha"><b>0,00</b></td>
+        </tr>        <tr>
+		<td class="TRNdado_linha" colspan="2">Débito do cartão final (3622)</td>
+		<td class="TRNtitcampo_linha"><b>800,13</b></td>
+	</tr>
+</table>
+<br/>
+<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+	<tr>
+		<td class="TRNpassotextoa" colspan="3">Lançamentos nacionais</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" colspan="3">ALEXSANDRO L COSTA        (3622)</td>
+	</tr>
+	<tr>
+		<td class="TRNdado_linha" width="14%" nowrap>DATA</td>
+		<td class="TRNdado_linha" width="56%" nowrap>MOVIMENTAÇÃO</td>
+		<td class="TRNtitcampo_linha" width="30%" nowrap><b>VALOR EM R$</b></td>
+	</tr>
+	<tr>
+		<td class="TRNcampo_linha">12/11</td>
+		<td class="TRNcampo_linha" nowrap>COBASI BUTANTA            </td>
+		<td class="TRNtitcampo_linha">7,20</td>
+	</tr>
+<tr>
+	<td class="TRNcampo_linha">12/11</td>
+	<td class="TRNcampo_linha">DIA 9411                  </td>
+	<td class="TRNtitcampo_linha">10,15</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">12/11</td>
+	<td class="TRNcampo_linha">PAO DE ACUCAR LJ 1292     </td>
+	<td class="TRNtitcampo_linha">83,83</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">15/11</td>
+	<td class="TRNcampo_linha">POSTO DE SERVICO ITAIP    </td>
+	<td class="TRNtitcampo_linha">50,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">17/11</td>
+	<td class="TRNcampo_linha">POSTO DE SERVICO METAL    </td>
+	<td class="TRNtitcampo_linha">168,90</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">18/11</td>
+	<td class="TRNcampo_linha">NATURAL DA TERRA          </td>
+	<td class="TRNtitcampo_linha">49,34</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">18/11</td>
+	<td class="TRNcampo_linha">NS SERVICE                </td>
+	<td class="TRNtitcampo_linha">67,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">19/11</td>
+	<td class="TRNcampo_linha">POSTO DE SERVICO METAL    </td>
+	<td class="TRNtitcampo_linha">173,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">24/11</td>
+	<td class="TRNcampo_linha">POSTO DE SERVICO METAL    </td>
+	<td class="TRNtitcampo_linha">167,08</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">SACOLAO VILA SONIA        </td>
+	<td class="TRNtitcampo_linha">99,84</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">ST. MARCHE -  MORUMBI     </td>
+	<td class="TRNtitcampo_linha">25,95</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">COMERCIO DE AGUA ALFIE    </td>
+	<td class="TRNtitcampo_linha">14,50</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">CORREIOS AC B PREVIDEN    </td>
+	<td class="TRNtitcampo_linha">65,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">DIA 9411                  </td>
+	<td class="TRNtitcampo_linha">3,45</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">SACOLAO VILA SONIA        </td>
+	<td class="TRNtitcampo_linha">29,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">25/11</td>
+	<td class="TRNcampo_linha">REGATTA                   </td>
+	<td class="TRNtitcampo_linha">39,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">26/11</td>
+	<td class="TRNcampo_linha">ASSAI                     </td>
+	<td class="TRNtitcampo_linha">589,92</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">26/11</td>
+	<td class="TRNcampo_linha">LOJA 2036 - TRES IRMAO    </td>
+	<td class="TRNtitcampo_linha">10,59</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">26/11</td>
+	<td class="TRNcampo_linha">PAO DE ACUCAR LJ 1292     </td>
+	<td class="TRNtitcampo_linha">148,44</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">26/11</td>
+	<td class="TRNcampo_linha">ASSAI                     </td>
+	<td class="TRNtitcampo_linha">64,56</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">28/11</td>
+	<td class="TRNcampo_linha">COML ELET YAMATO          </td>
+	<td class="TRNtitcampo_linha">15,00</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">28/11</td>
+	<td class="TRNcampo_linha">SUPERMERCADO PADRAO       </td>
+	<td class="TRNtitcampo_linha">40,15</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">28/11</td>
+	<td class="TRNcampo_linha">SUPERMERCADOS RECANTO     </td>
+	<td class="TRNtitcampo_linha">14,70</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">28/11</td>
+	<td class="TRNcampo_linha">RAIA DROGASIL 538 FRAN    </td>
+	<td class="TRNtitcampo_linha">80,60</td>
+</tr>
+<tr>
+	<td class="TRNcampo_linha">29/11</td>
+	<td class="TRNcampo_linha">POSTO DE SERVICO METAL    </td>
+	<td class="TRNtitcampo_linha">188,00</td>
+</tr>
+        <tr>
+		<td class="TRNdado_linha" colspan="2">Crédito do cartão final (3622)</td>
+		<td class="TRNtitcampo_linha"><b>0,00</b></td>
+        </tr>        <tr>
+		<td class="TRNdado_linha" colspan="2">Débito do cartão final (3622)</td>
+		<td class="TRNtitcampo_linha"><b>2.205,20</b></td>
+	</tr>
+</table>
+<br/>
+
+					
+					<!-- Término Débitos e despesas nacionais -->
+					
+					<!-- Início Débitos e despesas internacionais -->
+					
+					
+					
+					
+					<!-- Término Débitos e despesas internacionais -->
+
+					<!-- Início Lançamentos Global Money -->
+					
+					
+					
+					
+					<!-- Término Lançamentos Global Money -->
+
+					
+					<!-- Início Demostrativo de pagamentos programados futuros -->
+					
+					<!-- Término Demostrativo de pagamentos programados futuros -->
+					
+					<!-- Início Compras parceladas - próximas faturas -->
+					
+					<!-- Término Compras parceladas - próximas faturas -->
+                    
+                    <!-- Início Compras 40d -->
+					
+					<!-- Início Compras 40d -->
+					
+					<!-- Iníco do Link Compras Parceladas -->
+					<table border="0" cellpadding="1" cellspacing="0" class="TRNfundo" width="100%">
+						<tr valign="top">
+							<td class="TRNtitcampo"></td>
+						</tr>
+					</table>
+					<!-- Término do Link Compras Parceladas -->
+					
+									</td>
+				<td width="7px">&nbsp;</td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+			<!---->
+					 
+
+			<!--Mensagem Limite Compartilhado-->
+			
+
+			<!--Mensagem Regulamentação BACEN-->
+			
+			
+			<!--Mensagem sem classificação-->
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNbordasup"><tr class="TRNlin"><td></td></tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNfundo">
+<tr><td><div class="TRNmsg">-&nbsp;Em decorr&ecirc;ncia da regulamenta&ccedil;&atilde;o do Banco Central do Brasil, circular 3.512 de 25 de novembro de 2010, o valor m&iacute;nimo da fatura de cart&atilde;o de cr&eacute;dito a ser pago mensalmente n&atilde;o poder&aacute; ser inferior aos seguintes valores: 15% do valor total da fatura - a partir de junho de 2011; e 20% do valor total da fatura - a partir de 1º de dezembro de 2011.<br/>
+O valor do pagamento m&iacute;nimo do seu cart&atilde;o ser&aacute; calculado de acordo com tais percentuais, a partir das datas acima.</div></td></tr>
+</table>
+
+			
+			<!--Mensagem Importante-->
+			
+			
+			<!--Mensagem Aviso-->
+			
+			
+			<!--Mensagem Atenção-->
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNbordasup"><tr class="TRNlin"><td></td></tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNfundo">
+<tr><td><div class="TRNmsg"><img style="vertical-align:middle" src="/V1/PERS/IMG/atencao.gif" border="0" alt="Atenção" /><br />-&nbsp;Para garantir ainda mais segurança e tranqüilidade em suas compras, o Cart&atilde;o Personnalit&eacute; MasterCard possui um sistema de monitoramento eletr&ocirc;nico que identifica poss&iacute;veis desvios no perfil de utiliza&ccedil;&atilde;o do seu cart&atilde;o. Caso necess&aacute;rio, ser&aacute; solicitado que voc&ecirc; confirme alguns dados ligando para a Central do Cart&atilde;o Personnalit&eacute;. Este procedimento &eacute; importante para garantir que seu Cart&atilde;o Personnalit&eacute; MasterCard seja utilizado somente por voc&ecirc;.<br />-&nbsp;Compras parceladas podem levar at&eacute; 5 dias para apresentar o valor dividido em parcelas. A fatura para pagamento apresentar&aacute; o valor da parcela negociado no momento da compra.<br />-&nbsp;Ap&oacute;s o pagamento da "Fatura Atual", o seu saldo total n&atilde;o ser&aacute; mais somado ao total desta fatura.</div></td></tr>
+</table>
+
+			
+			<!--Mensagem numerada-->
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNbordasup"><tr class="TRNlin"><td></td></tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNfundo">
+<tr><td><div class="TRNmsg"><img style="vertical-align:middle" src="/V1/PERS/IMG/aviso.gif" border="0" alt="Aviso" /><br />-&nbsp;Para sua conveniência e conforme contrato, se não ocorrer o pagamento desta fatura até o 10º dia após o vencimento, o valor do pagamento mínimo poderá ser debitado em sua conta corrente que possuir saldo disponível suficiente. Para inibir o débito deste mês, procure a Agência Itaú mais próxima até o 8º dia após o vencimento.</div></td></tr>
+</table>
+
+			
+			
+		</table>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" class="TRNbordasup"><tr class="TRNlin"><td></td></tr></table>		
+		
+	</div>
+<script language="javascript" src="https://www.itau.com.br/_arquivosestaticos/Itau/defaultTheme/js/montaBanner.js"></script> 	
+</form>
+<div id="divContinuar" style="width:510px;position:relative;float:left;width:510px;margin:0px 0px 0px 6px;border-top:1px solid #C6C6C6;border-bottom:1px solid #C6C6C6;display:none;" class="TRNfundo" ></div>
+<!-- BoxSeloMaxConta -->
+<div id="BOXcontainer04" style="top:28px;margin-bottom:5px;"><span><img src="/V1/PERS/IMG/seloMobile.jpg" /></span></div> 
+
+<!-- SubMenuImprimir -->
+<script language="JavaScript">
+function ImprimirComprovante()
+{
+  var x;
+  x = window.open("/V1/PERS/IMG/VersaoImpressao.htm","Comprovante","left=0,top=0,location=no,toolbar=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,copyhistory=no,width=650,height=450");
+  INStoUni2Ajax('WN3COMP04OP   O4100','U20','','FC95CB27AD42A1842238DFC2C7CFCD962B3D4EE205AEB0893DE05ED6F368E96A0B0E5FE191EDA70BDDA8A2D78002A75D'); 
+}
+</script>
+
+<div id="BOXcontainer01">
+ <div class="BOXtitulo"><p class="BOXp002">Opções</p></div>
+ <p class="BOXmp"><img src="/V1/PERS/IMG/ico_seta6.gif" border="0" alt="" class="BOXmps"/><a href="javascript:ImprimirComprovante();" class="menuitem" OnMouseMove="status='Bankline'" title="Imprimir Fatura">Imprimir Fatura</a>&nbsp;&nbsp;<img src="/V1/PERS/IMG/ic_impressao.gif" width="22" height="17" border="0" align="absmiddle" /></p>
+ 
+</div>
+
+
+
+<!-- IrPara -->
+<div id="BOXcontainer02">
+ <div class="BOXtitulo"><p class="BOXp002">Ir para</p></div>
+ <p class="BOXmp"><img src="/V1/PERS/IMG/ico_seta6.gif" border="0" alt="" class="BOXmps"/><a href="javascript:INStoUni2C('WN3M7034 IP M O4100','U20','JKIHJCDC4CLO','09113FC27F4A2325A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C542DE58D8DAC6E313EF8F575E6DBFDCB69D3756695542BE58AA405BEFD5BABF6C0'); " class="menuitem" OnMouseMove="status='Bankline'" title="Histórico de faturas">Histórico de faturas</a></p><p class="BOXmp"><img src="/V1/PERS/IMG/ico_seta6.gif" border="0" alt="" class="BOXmps"/><a href="javascript:INStoUni2C('WN3M10600IP M O4100','U20','JKIHJCDC4CLO','9305B569FEDEE86865AED3BF3445D21B77E4A06D962D0FA3EFF49D9E3C573702333A4A4767895284'); " class="menuitem" OnMouseMove="status='Bankline'" title="Demonstrativo gráfico da fatura">Demonstrativo gráfico da fatura</a></p><p class="BOXmp"><img src="/V1/PERS/IMG/ico_seta6.gif" border="0" alt="" class="BOXmps"/><a href="javascript:INStoUni2C('WN3M10601IP M O4100','U20','JKIHJCDC4CLO','E762B94836A2BCDFD106A24EAFAAC3FE7B4371EB416A72367FC214CB2DA1C3DD53589F09EFBFB906'); " class="menuitem" OnMouseMove="status='Bankline'" title="Comparativo gráfico por período">Comparativo gráfico por período</a></p><p class="BOXmp"><img src="/V1/PERS/IMG/ico_seta6.gif" border="0" alt="" class="BOXmps"/><a href="javascript:INStoUni2C('WN3M3522 IP M O4100','U20','JKIHJCDC4CLO','B3271587698BDE4DD106A24EAFAAC3FE62E93D92426E28D1F5FB481C072EAA64A622C586F567D3B303AF9BEA17A1B33DCB16B4EBD12EA67A'); " class="menuitem" OnMouseMove="status='Bankline'" title="Consultas a compras parceladas">Consultas a compras parceladas</a></p><p class="BOXmp"><img src="/V1/PERS/IMG/ico_seta6.gif" border="0" alt="" class="BOXmps"/><a href="javascript:INStoUni2C('WN3M11361IP M O4100','U20','JKIHJCDC4CLO','501AB576E01FDB36D106A24EAFAAC3FE7B4371EB416A72367FC214CB2DA1C3DDEF32766D901EB757898EED59680E72C49A09CDC68977D94D'); " class="menuitem" OnMouseMove="status='Bankline'" title="Consultar número do cartão">Consultar número do cartão</a></p><p class="BOXmp"><img src="/V1/PERS/IMG/ico_seta6.gif" border="0" alt="" class="BOXmps"/><a href="javascript:INStoUni2C('WN3M12753IP M O4100','U20','JKIHJCDC4CLO','3EDCD80D6DD36E95499F9D33F84C92D52734B506FC82F7F3E1A296DBCDB801F079E4100B98F9AB2D361A9A3EEB6C12735D14213ED152901F'); " class="menuitem" OnMouseMove="status='Bankline'" title="Opção de recebimento de fatura">Opção de recebimento de fatura</a></p>
+</div>
+
+
+<!-- Post it -->
+
+
+
+<!--div id="banner0Z" style="clear:right; position:relative; float: right; left:-10px; top:10px; width: 230px; border: none;"></div-->
+
+<!-- Banner -->
+
+
+<form name="formOutrosCartoes" id="formOutrosCartoes" action="/GRIPNET/bklcom.dll?3468" METHOD="POST" onsubmit="ApagaSenha()" autocomplete="off">
+	<input type="hidden" name="id" value="U24CFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="A239C0345F5FF84140BC86237213A71BF7DE57F4BBCA6A855015240644B1B01DF98135F492ED9D32F5153091890119D81ACEAB6D964A3FD4FBAC40C0EF668DD90B29D24F48794421E69E5CF98DEAA8875E8FCA0B74AB3FE4FF68AAC2D128CF40D72150687FED0E55" />
+	<input type="hidden" name="hCartaoFatura" value="" />
+	<input type="hidden" name="hCartaoCombo" value="" />
+	<input type="hidden" name="hCartao" value="" />
+</form>
+
+<form name="formFichaComp" id="formFichaComp" action="/GRIPNET/bklcom.dll?13495" METHOD="POST" target="FATURAIMPR">
+	<input type="hidden" name="id" value="U25CFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="94918D6EBC97BD24F0CD6332CE6EC68ECE61519672CBE78D4480D8DE56600F4D682CD85DDAA3CF4E4CB6E011682578059DE14B5F0A700781838200C050383B2B979275A9C4A2E806B9B8483D730EBC56D72150687FED0E55" />
+</form>
+
+<form name="formComprasParceladas" id="formComprasParceladas" action="/GRIPNET/bklcom.dll?13195" METHOD="POST">
+	<input type="hidden" name="id" value="U26CFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="5CAD690A78658E10D106A24EAFAAC3FE9B298F8BA0D6B0817F3C2EEFFB73A0C2D2FEADB2D9A61C3ACABD8F485D9AE45A5FF957AA662FEF8CB9026F1AB85B3F93648A92F25375A91293B829A2ADD940090191964352F73B8E" />
+	<input type="hidden" name="ILCQ_Mes_Inicial" value="12" />
+	<input type="hidden" name="ILCQ_Ano_Inicial" value="2014" />
+	<input type="hidden" name="ILCQ_Mes_Final"   value="" />
+	<input type="hidden" name="ILCQ_Ano_Final"   value="" />
+</form>
+<form name="formPDF" id="formPDF" action="/GRIPNET/bklcom.dll?4058" METHOD="POST" target="_blank">
+	<input type="hidden" name="id" value="U27CFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="BFC5D31C449F87A427AC42685EE059533E7C6708B85EDCE2BF65E0C91E811F03E4430CA5ED80FC47B3159814CBDE27086FA5DD61C9D912E599D666A16447A429FB0D19E43FB99996D72150687FED0E55" />
+</form>
+
+<form name="formAlteracaoCadastral" id="formAlteracaoCadastral" action="/GRIPNET/bklcom.dll?5159" METHOD="POST">
+	<input type="hidden" name="id" value="U28CFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="25624A57E35B4FFB95B48B60436BE39B35F9F39E1D4D0D2EBF65E0C91E811F03E4430CA5ED80FC47B3159814CBDE27086FA5DD61C9D912E599D666A16447A42975DFD8D4B0B80C52E7E682FA7A470B41B9B6CD6A70446562C9663ACFEE39CB60" />
+</form>
+
+<form name="formAux2Fatura" id="formAux2Fatura" action="/GRIPNET/bklcom.dll?5408" METHOD="POST" autocomplete="off">
+	<input type="hidden" name="id" value="U29CFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="551F3226653D80D84480D8DE56600F4D682CD85DDAA3CF4EF98135F492ED9D32F5153091890119D81ACEAB6D964A3FD4FBAC40C0EF668DD90B29D24F487944218ED980B852FED3FECF883C9F6FF479320191964352F73B8E" />
+</form>
+<form method="POST" id="formErro2" name="formErro2" action="/GRIPNET/bklcom.dll?7064">
+	<input type="hidden" name="id" value="U2ACFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="03FC86B207F779C44480D8DE56600F4DED42B1F9317F9584BF65E0C91E811F03E4430CA5ED80FC47B3159814CBDE27086FA5DD61C9D912E599D666A16447A429FBBB088EEDD7C6374F49F3319654225C" />
+</form>
+<form method="POST" id="frmSaibaMais" name="frmSaibaMais" action="/GRIPNET/bklcom.dll?10943">
+	<input type="hidden" name="id" value="U2BCFLNMKCGHCAHGFNJMGEDBJFNINSIJKIHJCDC4CLO0000000210368[015F542C969F71DD1BF71DD2A2740950A5552614BA76ECACFA0BEF621E21FD72" />
+	<input type="hidden" name="op" value="362EF15C62FAB46DAD4777DE6919D62760110872A0124A4FC3F07E7C3C3557364480D8DE56600F4D682CD85DDAA3CF4E4CB6E011682578059DE14B5F0A70078137AA0B37901B242B91F51FFE6620FF00BC549F3103685A6CECFF5ADB8F555167" />
+</form>
+<div id="areaChatAjuda"></div>
+<div id="areaChatGerente"><iframe name="iframeMensagensOnline" id="iframeMensagensOnline" frameborder="0" border="0" cellspacing="0" height="22" width="245" src="/VSNET/transparente.html"  allowTransparency="true" scrolling="no" style="border-style:none;"></iframe></div>
+
+<script language="javascript" src="/vsnet/funcoesChat.js"></script>
+<script language="javascript">
+ setTimeout(function () {posicionaAjuda(1); }, 100);
+ 
+	window.onresize = function(event) {
+	posicionaAjuda(1);
+	}
+ 
+	$(window).scroll(function () {	
+	posicionaAjuda(1);
+	});
+ setTimeout(function(){INStoUni2CAjaxDiv('WN3M14414MN M O4100','U20','KIINJCHC2EOH','93672C49C287848BFD54402970890FA2911DB4B02C78C7132458B13CB52142DAC04080BAE86F2EC5', 'areaChatAjuda'); },200);
+</script><div id="RDP001"></div><div id="RDPcontainer"><div id="RDPposlink1"><a href="http://www.itau.com.br" OnMouseMove="status='Bankline'" title="Itaú Unibanco S.A." class="RDPcomlink" target="_blank">Itaú Unibanco S.A.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:INStoUni2C('WN3BOXSOSMN M O4100','U20','KMIPJCFB7JKI','1C80FF39CF2824ADCDFE27F83D801ACE84A1663E140C407728694B5804B0FC2CDDA8A2D78002A75D'); " OnMouseMove="status='Bankline'" title="Atendimento" class="RDPcomlink">Atendimento</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:INStoUni2CAjax('WN3LNKSEGMN M O4100','U20','JNINJCGB2DOL','274CA7E118355BB2CD644C6BEAE0CF6CBAE522D1EC3A48719EB4AC508601AB6BC04080BAE86F2EC5'); popup('http://www.itau.com.br/seguranca/', 'Seguranca', 'toolbar=yes,left=0,top=0,location=no,directories=no,status=no,menubar=yes,scrollbars=yes,resizable=yes,copyhistory=no,width=793,height=400'); " class="RDPcomlink" OnMouseMove="status='Bankline'" title="Segurança">Segurança</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:INStoMC('GEIPJCDB0AKJ','WN3BARMAPMN M O4100')" class="RDPcomlink" OnMouseMove="status='Bankline'" title="Mapa do site">Mapa do site</a></div>
+<span class="HOMidiasSociais">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Acompanhe: </span><span class="HOMidiasSociaisIMG"><a href="http://www.facebook.com.br/revistapersonnalite" target="_blank" title="Acompanhe o Personnalité no Facebook"><img src="/V1/PERS/IMG/facebook_Person.png" border="0" alt="Acompanhe o Personnalité no Facebook" /></a>&nbsp;&nbsp;<a href="http://www.twitter.com/itau" target="_blank" title="Acompanhe o Itaú no Twitter" ><img src="/V1/PERS/IMG/Twitter_Person.png" border="0" alt="Acompanhe o Itaú no Twitter" /></a>&nbsp;&nbsp;<a href="http://www.itauinvestnet.com.br/itauinvestnet/rss/rss_descricao.aspx" target="_blank" title="Acompanhe o Itaú via RSS"><img src="/V1/PERS/IMG/RSS_Feed_Person.png" border="0" alt="Acompanhe o Itaú via RSS" /></a>&nbsp;&nbsp;<a href="http://www.youtube.com/user/itaupersonnalite" target="_blank" title="Acompanhe o Itaú no Youtube"><img src="/V1/PERS/IMG/YouTube_Person.png" border="0" alt="Acompanhe o Itaú no Youtube" /></a></span></div></div><script language="javascript">
+ function ajustaRDP() {
+  var documentSize = $(document).height();
+  var positiontop = document.getElementById("RDPcontainer").offsetTop;
+  var positionrdp = (documentSize - positiontop) + 3; 
+document.getElementById("RDPcontainer").style.top = positionrdp + "px";
+  }
+ setTimeout('ajustaRDP()', 10);</script>
+
+<script type="text/javascript" charset="UTF-8" src="/vsnet/ga/ga_funcoes.js?16082014"></script><script type="text/javascript">opAutoCompleteC = [ {"label": "Consultar Extrato da Conta Corrente", "peso": "5744", "idMenu": "10453", "link": "javascript:INStoUni2C('WN3M10453QL M O4100','U20','FEIJJCDC5EHJ','346AD69ED7B832AB3B05635340A1521303E92A7528EC1C7E41540FB82F35315BC7C2028E6CA6C3F3E40EBD4A0C8257AA9477CBE9A9F4EC63761C853A7F5161D1'); ", "favorito": "N"},{"label": "Recarga Celular Pré-Pago", "peso": "5647", "idMenu": "10980", "link": "javascript:INStoUni2C('WN3M10980QL M O4100','U20','LMIJJCDC8JML','31744BA2E5919493C81F4A4BEB98F8B814CB970AD301165BB0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Pagar Impostos e Tributos (GPS, DARF, IPTU, etc.)", "peso": "5469", "idMenu": "10943", "link": "javascript:INStoUni2C('WN3M10943QL M O4100','U20','JMIHJCDC4JGI','86F664255A9F4A071AB4074B8DF4461BBFFC18CA9BC2593400C8D65C82BD763BEDE53BE1B476491E16459844BDC135D4'); ", "favorito": "N"},{"label": "Consultar Fatura", "peso": "5447", "idMenu": "10244", "link": "javascript:INStoUni2C('WN3M10244QL M O4100','U20','MIIJJCDC4CHK','65A209676F29BAA15ECD6EEA72EEA0F92B576C83CFCCFEC315D3D0394DBE44DB89732766A2D6A25385F73837E0A8DD73B02479A6A11FFC06'); ", "favorito": "N"},{"label": "Consultar Programa Sempre Presente", "peso": "5439", "idMenu": "10360", "link": "javascript:INStoUni2C('WN3M10360QL M O4100','U20','LHILJCDC6DIH','9FC264392EA83A42E20DA51C0D96B27A8578457D7A030B7524D11701F4032ECC4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Transferir de Conta Corrente para Conta Corrente", "peso": "5396", "idMenu": "16275", "link": "javascript:INStoUni2C('WN3M16275QL M O4100','U20','IHILJCJC7CIM','976FBBA60BE28D6B1AB4074B8DF4461B9EB829E5C21958D9064F5FAC717964B51CFB2993D04009D9938F863A9F416E39A1F3E2D3017A7578'); ", "favorito": "N"},{"label": "Pagar boletos, faturas, contas de água, luz, telefone ...", "peso": "5363", "idMenu": "10945", "link": "javascript:INStoUni2C('WN3M10945QL M O4100','U20','MEILJCDC5JNH','CD14D1D5BFE628041AB4074B8DF4461B7CE0012355693F651C33CAD72E935B83F6CA96211025D52D020071AB6E08F219F4581D9A099527A7'); ", "favorito": "F"},{"label": "Transferir para outros bancos (DOC e TED) - para outras pessoas", "peso": "5361", "idMenu": "12306", "link": "javascript:INStoUni2C('WN3MNUTF QL M O4100','U20','NFIHJCFC1DLG','DBE988AB3D818FF930BB1756973831846D31D76E5F2BDC6B845D23CDDC6FF5AC4213F7D3A81E68F4140349B6355C5B69'); ", "favorito": "N"},{"label": "Consultar Comprovantes", "peso": "5202", "idMenu": "10990", "link": "javascript:INStoUni2C('WN3M10990QL M O4100','U20','IKIHJCDC9JGF','D4085D6D98F4DA421AB4074B8DF4461B6117B9CA755D83141CFB2993D04009D9938F863A9F416E394637F6A66D9B24AC5ED86AA0FAB7A14DF6EA7C3BC3146A9E65E33C871A11BAD8'); ", "favorito": "N"},{"label": "Pagamentos DETRAN (IPVA, DPVAT, licenciamento, multas)", "peso": "5192", "idMenu": "10947", "link": "javascript:INStoUni2C('WN3M10947QL M O4100','U20','HFINJCDC5JJF','95B9E17C617D1D8F1AB4074B8DF4461BBFFC18CA9BC25934DBE0EFAED9DAA8F1E0BD056023619D3BDDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar e pagar boletos DDA (Débito Direto Autorizado)", "peso": "5190", "idMenu": "10974", "link": "javascript:INStoUni2C('WN3M10974QL M O4100','U20','NMIPJCDC7JKN','B7217648BC3805D2C81F4A4BEB98F8B8514BB96FC7ECEDDC0313A7FD06FFBA6889732766A2D6A253A7F7156F7833AD63'); ", "favorito": "N"},{"label": "Cadastrar Favorecidos (Transferência, DOC e TED)", "peso": "5121", "idMenu": "12305", "link": "javascript:INStoUni2C('WN3M12305QL M O4100','U20','FIIHJCFC1DLF','A142BAAF11A55ABA835BFB106A6EA32E6D31D76E5F2BDC6BCEAC2F5ADB5B8531486AD73199B9198B4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Consultar / Cancelar Débito Automático", "peso": "5079", "idMenu": "10958", "link": "javascript:INStoUni2C('WN3M10958QL M O4100','U20','LFIJJCDC5JHO','58EEA97607E7703B1AB4074B8DF4461BB9F6587ED195E6499CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Atualizar meus dados cadastrais", "peso": "5022", "idMenu": "10478", "link": "javascript:INStoUni2C('WN3M10478QL M O4100','U20','JLIHJCDC7EGN','F53B57427F53E7021AB4074B8DF4461B03104EE96430C607271ABD3AD6578A9041540FB82F35315B'); ", "favorito": "N"},{"label": "Consultar Cheques Emitidos", "peso": "4889", "idMenu": "10615", "link": "javascript:INStoUni2C('WN3M10615QL M O4100','U20','LMIJJCDC1GHL','7DB73073E5D1909E1AB4074B8DF4461B8044D34463D17503C72FA4AA958A42701CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Transferir para outros bancos (DOC e TED) - para minhas contas", "peso": "4838", "idMenu": "12304", "link": "javascript:INStoUni2C('WN3MNUTF QL M O4100','U20','IKILJCFC0DIL','FA79BD88B966245D30BB1756973831846D31D76E5F2BDC6B845D23CDDC6FF5AC4213F7D3A81E68F430A15E4CFCEAACAC'); ", "favorito": "N"},{"label": "Desbloquear talão de cheques", "peso": "4752", "idMenu": "10612", "link": "javascript:INStoUni2C('WN3M10612QL M O4100','U20','NHINJCDC2GOF','843BD5BB59702BC195B48B60436BE39B7DFB674361E2ACC71CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Consultar Favorecidos (Transferência, DOC e TED)", "peso": "4744", "idMenu": "12312", "link": "javascript:INStoUni2C('WN3MNUTF QL M O4100','U20','LFILJCFC1DNO','DE41361DFEBDDB55835BFB106A6EA32E6D31D76E5F2BDC6BCF3A033F97ED70B00F48F3DD9E37C5B24213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Pagar duas ou mais contas", "peso": "4698", "idMenu": "10946", "link": "javascript:INStoUni2C('WN3M10946QL M O4100','U20','GHIJJCDC4JHM','0F1A6EF5CE9B5929F43119BE8774215412295498AF951944D3D24C3B8B3F3D6449EC7BE6C1A1F558B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Meus Empréstimos Contratados", "peso": "4698", "idMenu": "6269", "link": "javascript:INStoUni2C('WN3M6269 QL M O4100','U20','HFIJJCJB7CHF','E1A8DF0C6B7BBA80D106A24EAFAAC3FEF85746A358DB8CFD4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Desbloquear Cartão de Crédito", "peso": "4659", "idMenu": "15717", "link": "javascript:INStoUni2C('WN3M15717QL M O4100','U20','LIIPJCIC2HKG','6ECEBD2B7E660CDC95B48B60436BE39B030EE35C1A2DFB2F201E7E2838955754C22AE6CBD145FD8FDDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar saldo e extrato de pontos", "peso": "4601", "idMenu": "16435", "link": "javascript:INStoUni2C('WN3M16435QL M O4100','U20','OFIJJCJC3EHL','83F03FEA74B639A46E84AD8662308086270BF3DE28FF6775681E33BCA2A28CC74F5933BFBE01C982E4714DAF94650EC9B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Escolher Investimento para aplicar", "peso": "4581", "idMenu": "14383", "link": "javascript:INStoUni2C('WN3M14383QL M O4100','U20','NJINJCHC9DOG','667FFB9214E6ED51314361A9C0BA2CC9BF938E6D7825ED34C24AA658F4BA4ECE6558642C842137EB41540FB82F35315BC7C2028E6CA6C3F37E54E7C2B1B8C09C'); ", "favorito": "N"},{"label": "Pagar fatura do Cartão de Crédito", "peso": "4550", "idMenu": "10245", "link": "javascript:INStoUni2C('WN3M10245QL M O4100','U20','OKIHJCDC4CGK','08107535C64661A2E2AA91430B70B1BA91666D5383A874FDB0C457A5BCE325CF8EA3921D262DCE45978C0C18FBF54052'); ", "favorito": "N"},{"label": "Habilitar Débito Automático", "peso": "4539", "idMenu": "10957", "link": "javascript:INStoUni2C('WN3M10957QL M O4100','U20','LNIJJCDC5JHN','3D38C094C5104C4C1AB4074B8DF4461BB9F6587ED195E6499CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Alterar Dados cadastrais", "peso": "4521", "idMenu": "10366", "link": "javascript:INStoUni2C('WN3M10366QL M O4100','U20','LJINJCDC7DOJ','38A7E44DA0B99F9195B48B60436BE39B35F9F39E1D4D0D2E1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Cadastrar Cartão para compras no exterior (Aviso viagem)", "peso": "4481", "idMenu": "14183", "link": "javascript:INStoUni2C('WN3M14183QL M O4100','U20','NGILJCHC9BNF','D454AD889745A07D6367AD238569B67E8BAA8B39BD7CF36E41540FB82F35315B'); ", "favorito": "N"},{"label": "Consultar Saldo da Conta Corrente", "peso": "4464", "idMenu": "10452", "link": "javascript:INStoUni2C('WN3POSCONQL M O4100','U20','NHINJCDC6EOF','F147A9E440BE7953C7094585476D7069C0098E3BD4CB5E7588B1757BDC5523EDF78F43DEEF13E1C189732766A2D6A253B6C42FA9B61B9AE3'); ", "favorito": "N"},{"label": "Enviar recursos ao exterior", "peso": "4443", "idMenu": "12582", "link": "javascript:INStoUni2C('WN3M12582QL M O4100','U20','OLINJCFC8FJK','DE9186CCEDE9C526FFEE3B4F6F6AA8F44F199AD7ED464C8C4C9228580327C4C0BA085777FBEB191741540FB82F35315BF7363BA8CEDB5BCF'); ", "favorito": "N"},{"label": "iToken no Chaveiro", "peso": "4428", "idMenu": "15305", "link": "javascript:INStoUni2C('WN3M15305QL M O4100','U20','OLIJJCIC1DMG','B0D27195737BE3F21AB4074B8DF4461B13044BC7644E5C5A7D6D13347DD48F2741540FB82F35315BFBA99C95CAE2C79F'); ", "favorito": "N"},{"label": "iToken por SMS", "peso": "4393", "idMenu": "15303", "link": "javascript:INStoUni2C('WN3M15303QL M O4100','U20','MEIHJCIC0DGI','1180A1B93CB054001AB4074B8DF4461B13044BC7644E5C5A7D6D13347DD48F2741540FB82F35315B44D175402AA646EC'); ", "favorito": "N"},{"label": "Instalar Guardião 30 horas", "peso": "4379", "idMenu": "15307", "link": "javascript:INStoUni2C('WN3M15307QL M O4100','U20','OFIPJCIC1DKG','76B500FEDD4F26B4A48782C610E3755E6DE40DA5F9BD818EC6175AB6F36F8FC4B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Consultar folha de pagamento (holerite/RH)", "peso": "4376", "idMenu": "13709", "link": "", "favorito": "N"},{"label": "Consultar Extrato dos últimos 30 dias da Poupança", "peso": "4367", "idMenu": "12215", "link": "javascript:INStoUni2C('WN3M12215QL M O4100','U20','LLILJCFC1CIM','AB85E1769EBEE393D106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E20B780393A2F7812E7AE9B35FB7F0C31C'); ", "favorito": "N"},{"label": "Pagar Boletos Itaú em meu nome", "peso": "4361", "idMenu": "10953", "link": "javascript:INStoUni2C('WN3M10953QL M O4100','U20','FKIHJCDC5JLN','74AF95A9FEFBF9450C96AC7913882CFD387D013E45ACAB7495D9123295DFDB0FD5983C551D10DA5A9CA5BD37DC09C6E293CDBFE8B5230285'); ", "favorito": "N"},{"label": "Transferir de Conta Corrente para Conta Poupança", "peso": "4361", "idMenu": "16276", "link": "javascript:INStoUni2C('WN3TFCCCPQL M O4100','U20','LIIJJCJC7CHM','74BB424D4AC417EC1AB4074B8DF4461B9EB829E5C21958D9064F5FAC717964B51CFB2993D04009D9938F863A9F416E39821BBD4A822AD0A0'); ", "favorito": "N"},{"label": "Resgatar Poupança", "peso": "4335", "idMenu": "12217", "link": "javascript:INStoUni2C('WN3M12217QL M O4100','U20','FFIHJCFC2CLH','7B278B6CD52345FB835BFB106A6EA32E88CDD0E00DE9AF15EBCC85E03AA6F80141540FB82F35315B'); ", "favorito": "N"},{"label": "Emitir boletos", "peso": "4309", "idMenu": "14137", "link": "", "favorito": "N"},{"label": "Consultar Extrato Mensal Consolidado", "peso": "4298", "idMenu": "12696", "link": "javascript:INStoUni2C('WN3M12696QL M O4100','U20','OMIJJCFC9GHM','824A4BADF4CD46E7A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E2F8F575E6DBFDCB693780C4090C521F943EE4EDFA6709F98C'); ", "favorito": "N"},{"label": "Consultar Limites de Crédito", "peso": "4289", "idMenu": "3412", "link": "javascript:INStoUni2C('WN3POSCREQL M O4100','U20','MLIJJCGB1EMN','860244546850AE6ECD644C6BEAE0CF6C0F0CB9287F4855A6E0E0F0A0356A95AC33EB899DDD8AB3B9DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar favoritos (Pagamentos)", "peso": "4280", "idMenu": "10982", "link": "javascript:INStoUni2C('WN3M10982QL M O4100','U20','HFIPJCDC9JPG','91201BA51AA80ABF1AB4074B8DF4461BBFFC18CA9BC2593445DD876104BE0F6A064FB333E34DBBE3DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar Lançamentos Futuros", "peso": "4279", "idMenu": "10459", "link": "javascript:INStoUni2C('WN3M10459QL M O4100','U20','MLILJCDC6EIG','E9A1EFF0FF7DC7274AA6DCF707C9F915B0C0C9445CBCAD5227C03E2898C76D7F1CFB2993D04009D9938F863A9F416E3992685D26CB40CE40'); ", "favorito": "N"},{"label": "Solicitar talão de cheques", "peso": "4244", "idMenu": "10607", "link": "javascript:INStoUni2C('WN3M10607QL M O4100','U20','NGIHJCDC1GLH','C11EA8D9D97F81BCD106A24EAFAAC3FEDC396A9013FEA5369CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Consultar Extrato Consolidado da Poupança", "peso": "4226", "idMenu": "12214", "link": "javascript:INStoUni2C('WN3M12214QL M O4100','U20','IGIHJCFC1CGJ','201EDB0A2150213A2238DFC2C7CFCD964EA1852C69D4ADC0E69586D3EC164998D6FCDA98F2DD38CD9CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Fale com o Itaú", "peso": "4225", "idMenu": "2969", "link": "javascript:INStoUni2C('WN3BOXSOSQL M O4100','U20','MNIPJCFB7JKI','AFE2E1BBE27C8EBECDFE27F83D801ACE84A1663E140C407742A173ED98112A92DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar tabela de rentabilidade", "peso": "4224", "idMenu": "14391", "link": "javascript:INStoUni2C('WN3M14391QL M O4100','U20','LIINJCHC9DJJ','CFD4889283FD83EF894E85D11B9707EFD111DE5E10D65A629FE2A3689020EE0CF78F43DEEF13E1C1DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar Limite do Cartão de Crédito", "peso": "4204", "idMenu": "10361", "link": "javascript:INStoUni2C('WN3M10361QL M O4100','U20','GNILJCDC6DNN','74FC2DFB2FFC6B3495B48B60436BE39B35F9F39E1D4D0D2E1CFB2993D04009D9938F863A9F416E392D1DFEF2AF18CB77'); ", "favorito": "N"},{"label": "Recarregar ou resgatar recursos do GlobalTravel Card (Cartão de viagem)", "peso": "4183", "idMenu": "15780", "link": "javascript:INStoUni2C('WN3M15780QL M O4100','U20','HJIHJCIC8HLK','8C83281FF513891C95B48B60436BE39B556CFB1B03AE76BE2B28289FFC8DBAAD38392A0EFEB3841B41540FB82F35315B'); ", "favorito": "N"},{"label": "Receber recursos do exterior", "peso": "4173", "idMenu": "12583", "link": "javascript:INStoUni2C('WN3M12583QL M O4100','U20','IGIPJCFC9FPH','C156F7AA3690FBEBFDF7179FC93E63903FBD185E5ADC274FB15A26612179BFA7CD0165314EEEA8F9A60A0481DE5969615B4C336B76AD77FA'); ", "favorito": "N"},{"label": "Acessar Home Broker: Itaú Corretora", "peso": "4153", "idMenu": "14534", "link": "javascript:INStoUni2C('WN3M14534QL M O4100','U20','KJILJCHC3FIL','4E247348FB6CE4AA7280FB8E5C6F4AB028CA388B62ECBAB027E41E9D0C29F33AEF32766D901EB757B74776A6908DABD738FFFD70414F482613F70A170E6FC4DD'); ", "favorito": "N"},{"label": "Desbloquear cartão para uso no exterior (Aviso viagem)", "peso": "4106", "idMenu": "14452", "link": "javascript:INStoUni2C('WN3M14452QL M O4100','U20','HNIHJCHC5ELM','85FC7543BDE3BD1130BB175697383184C53850F1B430424DB71EDBC5AF41324D9CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Transferir de Conta Poupança para Conta Corrente", "peso": "4101", "idMenu": "16279", "link": "javascript:INStoUni2C('WN3M16279QL M O4100','U20','MMIHJCJC7CGO','50A6B04301184F011AB4074B8DF4461B9EB829E5C21958D9064F5FAC717964B51CFB2993D04009D9938F863A9F416E3990EC1DAB9E29402D'); ", "favorito": "N"},{"label": "Itaú Travel Money - Saldo e lançamentos", "peso": "4099", "idMenu": "14478", "link": "javascript:INStoUni2C('WN3M14478QL M O4100','U20','MFIHJCHC8ELI','258553A7B4DFBA932A7F6E39048CC1E2D6080B998CC8EF6EF5BA217D74F26267D862F33D107578A3A37EF9536171C5A17EC1467896B4AF0D27E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Simular Crédito Consignado", "peso": "4090", "idMenu": "4014", "link": "javascript:INStoUni2C('WN3M4014 QL M O4100','U20','NJIJJCHB2AMF','E3BA6BD84AE7679BD106A24EAFAAC3FED24713EBB982AD0B27E41E9D0C29F33AEF32766D901EB75729A502EB0735F2EF'); ", "favorito": "N"},{"label": "Pagar meus cartões Itaucard", "peso": "4088", "idMenu": "10960", "link": "javascript:INStoUni2C('WN3M10960QL M O4100','U20','IIIJJCDC6JML','08107535C64661A2E2AA91430B70B1BA91666D5383A874FDB0C457A5BCE325CF8EA3921D262DCE45978C0C18FBF54052'); ", "favorito": "N"},{"label": "Consultar Financiamento Imobiliário contratado", "peso": "4076", "idMenu": "884", "link": "javascript:INStoUni2C('WN3M884  QL M O4100','U20','MKINJCDB8IJM','BE5C98078AF14E5B179CC3D781A8DDF76C9E3B15B2355170B0C457A5BCE325CF8EA3921D262DCE45A43A5BF67E4FBB03'); ", "favorito": "N"},{"label": "iToken no Aplicativo", "peso": "4063", "idMenu": "15304", "link": "javascript:INStoUni2C('WN3M15304QL M O4100','U20','ONIHJCIC0DLO','3B5614D1823C9B2D1AB4074B8DF4461B13044BC7644E5C5A7D6D13347DD48F2741540FB82F35315BF0BC36C5949A0028'); ", "favorito": "N"},{"label": "Consultar meus Planos de Previdência (PGBL, VGBL, etc.)", "peso": "4032", "idMenu": "13837", "link": "javascript:INStoUni2C('WN3M13837QL M O4100','U20','FFILJCGC3IIO','FC250B8887E769E415B7848A16F04894324949BAFA668B92A60A0481DE59696143DE5B667A714301AB2AE94EA526AF0C3AE8CC4EA474A543'); ", "favorito": "N"},{"label": "DDA Itaú - Cadastrar / Descadastrar", "peso": "4014", "idMenu": "10973", "link": "javascript:INStoUni2C('WN3M10973QL M O4100','U20','HKIHJCDC7JLN','B2768B9059A9BDE0C81F4A4BEB98F8B89B04F97206D1810A9CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Simular Financiamento Imobiliário", "peso": "4001", "idMenu": "3058", "link": "javascript:INStoUni2CAjax('WN3M3058 QL M O4100','U20','NJINJCGB6AOL','C00026E3ED2E1C26CD644C6BEAE0CF6CBAE522D1EC3A4871B0C457A5BCE325CFC04080BAE86F2EC5'); popup('https://www.itau.com.br/creditos-financiamentos/imoveis/simulador/?utm_source=correntista-bankline&utm_medium=link&utm_term=linha0&utm_campaign=correntista-link-imoveis', 'Imobline', 'toolbar=yes,left=0,top=0,location=no,directories=no,status=no,menubar=yes,scrollbars=yes,resizable=yes,copyhistory=no,width=800,height=400'); ", "favorito": "N"},{"label": "Consultar lançamentos em Débito Automático", "peso": "3959", "idMenu": "10959", "link": "javascript:INStoUni2C('WN3M10959QL M O4100','U20','MMIHJCDC5JGO','D4319C40EAE07AAD1AB4074B8DF4461B16F9283CDC37D5CD66F0A5BD2600355C9CA5BD37DC09C6E293CDBFE8B5230285'); ", "favorito": "N"},{"label": "Cancelar transações agendadas", "peso": "3938", "idMenu": "13271", "link": "javascript:INStoUni2C('WN3M13271QL M O4100','U20','LGIHJCGC7CGG','3BD1CEEF65DB0D271AB4074B8DF4461BF8B2888DB0A0CC1A3F1C67A01C465E451CFB2993D04009D9938F863A9F416E39A9536668341BE8F026DF368E0D48417B'); ", "favorito": "N"},{"label": "Consultar Contrato de abertura de Multiconta Personnalité", "peso": "3936", "idMenu": "10481", "link": "javascript:INStoUni2CAjax('WN3M10481QL M O4100','U20','NNIHJCDC8EGG','C00026E3ED2E1C26CD644C6BEAE0CF6CBAE522D1EC3A4871B0C457A5BCE325CFC04080BAE86F2EC5'); popup('/V1/PERS/PDF/MultiContaPersonnalite.pdf', '', ''); ", "favorito": "N"},{"label": "Consultar extrato de Previdência", "peso": "3934", "idMenu": "13838", "link": "javascript:INStoUni2C('WN3M13838QL M O4100','U20','GLIJJCGC3IHO','2E7F78F6EBAD78D31AB4074B8DF4461BE54B7A7341169B9C2F4DD3917D3A19B39CA5BD37DC09C6E2F8F575E6DBFDCB6952EF9677D845FFFF41C905146736A006'); ", "favorito": "N"},{"label": "Solicitar entrega de dinheiro (Collecte)", "peso": "3931", "idMenu": "10489", "link": "javascript:INStoUni2C('WN3M10489QL M O4100','U20','FMINJCDC9EOM','01CD237818AAB690D106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Simular renegociação de empréstimos e saldo devedor", "peso": "3930", "idMenu": "12866", "link": "javascript:INStoUni2C('WN3M12866QL M O4100','U20','JIINJCFC6IJO','A13AB42AF33CD968D106A24EAFAAC3FE191EB241FCA73E068E704EDAB12598CEA60A0481DE596961E1ACF0C93C640EB39A09CDC68977D94D'); ", "favorito": "N"},{"label": "Bloquear pagamento de cheques", "peso": "3920", "idMenu": "10611", "link": "javascript:INStoUni2C('WN3M10611QL M O4100','U20','FLIPJCDC2GPF','CFD668E4CB7624F91F47646F14CE5F13241219B3D51F3F226D1BB8CE593D5DE6400700BE08FBF1FF1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Consultar Consórcio", "peso": "3909", "idMenu": "13954", "link": "javascript:INStoUni2C('WN3M13954QL M O4100','U20','KEIJJCGC6JMF','88E472556C213BC4835BFB106A6EA32E261EE340EC65691D27E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Cadastrar ou Alterar 'Alertas por e-mail e SMS'", "peso": "3900", "idMenu": "10491", "link": "javascript:INStoUni2C('WN3M10491QL M O4100','U20','GMINJCDC9EJJ','CDD32CEC978B7259D106A24EAFAAC3FE34410C22AA4F41CA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Cartão de Segurança Itaú", "peso": "3899", "idMenu": "15306", "link": "", "favorito": "N"},{"label": "Aplicar na Conta Poupança", "peso": "3883", "idMenu": "12216", "link": "javascript:INStoUni2C('WN3M12216QL M O4100','U20','JNIJJCFC2CMH','5EF3BF703AF9442B835BFB106A6EA32ED0599ED135F561F171368C7D0A84BB9216459844BDC135D4'); ", "favorito": "N"},{"label": "Alterar senha eletrônica", "peso": "3870", "idMenu": "10479", "link": "javascript:INStoUni2C('WN3M10479QL M O4100','U20','LGILJCDC8ENL','AA4BD7F3A3CFCC4E1AB4074B8DF4461B01DE38158E999682E6B9A067909A82C433EB899DDD8AB3B9DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar posição consolidada", "peso": "3864", "idMenu": "13950", "link": "javascript:INStoUni2C('WN3M13950QL M O4100','U20','KFIPJCGC5JKJ','44B3D7F91B6D4BDFD106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Consultar Limites de Crédito", "peso": "3850", "idMenu": "10603", "link": "javascript:INStoUni2C('WN3M10603QL M O4100','U20','IMILJCDC0GIK','860244546850AE6ECD644C6BEAE0CF6C0F0CB9287F4855A6E0E0F0A0356A95AC33EB899DDD8AB3B9DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Recarregar Cartão Pré-Pago - em Reais", "peso": "3834", "idMenu": "15730", "link": "javascript:INStoUni2C('WN3M15730QL M O4100','U20','FMINJCIC3HON','657947C509EE716ACDFE27F83D801ACEDD0AAC53B3E46A9FA566223B31C2E6A38066B4D6E62A195227E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Acompanhar sua proposta de Financiamento Imobiliário", "peso": "3796", "idMenu": "12943", "link": "javascript:INStoUni2C('WN3M12943QL M O4100','U20','HEINJCFC4JJL','3592D9845C104470386D17DB8EEC16C64A43CCB0258B4462B0C457A5BCE325CF8EA3921D262DCE45AA5AAAB4E6F1DE7F'); ", "favorito": "N"},{"label": "Consultar Extrato Anual de Tarifas", "peso": "3787", "idMenu": "10454", "link": "javascript:INStoUni2C('WN3M10454QL M O4100','U20','JGIJJCDC5EHK','0C9813F23C2DF1B8A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E2F8F575E6DBFDCB693780C4090C521F9475AEBBED9088DA30'); ", "favorito": "N"},{"label": "Simular Proteção Viagem Personnalité", "peso": "3779", "idMenu": "12693", "link": "javascript:INStoUni2C('WN3M12693QL M O4100','U20','KMIJJCFC9GMO','1A92686F86D9A60AE20DA51C0D96B27A196972F25B7ACB99A0F7E42524F1A3A171368C7D0A84BB9216459844BDC135D4'); ", "favorito": "N"},{"label": "Consultar operações agendadas na internet", "peso": "3748", "idMenu": "12579", "link": "javascript:INStoUni2C('WN3M12579QL M O4100','U20','KMIPJCFC8FKI','F721352D2629024C1AB4074B8DF4461B6117B9CA755D83141CFB2993D04009D9938F863A9F416E394637F6A66D9B24AC5ED86AA0FAB7A14DF6EA7C3BC3146A9E3AC5B6915A0871CD'); ", "favorito": "N"},{"label": "Cadastrar favoritos (Pagamentos)", "peso": "3716", "idMenu": "10983", "link": "javascript:INStoUni2C('WN3M10983QL M O4100','U20','LNILJCDC9JNF','DBF26E32BCFC2CFA1AB4074B8DF4461BBFFC18CA9BC2593445DD876104BE0F6ADE9AE7EF92DCD9C6DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Desbloquear cartão de débito para compras internacionais", "peso": "3703", "idMenu": "13725", "link": "javascript:INStoUni2C('WN3M13725QL M O4100','U20','NHINJCGC2HJN','EC5022823CC95ED6D106A24EAFAAC3FED9C1E62DAF1256704213F7D3A81E68F4F61E7E0A28A7D5C156404C2CAFE5161329A502EB0735F2EF'); ", "favorito": "N"},{"label": "Consultar Cartão para compras no exterior (Aviso viagem)", "peso": "3701", "idMenu": "14184", "link": "javascript:INStoUni2C('WN3M14184QL M O4100','U20','FNIHJCHC8BLO','B32401EF34A36FAEEF6BC42D0A11986FF9692FBCC3C8D46441540FB82F35315B'); ", "favorito": "N"},{"label": "Resgatar meus Planos de Previdência", "peso": "3676", "idMenu": "13845", "link": "javascript:INStoUni2C('WN3M13845QL M O4100','U20','GHINJCGC5IOI','6A2A856E844653F615B7848A16F04894A0A8DD75EA56A845A60A0481DE5969617E54E7C2B1B8C09C'); ", "favorito": "N"},{"label": "Entregar talões de cheques na residência", "peso": "3675", "idMenu": "10608", "link": "javascript:INStoUni2C('WN3M10608QL M O4100','U20','ILIHJCDC0GGN','D8E94BBAAEBA17B21AB4074B8DF4461B4B71B631E38C6123CAD7A73301324A7816459844BDC135D4'); ", "favorito": "N"},{"label": "Parcelar Fatura do Cartão de Crédito", "peso": "3668", "idMenu": "10246", "link": "javascript:INStoUni2C('WN3M10246QL M O4100','U20','LGINJCDC4CJO','BA1F4412286BF9B1314361A9C0BA2CC9F7DE57F4BBCA6A8567F6952FEF23D5C28AF70358B6C2F2374213F7D3A81E68F4795017D100B198998F59E804F97DCC6F'); ", "favorito": "N"},{"label": "Pagar pelo número do cartão", "peso": "3667", "idMenu": "11085", "link": "javascript:INStoUni2C('WN3M11085QL M O4100','U20','FJIHJCEC8AGK','24306B4014A449ED1AB4074B8DF4461B09BE5525048DC33143F3C4C39E9BDF674B86C7CFA28C166B41540FB82F35315B'); ", "favorito": "N"},{"label": "Conhecer nossos Investimentos", "peso": "3666", "idMenu": "14392", "link": "javascript:INStoUni2C('WN3M14392QL M O4100','U20','KEIJJCHC9DMN','32D5D7E564AD59932238DFC2C7CFCD96032684D708D6CD61EBB29EC54C9BD1B8E37FC10EFB997FCF4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Recarregar moeda estrangeira no Itaú Travel Money", "peso": "3661", "idMenu": "14480", "link": "javascript:INStoUni2C('WN3M14480QL M O4100','U20','GFILJCHC8EIH','9197DCCB1ABD06B3CDFE27F83D801ACEDD0AAC53B3E46A9FA566223B31C2E6A38066B4D6E62A195227E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Consultar Documentos: Fatura, Imposto de Renda e Tarifas", "peso": "3661", "idMenu": "14862", "link": "javascript:INStoUni2C('WN3M14862QL M O4100','U20','NHIJJCHC6IHI','CEB68E2E14FD4620A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E22A71BE43346753764A06BE822D669878D88C49D1BC787783'); ", "favorito": "N"},{"label": "Consultar transações agendadas na internet", "peso": "3654", "idMenu": "11843", "link": "javascript:INStoUni2C('WN3M11843QL M O4100','U20','ILIHJCEC4IGI','F721352D2629024C1AB4074B8DF4461B6117B9CA755D83141CFB2993D04009D9938F863A9F416E394637F6A66D9B24AC5ED86AA0FAB7A14DF6EA7C3BC3146A9E3AC5B6915A0871CD'); ", "favorito": "N"},{"label": "Fale Conosco", "peso": "3646", "idMenu": "13963", "link": "javascript:INStoUni2C('WN3M13963QL M O4100','U20','NEIJJCGC6JMO','5F632FDC363A180D2A7F6E39048CC1E2300408C9415E80435FC5065AD898FDCF19DC772F0A024432E90740C3D1C11F6427E41E9D0C29F33AEF32766D901EB7579CC4D1104A81B7A7'); ", "favorito": "N"},{"label": "Consultar data de vencimento da fatura", "peso": "3641", "idMenu": "10367", "link": "javascript:INStoUni2C('WN3M10367QL M O4100','U20','ININJCDC7DJF','CC41C7A2678DF06E95B48B60436BE39B35F9F39E1D4D0D2E1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Consultar Agregados (DDA)", "peso": "3640", "idMenu": "10975", "link": "javascript:INStoUni2C('WN3M10975QL M O4100','U20','GIIHJCDC8JLF','2FDA290675C13206835BFB106A6EA32E026C633B1A4BC1D425FB192E6ADD351E1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Consultar Cheques depositados e não liberados", "peso": "3637", "idMenu": "10616", "link": "javascript:INStoUni2C('WN3M10616QL M O4100','U20','NKIHJCDC2GLG','DDC3E8A1139A29761F47646F14CE5F1311CE72B64431B23D7ED2FBEF34D958E77B9FC1B3E22179D841540FB82F35315BF78400A9AFDC269A'); ", "favorito": "N"},{"label": "Desbloquear saques e compras no exterior", "peso": "3635", "idMenu": "15040", "link": "javascript:INStoUni2C('WN3M15040QL M O4100','U20','GNIJJCIC4AHG','EC5022823CC95ED6D106A24EAFAAC3FED9C1E62DAF1256704213F7D3A81E68F4F61E7E0A28A7D5C156404C2CAFE5161329A502EB0735F2EF'); ", "favorito": "N"},{"label": "Associar Dispositivo de Segurança", "peso": "3618", "idMenu": "15308", "link": "javascript:INStoUni2C('WN3M15308QL M O4100','U20','OFIJJCIC1DMJ','2FD2403DC2A75DD52015A1A961ED83143AC3C35B0928FF439CA5BD37DC09C6E25FEB2B3098DEAAD4B034235F01FD43EB'); ", "favorito": "N"},{"label": "Informe de Rendimentos Financeiros", "peso": "3579", "idMenu": "10545", "link": "javascript:INStoUni2C('WN3M10545QL M O4100','U20','IFILJCDC5FNH','AEA9D8A716BD4FC7A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E2F8F575E6DBFDCB695F1AF37A78A90C17116424D930F09CAE'); ", "favorito": "N"},{"label": "Solicitar Cartão adicional", "peso": "3573", "idMenu": "10355", "link": "javascript:INStoUni2C('WN3M10355QL M O4100','U20','JLIHJCDC6DLF','690F989465BADB33D106A24EAFAAC3FE7B4371EB416A723627E41E9D0C29F33AEF32766D901EB7579E32C585B505B8C0B034235F01FD43EB'); ", "favorito": "N"},{"label": "O que é Programa Sempre Presente?", "peso": "3571", "idMenu": "16446", "link": "javascript:INStoUni2C('WN3M16446QL M O4100','U20','OHIHJCJC5ELG','9AFDBC6EE4C9EA7603CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757997F662AA06AF21F6FF0AE63E61A60BF'); ", "favorito": "N"},{"label": "Transferir de Conta Corrente para Conta Corretora", "peso": "3525", "idMenu": "16277", "link": "javascript:INStoUni2C('WN3M16277QL M O4100','U20','FMIHJCJC7CGM','84DEF1D6F30E658C1AB4074B8DF4461B9EB829E5C21958D9064F5FAC717964B51CFB2993D04009D9938F863A9F416E39784D56EEB44B1207'); ", "favorito": "N"},{"label": "Alterar ou cancelar Limite de gastos de cartões adicionais", "peso": "3517", "idMenu": "10368", "link": "javascript:INStoUni2C('WN3M10368QL M O4100','U20','FIILJCDC7DIF','1FF68E8BCA2A0E4695B48B60436BE39B35F9F39E1D4D0D2E1CFB2993D04009D9938F863A9F416E39DD39D048353022EA'); ", "favorito": "N"},{"label": "Contratar / Alterar Pacote de serviços", "peso": "3511", "idMenu": "10604", "link": "javascript:INStoUni2C('WN3M10604QL M O4100','U20','GHIPJCDC0GKN','D0D3B9A0327F6341D106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Consultar Compras parceladas", "peso": "3464", "idMenu": "10362", "link": "javascript:INStoUni2C('WN3M10362QL M O4100','U20','IIILJCDC6DNO','65F6BF6C248F7EB48B28F3914FB68586A9D684E4025F2C5C493BB50801360165B0C457A5BCE325CF8EA3921D262DCE455824DFAA78D09CFC29A502EB0735F2EF'); ", "favorito": "N"},{"label": "Beneficiários Plano de Previdência", "peso": "3453", "idMenu": "13847", "link": "javascript:INStoUni2C('WN3M13847QL M O4100','U20','GLIPJCGC5IPL','1063F9AC864B1DE415B7848A16F04894A40825B170A0DDCBA60A0481DE596961173F808F1CB43048AB2AE94EA526AF0C3AE8CC4EA474A543'); ", "favorito": "N"},{"label": "Pagar contas com meu cartão", "peso": "3445", "idMenu": "10373", "link": "javascript:INStoUni2C('WN3M10373QL M O4100','U20','HIILJCDC7DIK','7CC9E44EA653FCA71AB4074B8DF4461B7CE0012355693F651C33CAD72E935B834072C13084414F72A60A0481DE596961F4581D9A099527A7'); ", "favorito": "N"},{"label": "Transferir limites de crédito", "peso": "3445", "idMenu": "16153", "link": "javascript:INStoUni2C('WN3M16153QL M O4100','U20','GMILJCJC6BNF','B0D4BEC3C2BC39BC03CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB7578A83345F0894F7237C83857E3745BFB3B817515C139A8CC2'); ", "favorito": "N"},{"label": "Acessar Calculadora", "peso": "3429", "idMenu": "2975", "link": "javascript:popup('/popup.htm', 'PopupBankline', 'toolbar=no,left=0,top=0,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,copyhistory=no,width=184,height=194'); INStoPopupUni2cdg('WN3BKLCALQL M O4100','U20','OMINJCFB7JJN','29715D0E4BFA0CDA7984BA9FF58A67C7D6E04D55A64CFE9C33EB899DDD8AB3B9DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar cadastro na Itaú Corretora", "peso": "3428", "idMenu": "14532", "link": "javascript:INStoUni2C('WN3M14532QL M O4100','U20','IFINJCHC4FOF','D5DA09F5874282AE1AB4074B8DF4461B27AF8D5D315FE505B5E5AFAC5DED36C3DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar apólice do Seguro Viagem", "peso": "3401", "idMenu": "12669", "link": "javascript:INStoUni2C('WN3M12669QL M O4100','U20','NJIJJCFC7GHF','D5B6EFA007819334C81F4A4BEB98F8B82E04811C9A3D1ABBABE654EBAD1F60D3EBF840D33E65843E1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Consultar limites de saques e compras", "peso": "3393", "idMenu": "15039", "link": "javascript:INStoUni2C('WN3M15039QL M O4100','U20','GIINJCIC4AJH','AD347ED0B2D29374D106A24EAFAAC3FE34410C22AA4F41CA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Consultar Demonstrativo de utilização", "peso": "3386", "idMenu": "10605", "link": "javascript:INStoUni2C('WN3M10605QL M O4100','U20','FNIJJCDC0GHL','5448CB2874435E42D106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Orientador de Crédito Personnalité", "peso": "3385", "idMenu": "4454", "link": "javascript:INStoUni2C('WN3M4454 QL M O4100','U20','OJILJCHB5EIL','CDEEF19D71B1F01279654A512926AA0946FC567DF97477CDED4828CA4EA1A28AB0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Opções de recebimento de correspondências", "peso": "3370", "idMenu": "13702", "link": "javascript:INStoUni2C('WN3M13702QL M O4100','U20','KNIJJCGC0HMN','351812511C4EE4EB1AB4074B8DF4461B3A23B839DDD17C0D1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Contratar Título de Capitalização", "peso": "3361", "idMenu": "13949", "link": "javascript:INStoUni2C('WN3M13949QL M O4100','U20','OJINJCGC5JOM','C8BAD0307BD585A3B9596B6F652F3F7E136C6F34AC8D46F908616C7CF750849B4213F7D3A81E68F49C5DFD3F1C21A49812ED39D248754171B046C014D1EE80BA'); ", "favorito": "N"},{"label": "Consultar Informe de Rendimentos Consolidado", "peso": "3360", "idMenu": "10483", "link": "javascript:INStoUni2C('WN3M10483QL M O4100','U20','LNINJCDC8EJL','AEA9D8A716BD4FC7A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E2F8F575E6DBFDCB695F1AF37A78A90C17116424D930F09CAE'); ", "favorito": "N"},{"label": "Consultar os Serviços para viagem", "peso": "3359", "idMenu": "13710", "link": "javascript:INStoUni2C('WN3M13710QL M O4100','U20','FMIJJCGC1HML','36E0233767244CDF2238DFC2C7CFCD9672C997F4F50012EE853DA591AB725A4A83BD1235ABED0E281CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Receber Alertas (por e-mail e SMS) sobre o Cartão de Crédito", "peso": "3358", "idMenu": "14105", "link": "javascript:INStoUni2C('WN3M14105QL M O4100','U20','FJIPJCHC0BKO','ABA81AEA48DA8F4E30BB175697383184FDB965E4E53AC25F49AD98C5993B4FDFB56F7C7DDC8740C941540FB82F35315B'); ", "favorito": "N"},{"label": "Contratar Cartão Itaú Travel Money", "peso": "3348", "idMenu": "16165", "link": "javascript:INStoUni2C('WN3M16165QL M O4100','U20','FFIHJCJC6BGK','E9890BF62D92FE62C81F4A4BEB98F8B8E1ACC456BFC1F19C87F7B6A830BAFC1A2F0B60B55F74CB9B16459844BDC135D4'); ", "favorito": "N"},{"label": "Consultar transferências recebidas", "peso": "3319", "idMenu": "12307", "link": "javascript:INStoUni2C('WN3MNUTF QL M O4100','U20','LIIPJCFC1DKG','6DA0FE4E91CEFCC51AB4074B8DF4461B4B71B631E38C6123CAD7A73301324A78A60A0481DE596961F0C247A2106C0BA292685D26CB40CE40'); ", "favorito": "N"},{"label": "Aplicativo para o Computador - Baixar o instalador", "peso": "3318", "idMenu": "15684", "link": "javascript:INStoUni2C('WN3M15684QL M O4100','U20','LGILJCIC9GNG','59B1B733FF5703E73DE8276F870EC51C8715E47E7D4144C17F58E9C3F019B253FD89D455E714ABF016459844BDC135D4'); ", "favorito": "N"},{"label": "Cadastrar Serviço de consultas por SMS", "peso": "3312", "idMenu": "16387", "link": "javascript:INStoUni2C('WN3M16387QL M O4100','U20','JJINJCJC9DOK','964411EEA46297CACDFE27F83D801ACE10086C05CAFF809D4796FA944F51D20DDEDE7B975E4EC94A41540FB82F35315B7BF28F9DD3FB397BDF909CB7B4C3819C'); ", "favorito": "N"},{"label": "Consultar código IBAN", "peso": "3301", "idMenu": "14421", "link": "javascript:INStoUni2C('WN3M14421QL M O4100','U20','GNIHJCHC2ELL','5BE1F57DC2D1E66A1AB4074B8DF4461B4B71B631E38C6123CAD7A73301324A7816459844BDC135D4'); ", "favorito": "N"},{"label": "Atendimento online (chat)", "peso": "3293", "idMenu": "15526", "link": "javascript:INStoUni2C('WN3M15526QL M O4100','U20','NHIPJCIC3FPK','330E5961D5974C5B30BB1756973831843DD8E62BB2D95847499689F69B6A4BA827E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Receber Alertas (por e-mail e SMS) sobre a Conta Corrente", "peso": "3283", "idMenu": "14104", "link": "javascript:INStoUni2C('WN3M14104QL M O4100','U20','LNIPJCHC0BKN','CDD32CEC978B7259D106A24EAFAAC3FE34410C22AA4F41CA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Consultar histórico da Fatura do cartão de crédito", "peso": "3279", "idMenu": "12516", "link": "javascript:INStoUni2C('WN3M12516QL M O4100','U20','NFIPJCFC2FKF','A3D220D5A703C0D6A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E2F8F575E6DBFDCB69D3756695542BE58AA405BEFD5BABF6C0'); ", "favorito": "N"},{"label": "Recarga de Celular por envio de SMS", "peso": "3279", "idMenu": "14869", "link": "javascript:INStoUni2C('WN3M14869QL M O4100','U20','OHILJCHC7INL','B454BEA4F064070EC81F4A4BEB98F8B85C4CA1D354E3BF79AE5A585D9DA79091B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Condições gerais da prestação de serviços de conveniência", "peso": "3277", "idMenu": "10480", "link": "javascript:INStoUni2C('WN3M10480QL M O4100','U20','LEILJCDC8EIH','302BD48253B55A192238DFC2C7CFCD96012102694883670FEF42ABA3AA3E300A9CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Visitar site Imobline", "peso": "3273", "idMenu": "3061", "link": "javascript:INStoUni2CAjax('WN3M3061 QL M O4100','U20','ILIJJCGB6AMM','C00026E3ED2E1C26CD644C6BEAE0CF6CBAE522D1EC3A4871B0C457A5BCE325CFC04080BAE86F2EC5'); popup('https://www.itau.com.br/creditos-financiamentos/imoveis/?utm_source=correntista-bankline&utm_medium=link&utm_term=linha0&utm_campaign=correntista-link-imoveis', 'Imobline', 'toolbar=yes,left=0,top=0,location=no,directories=no,status=no,menubar=yes,scrollbars=yes,resizable=yes,copyhistory=no,width=800,height=400'); ", "favorito": "N"},{"label": "Consultar Beneficiários (DDA)", "peso": "3260", "idMenu": "10976", "link": "javascript:INStoUni2C('WN3M10976QL M O4100','U20','GKINJCDC8JOJ','D4E971F7AC0F80241AB4074B8DF4461B6E1126C185ED8839B37D9F396BA33D57B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Consultar Resgates agendados", "peso": "3256", "idMenu": "13846", "link": "javascript:INStoUni2C('WN3M13846QL M O4100','U20','IMILJCGC4IIN','CBDDD653E6BE260115B7848A16F048944271B53034BF7415A60A0481DE596961C451842C79126DDAAB2AE94EA526AF0C9A09CDC68977D94D'); ", "favorito": "N"},{"label": "Autorizar / recusar débitos pendentes", "peso": "3233", "idMenu": "14520", "link": "javascript:INStoUni2C('WN3M14520QL M O4100','U20','FKIPJCHC2FKJ','71DD1BBDB299EDDA95B48B60436BE39B2E023DEAD9E1162E1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Consultar Serviços para viagem", "peso": "3225", "idMenu": "15042", "link": "javascript:INStoUni2C('WN3M15042QL M O4100','U20','JGIHJCIC4AGH','36E0233767244CDF2238DFC2C7CFCD9672C997F4F50012EE853DA591AB725A4A83BD1235ABED0E281CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Simular Plano de Previdência", "peso": "3224", "idMenu": "13860", "link": "javascript:INStoUni2C('WN3M13860QL M O4100','U20','GNIJJCGC6IHG','8C6706457DCEC2EC1AB4074B8DF4461B28CBDA770AC086067AF80D3F7395E86927E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Cadastrar Favorecidos da Poupança", "peso": "3221", "idMenu": "12218", "link": "javascript:INStoUni2C('WN3M12218QL M O4100','U20','KEIJJCFC2CMJ','C142990492F852B5D106A24EAFAAC3FE260C8576E460BC0C9CA5BD37DC09C6E22736CE0D9464960A4912F70584878526F10F9B16C5B1C6557F7D86AB1AED3392ED6FE88600904D190E15B38CF844C811'); ", "favorito": "N"},{"label": "Agendar contato de um consultor (Seguro Auto Itaú / Porto Seguro / Azul )", "peso": "3211", "idMenu": "3554", "link": "javascript:INStoUni2C('WN3M3554 QL M O4100','U20','OGIHJCGB5FLO','B612B1DAA671B37E833D45B8BCA9BF031521A120141599C6A587057334F180446558642C842137EB41540FB82F35315B'); ", "favorito": "N"},{"label": "Parcelamento Flexível", "peso": "3205", "idMenu": "14376", "link": "javascript:INStoUni2C('WN3M14376QL M O4100','U20','IHINJCHC8DOJ','858201FC433A3107AEECB8E757894274A3D50056C5D9AA27B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Aplicar em Planos de Previdência", "peso": "3200", "idMenu": "13842", "link": "javascript:INStoUni2C('WN3M13842QL M O4100','U20','IHIPJCGC4IKL','F5CFD5FA3589108515B7848A16F048942F726DCC2CC3D83E16459844BDC135D4'); ", "favorito": "N"},{"label": "Consultar Tabela de Rentabilidade (Planos de Previdência)", "peso": "3196", "idMenu": "13862", "link": "javascript:INStoUni2C('WN3M13862QL M O4100','U20','LEINJCGC7IOF','685BF25F7198B8D2835BFB106A6EA32EEBAE1C569E3F2ACF302517492F9EE3E987891C5C722B85164A96ECB37BE7291033EB899DDD8AB3B9DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Excluir a oposição ou cancelamento de cheques", "peso": "3190", "idMenu": "10613", "link": "javascript:INStoUni2C('WN3M10613QL M O4100','U20','GMINJCDC2GOG','2E77659C02FD70C01F47646F14CE5F13241219B3D51F3F226D1BB8CE593D5DE64D4D83F2BB08726A27E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Autorizar aplicação", "peso": "3182", "idMenu": "14388", "link": "javascript:INStoUni2C('WN3M14388QL M O4100','U20','KHIJJCHC8DHO','1E6B81872B1E779C835BFB106A6EA32E73C7398972825DE9204212ED183CC7CBB0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Comprar dólar, euro e libra no Cartão de Crédito", "peso": "3182", "idMenu": "16162", "link": "javascript:INStoUni2C('WN3M16162QL M O4100','U20','HFINJCJC6BJK','DD9EF798795FB16165AED3BF3445D21BEFE3EAECF59999B8704CA13CD2454A0AC6BF24616B5C71AD4067F1ED943A2657DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Alterar o valor do CEP/CEP PLUS", "peso": "3170", "idMenu": "13249", "link": "javascript:INStoUni2C('WN3M13249QL M O4100','U20','NIIJJCGC5CHF','BF7EC5E22C3B29F3D106A24EAFAAC3FE4EB16F43B74972A49CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Receber uma recomendação de como investir", "peso": "3169", "idMenu": "14395", "link": "javascript:INStoUni2C('WN3M14395QL M O4100','U20','MJIHJCHC0ELF','A573BD737FCA34901F47646F14CE5F13768D94EAB45B4C1C6CF265752EBE6CCFA60A0481DE596961B5E0EBE21C003F5A'); ", "favorito": "N"},{"label": "Alterar Beneficiários do Seguro de Vida e Acidentes Pessoais", "peso": "3168", "idMenu": "1864", "link": "javascript:INStoUni2C('WN3M1864 QL M O4100','U20','LEINJCEB6IJM','060247907E5C04AF15B7848A16F04894A9DF3E09B4926DA1A60A0481DE596961B17EB44CB760EB41F6EA7C3BC3146A9EB034235F01FD43EB'); ", "favorito": "N"},{"label": "Contratar Cheque Especial Personnalité", "peso": "3162", "idMenu": "13248", "link": "javascript:INStoUni2C('WN3M13248QL M O4100','U20','OJILJCGC5CIF','A95CBE38516AEA4CC81F4A4BEB98F8B89BE622B05BC6CBDAB0C457A5BCE325CF8EA3921D262DCE45A7FCB80AA5E514EB'); ", "favorito": "N"},{"label": "Acompanhar solicitação na central de atendimento", "peso": "3138", "idMenu": "10376", "link": "javascript:INStoUni2C('WN3M10376QL M O4100','U20','GHIHJCDC7DGL','D0EFC11828419D79C85C8D4FA1E2B758A52B0700F2B5374B95B21A1C18FF2C32B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Comprar travellers Cheques", "peso": "3125", "idMenu": "15781", "link": "", "favorito": "N"},{"label": "Consultar Boletos de cobrança emitidos", "peso": "3115", "idMenu": "14143", "link": "", "favorito": "N"},{"label": "Consultar 2a via dos contratos de crédito", "peso": "3101", "idMenu": "7157", "link": "javascript:INStoUni2C('WN3M7157 QL M O4100','U20','JMILJCKB6BNJ','4DB753FDF95CDAE2D106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Pagamento de Títulos em cartório", "peso": "3100", "idMenu": "10949", "link": "javascript:INStoUni2C('WN3M10949QL M O4100','U20','ILILJCDC5JIG','899936FD743568951AB4074B8DF4461B7DB782CB18C340184213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Contratar Cobrança Expressa", "peso": "3094", "idMenu": "14283", "link": "javascript:INStoUni2C('WN3M14283QL M O4100','U20','LFIPJCHC9CPH','32300C1071DF90F1D106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E22736CE0D9464960A7C4BAE3274F12BA6'); ", "favorito": "N"},{"label": "Alterar aplicação mensal da Previdência", "peso": "3080", "idMenu": "13843", "link": "javascript:INStoUni2C('WN3M13843QL M O4100','U20','HIINJCGC4IJL','5584AD8DB58A61C71AB4074B8DF4461BF8B2888DB0A0CC1A65EC4C534A2AD7EB352036C5C1A51FB327E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Simular parcelamento do Cheque Especial (LIS)", "peso": "3079", "idMenu": "7125", "link": "javascript:INStoUni2C('WN3M7125 QL M O4100','U20','FHIPJCKB3BPJ','2C53D852E62FE55256569B37D0ACAFEF58BEDBC744E430AF1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Documentação necessária para transferências em moeda estrangeira", "peso": "3075", "idMenu": "12585", "link": "javascript:INStoUni2C('WN3M12585QL M O4100','U20','NHIPJCFC9FPJ','AA7C7730D09BB608835BFB106A6EA32EB3F36C5FF6B030363739D54D1A067B07953C3BDCA90841B416459844BDC135D4'); ", "favorito": "N"},{"label": "Comprar leitor de código de barras", "peso": "3068", "idMenu": "15696", "link": "javascript:INStoUni2C('WN3M15696QL M O4100','U20','KJILJCIC0HNI','74BE18EB3F248FE7BACC68947651322CE7553623C44128A01FE2CBB68CB57A8441540FB82F35315B9CF7A627628A63D5FEFC864F6FC6BE11871FCB1DDAD3BEC8'); ", "favorito": "N"},{"label": "Comprar dólar, euro ou libra no seu Cartão de Crédito", "peso": "3051", "idMenu": "14475", "link": "javascript:INStoUni2C('WN3M14475QL M O4100','U20','HFILJCHC7EIM','97B494C9FD05E6D5C3A7D4880F11056DEFE3EAECF59999B8704CA13CD2454A0AC6BF24616B5C71AD4067F1ED943A2657DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Personalizar sua conta nos canais de atendimento", "peso": "3034", "idMenu": "14871", "link": "javascript:INStoUni2C('WN3M14871QL M O4100','U20','NMILJCHC7INN','7C3ABA3BEADABF671AB4074B8DF4461BF8B2888DB0A0CC1AFD63061164ED4DADE0BD056023619D3B89732766A2D6A253F4F8B16FF9084694'); ", "favorito": "N"},{"label": "Meu perfil de investidor", "peso": "3029", "idMenu": "14394", "link": "javascript:INStoUni2C('WN3M14394QL M O4100','U20','KGILJCHC9DIL','40AA5769D2A4EDC81F47646F14CE5F13768D94EAB45B4C1C6CF265752EBE6CCFA60A0481DE596961CB2420C0684D5585'); ", "favorito": "N"},{"label": "Consultar Favorecidos da Poupança", "peso": "3019", "idMenu": "12219", "link": "javascript:INStoUni2C('WN3M12219QL M O4100','U20','HIILJCFC2CIG','1127646B04C8E37CD106A24EAFAAC3FE260C8576E460BC0C9CA5BD37DC09C6E22736CE0D9464960A673FF564AD0A6C0184583CE13A517EEB'); ", "favorito": "N"},{"label": "Adesão ao Cadastro Positivo", "peso": "3016", "idMenu": "14490", "link": "javascript:INStoUni2C('WN3M14490QL M O4100','U20','OLILJCHC9EIH','27D6F4997E047D2F2238DFC2C7CFCD9672C997F4F50012EE875475D631B409227D6D13347DD48F2741540FB82F35315B273450F5E87B1E067E54E7C2B1B8C09C'); ", "favorito": "N"},{"label": "Parcelar Fatura do Cartão de Crédito", "peso": "3013", "idMenu": "10961", "link": "javascript:INStoUni2C('WN3M10961QL M O4100','U20','FNIJJCDC6JMM','BA1F4412286BF9B1314361A9C0BA2CC9F7DE57F4BBCA6A8567F6952FEF23D5C28AF70358B6C2F2374213F7D3A81E68F4795017D100B198998F59E804F97DCC6F'); ", "favorito": "N"},{"label": "Consultar limites e taxas de Crédito Consignado", "peso": "3008", "idMenu": "4015", "link": "javascript:INStoUni2C('WN3M4015 QL M O4100','U20','KMILJCHB1AIM','CB42373088A86CCED106A24EAFAAC3FED24713EBB982AD0B27E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Consultar Comprovantes dos Investimentos", "peso": "2977", "idMenu": "14400", "link": "javascript:INStoUni2C('WN3M14400QL M O4100','U20','LIINJCHC0EJI','BF614CCFE24A245BEED33DB0B3149C0E4BE5701352AEBBC67AFDEBDD1D018E4A16459844BDC135D4'); ", "favorito": "N"},{"label": "Receber alertas de débitos automáticos pendentes de aprovação", "peso": "2960", "idMenu": "14529", "link": "javascript:INStoUni2C('WN3M14529QL M O4100','U20','LFILJCHC3FNL','1985E649B84B5290C31CB3D5A431E4B1187DE7C0E28D0452F9AD4286A032967416459844BDC135D4'); ", "favorito": "N"},{"label": "Simular Seguro Residencial Itaú", "peso": "2948", "idMenu": "672", "link": "javascript:INStoUni2C('WN3SEGRE2QL M O4100','U20','LMIJJCDB7GHI','1B200A4DA8D045361AB4074B8DF4461B4B71B631E38C6123CAD7A73301324A7816459844BDC135D4'); ", "favorito": "N"},{"label": "Resgatar Investimentos", "peso": "2945", "idMenu": "14525", "link": "javascript:INStoUni2C('WN3M14525QL M O4100','U20','MMIJJCHC3FMG','389740C9160F21E81879800667A2A584B509A11A8D7CD6929CA1C0E99A03CDBA53048F13421682EB4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Consultar Aplicações (Previdência) agendadas", "peso": "2942", "idMenu": "13844", "link": "javascript:INStoUni2C('WN3M13844QL M O4100','U20','OHIJJCGC5IMF','C035C35B6CD3BDFD15B7848A16F0489405D7B349B060A3C4A60A0481DE596961FF5CE6AB43ED8FA4'); ", "favorito": "N"},{"label": "O que é Crédito com Garantia Investimento?", "peso": "2931", "idMenu": "14646", "link": "javascript:INStoUni2C('WN3M14646QL M O4100','U20','LEIJJCHC4GHM','B4E9F6D2559DD63803CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB75733280B42D6240C45BFB145F4CD22301C8269C5D1586C9454A7E7D6E2E5FEE048'); ", "favorito": "N"},{"label": "Receber uma proposta de Financiamento Imobiliário", "peso": "2922", "idMenu": "3059", "link": "javascript:INStoUni2CAjax('WN3M3059 QL M O4100','U20','NMIJJCGB6AMK','C00026E3ED2E1C26CD644C6BEAE0CF6CBAE522D1EC3A4871B0C457A5BCE325CFC04080BAE86F2EC5'); popup('https://www.itau.com.br/creditos-financiamentos/imoveis/enviar-proposta/?utm_source=correntista-bankline&utm_medium=link&utm_term=linha0&utm_campaign=correntista-link-imoveis', 'Imobline', 'toolbar=yes,left=0,top=0,location=no,directories=no,status=no,menubar=yes,scrollbars=yes,resizable=yes,copyhistory=no,width=800,height=400'); ", "favorito": "N"},{"label": "Cancelar Cartão para compras no exterior (Aviso viagem)", "peso": "2911", "idMenu": "14185", "link": "javascript:INStoUni2C('WN3M14185QL M O4100','U20','IHIPJCHC9BPJ','9D3DEE34158FAF5283B9799C07E835A5F9692FBCC3C8D46441540FB82F35315B'); ", "favorito": "N"},{"label": "Simular Crediário com Garantia Investimento", "peso": "2909", "idMenu": "14584", "link": "javascript:INStoUni2C('WN3M14584QL M O4100','U20','FKIPJCHC9FPI','15A670CDB2966FC395B48B60436BE39B582F9BC2A8D713961CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "O que é DDA (Débito Direto Autorizado)?", "peso": "2899", "idMenu": "10972", "link": "javascript:INStoUni2C('WN3M10972QL M O4100','U20','KJIPJCDC7JKL','8B104F16B84D705703CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB75794C5E466522D41EC2A1B422550D6C023'); ", "favorito": "N"},{"label": "Consultar Declaração de Imposto de Renda (Previdência)", "peso": "2899", "idMenu": "13869", "link": "javascript:INStoUni2C('WN3M13869QL M O4100','U20','OJIJJCGC7IHF','634FEE600ED0D3C31AB4074B8DF4461BF8B2888DB0A0CC1AF4306A94AE11D267B8ABD08D02B8BE1DB0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Consultar ou cancelar Cadastro Positivo", "peso": "2877", "idMenu": "14496", "link": "javascript:INStoUni2C('WN3M14496QL M O4100','U20','KFILJCHC9EIN','A977EA21BB2A380F2238DFC2C7CFCD9672C997F4F50012EE875475D631B409227D6D13347DD48F2741540FB82F35315BB66DDD88B4F493037E54E7C2B1B8C09C'); ", "favorito": "N"},{"label": "Consultar Parcelamento da fatura contratado", "peso": "2875", "idMenu": "10363", "link": "javascript:INStoUni2C('WN3M10363QL M O4100','U20','HEIPJCDC7DPH','E0F14867EE5E29D7CC35A42258F3DF0E77E4A06D962D0FA31CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Orientações de Segurança", "peso": "2860", "idMenu": "15301", "link": "javascript:INStoUni2CAjax('WN3M15301QL M O4100','U20','FJIPJCIC0DKK','C00026E3ED2E1C26CD644C6BEAE0CF6CBAE522D1EC3A4871B0C457A5BCE325CFC04080BAE86F2EC5'); popup('http://www.itau.com.br/seguranca/', '', ''); ", "favorito": "N"},{"label": "Transferir de Conta Poupança para Conta Poupança", "peso": "2860", "idMenu": "16280", "link": "javascript:INStoUni2C('WN3M16280QL M O4100','U20','IKIPJCJC8CPO','199B11D12C0B685B1AB4074B8DF4461B9EB829E5C21958D9064F5FAC717964B51CFB2993D04009D9938F863A9F416E3931B31D4839FE84EE'); ", "favorito": "N"},{"label": "Consultar limites e taxas da Antecipação do 13o salário", "peso": "2857", "idMenu": "6017", "link": "", "favorito": "N"},{"label": "Consultar Extrato de movimentações (Cobranças)", "peso": "2846", "idMenu": "14141", "link": "", "favorito": "N"},{"label": "Assinar termos de portabilidade", "peso": "2845", "idMenu": "13866", "link": "javascript:INStoUni2C('WN3M13866QL M O4100','U20','KKILJCGC7INI','BA648B21400A4888C37460484A328BDB63F6629E721F888CAA07FB5A199BBE1541540FB82F35315B'); ", "favorito": "N"},{"label": "Consultar Histórico do meu cadastro", "peso": "2834", "idMenu": "10978", "link": "javascript:INStoUni2C('WN3M10978QL M O4100','U20','KKINJCDC8JJG','6B6C6F7E3FCEA9DBD106A24EAFAAC3FE02A9AF2997DEF279851D00030A5E8BFFD5EC89923CD21DAF16459844BDC135D4'); ", "favorito": "N"},{"label": "Conheça os Planos de Previdência do Itaú", "peso": "2832", "idMenu": "13861", "link": "javascript:INStoUni2C('WN3M13861QL M O4100','U20','FHIJJCGC6IHH','0BC627F9EAAA966D743B0860BC0A452CC53850F1B430424DF06E00D85EADDB541CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Solicitar extrato de Despesas com Operações de Crédito", "peso": "2814", "idMenu": "12877", "link": "javascript:INStoUni2C('WN3M12877QL M O4100','U20','MGIJJCFC8IMI','9F090B956343122A1AB4074B8DF4461B4B71B631E38C6123E0BD056023619D3BDDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar extrato de Investimentos", "peso": "2809", "idMenu": "14399", "link": "javascript:INStoUni2C('WN3M14399QL M O4100','U20','KKIJJCHC0EHF','CDD31B16391D4BEB0C96AC7913882CFD2F4DD3917D3A19B39CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Cadastrar 'Seus cartões dentro do seu celular'", "peso": "2778", "idMenu": "14980", "link": "javascript:INStoUni2C('WN3M14980QL M O4100','U20','GGIJJCHC8JML','D1EF25EE1AA122DDD106A24EAFAAC3FE132514FAEC19C5689CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Falar com um especialista", "peso": "2764", "idMenu": "14396", "link": "javascript:INStoUni2C('WN3M14396QL M O4100','U20','NNILJCHC0ENI','36546549A6321EC51D812B70F5DEB448D8BEE5BB7DB6007F6E4CB776D6624FA3ECD44B25FFB2488FB0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Alterar o cadastro de Alertas (por e-mail e SMS) sobre a Conta Corrente", "peso": "2762", "idMenu": "14107", "link": "javascript:INStoUni2C('WN3M14107QL M O4100','U20','LLIJJCHC1BMI','CDD32CEC978B7259D106A24EAFAAC3FE34410C22AA4F41CA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Consultar Limite Construshop contratado", "peso": "2751", "idMenu": "7043", "link": "javascript:INStoUni2C('WN3M7043 QL M O4100','U20','IGIJJCKB4AMO','6F7FF70D5FDA5BB2D106A24EAFAAC3FE4DCE4FA1CBDE4F1F1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Termo de transferência de salário", "peso": "2723", "idMenu": "10487", "link": "javascript:INStoUni2C('WN3M10487QL M O4100','U20','GJIPJCDC9EPL','774C1207F94FB54D1AB4074B8DF4461B4CC6F62ED06A0E651CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Reimpressão de apólices", "peso": "2692", "idMenu": "1775", "link": "javascript:INStoUni2C('WN3M1775 QL M O4100','U20','INIJJCEB8HMG','61127AADABF72F8815B7848A16F04894A9DF3E09B4926DA1A60A0481DE596961DD3CBD0506F5230DF6EA7C3BC3146A9EB034235F01FD43EB'); ", "favorito": "N"},{"label": "Consultar Guia com orientações gerais sobre o IR", "peso": "2683", "idMenu": "14086", "link": "javascript:INStoUni2CAjax('WN3M14086QL M O4100','U20','GKIPJCHC9APK','C00026E3ED2E1C26CD644C6BEAE0CF6CBAE522D1EC3A4871B0C457A5BCE325CFC04080BAE86F2EC5'); popup('http://www.itau.com.br/personnalite/guiair', '', ''); ", "favorito": "N"},{"label": "Consultar transferências em moeda estrangeira", "peso": "2668", "idMenu": "12584", "link": "javascript:INStoUni2C('WN3M12584QL M O4100','U20','OMIJJCFC9FMF','C766FB60E3B555C58B19DC4CEB0ED20C620E17EDA2362AD712D6CE9683E16FC09CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Saiba mais sobre a Agência Digital", "peso": "2663", "idMenu": "16271", "link": "javascript:INStoUni2C('WN3M16271QL M O4100','U20','JFIPJCJC8CPF','C2110F6061476FA8E1018AFAF6A2B513FE01623187F87F5716459844BDC135D4'); ", "favorito": "N"},{"label": "Consultar comunicado de fundos", "peso": "2657", "idMenu": "14546", "link": "javascript:INStoUni2C('WN3M14546QL M O4100','U20','MGIPJCHC5FPK','C55CBC4E5BB83335A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E2F8F575E6DBFDCB69D3756695542BE58A727FECD577A91BFB'); ", "favorito": "N"},{"label": "Como receber Alertas (por e-mail e SMS) sobre o Cartão de Crédito?", "peso": "2648", "idMenu": "14102", "link": "javascript:INStoUni2C('WN3M14102QL M O4100','U20','KJILJCHC0BNO','215BDF230EA6099003CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB75785233630963CF22BF79F400F28FABDBEF30E7BD04893B16E'); ", "favorito": "N"},{"label": "Cancelar aplicações e resgates", "peso": "2646", "idMenu": "14401", "link": "javascript:INStoUni2C('WN3M14401QL M O4100','U20','FNINJCHC0EOO','9B76210788A92BE6EED33DB0B3149C0E323549B0867B03C02D445554BFBD15CE41540FB82F35315B'); ", "favorito": "N"},{"label": "Consultar Operações Agendadas", "peso": "2639", "idMenu": "1786", "link": "javascript:INStoUni2C('WN3M1786 QL M O4100','U20','JNINJCEB9HOJ','D4085D6D98F4DA421AB4074B8DF4461B6117B9CA755D83141CFB2993D04009D9938F863A9F416E394637F6A66D9B24AC5ED86AA0FAB7A14DF6EA7C3BC3146A9E65E33C871A11BAD8'); ", "favorito": "N"},{"label": "Desbloquear Cartão Pré-Pago - em Reais", "peso": "2614", "idMenu": "15729", "link": "javascript:INStoUni2C('WN3M15729QL M O4100','U20','OFIPJCIC3HPN','F61841F7A269E17BD106A24EAFAAC3FEDB221E54BE1512804C40D530D6761A8C7AEC752D22AA49ACB0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Conheça o app Itaú para celular", "peso": "2597", "idMenu": "14902", "link": "javascript:INStoUni2C('WN3M14902QL M O4100','U20','HGILJCHC0JNO','C0689DD19588C15703CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB75757DB75C0CDA57F79B6722D7F42613DFF'); ", "favorito": "N"},{"label": "Alterar limite de crédito", "peso": "2594", "idMenu": "14549", "link": "javascript:INStoUni2C('WN3M14549QL M O4100','U20','IFILJCHC5FIG','CE149D5B40A642F7184690F2080B4528C13F622180535FE2B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Consultar limites e taxas do Crediário com Garantia Investimento", "peso": "2561", "idMenu": "14853", "link": "javascript:INStoUni2C('WN3M14853QL M O4100','U20','KEINJCHC5IJL','8D9E002A9E6C1A3A33393C8210E258CB2679A66605D5A752FFAF2F5330853218DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "SMS enviados nos últimos 60 dias", "peso": "2559", "idMenu": "14891", "link": "javascript:INStoUni2C('WN3M14891QL M O4100','U20','HFIJJCHC9IMM','684161E7AC1B4722D106A24EAFAAC3FE34410C22AA4F41CA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Cancelar solicitação de cartão adicional", "peso": "2558", "idMenu": "10369", "link": "javascript:INStoUni2C('WN3M10369QL M O4100','U20','LFIHJCDC7DLJ','6A39A5D2C536CE86D106A24EAFAAC3FE7B4371EB416A723627E41E9D0C29F33AEF32766D901EB757193814F7D844A1AF7E54E7C2B1B8C09C'); ", "favorito": "N"},{"label": "Fatura Digital - cadastrar / alterar", "peso": "2538", "idMenu": "12740", "link": "javascript:INStoUni2C('WN3M12740QL M O4100','U20','JMIJJCFC4HHG','8954CF699F27097C499F9D33F84C92D52734B506FC82F7F3E1A296DBCDB801F079E4100B98F9AB2DF931060C3DE7EA5216459844BDC135D4'); ", "favorito": "N"},{"label": "Informe de Rendimentos Acionistas", "peso": "2525", "idMenu": "12031", "link": "javascript:INStoUni2C('WN3M12031QL M O4100','U20','FNILJCFC3AII','AEA9D8A716BD4FC7A5B59F0563700A03ED7BB40E403D9D34ECCC90C5D2894C549CA5BD37DC09C6E2F8F575E6DBFDCB695F1AF37A78A90C17116424D930F09CAE'); ", "favorito": "N"},{"label": "Aceitar convite para ser agregado", "peso": "2516", "idMenu": "10977", "link": "javascript:INStoUni2C('WN3M10977QL M O4100','U20','LKIPJCDC8JPL','AE54A52C90C227C2D106A24EAFAAC3FEDD1FD5B972AD08AE7C8F7A6A31EFD2689757E7502B7F1D02F9AD4286A032967416459844BDC135D4'); ", "favorito": "N"},{"label": "E-mail", "peso": "2505", "idMenu": "3031", "link": "javascript:INStoUni2C('WN3BOXEMAQL M O4100','U20','HHILJCGB3AII','FAF21E5D7C2ABE161AB4074B8DF4461B6117B9CA755D83141CFB2993D04009D9938F863A9F416E391301B9C922359B339E61CA9E7CCDA6C5'); ", "favorito": "N"},{"label": "Contratar Itaú Travel Money (pré-pago Mastercard e Visa)", "peso": "2492", "idMenu": "14812", "link": "javascript:INStoUni2C('WN3M14812QL M O4100','U20','NGILJCHC1IIJ','E9890BF62D92FE62C81F4A4BEB98F8B8E1ACC456BFC1F19C87F7B6A830BAFC1A2F0B60B55F74CB9B16459844BDC135D4'); ", "favorito": "N"},{"label": "O que é Crédito Consignado Itaú?", "peso": "2488", "idMenu": "4013", "link": "javascript:INStoUni2C('WN3M4013 QL M O4100','U20','FEIHJCHB1AGI','076967E05E72FC0203CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757BC7132344FB7A4A26B61DC367982A624'); ", "favorito": "N"},{"label": "Simular uma aplicação", "peso": "2485", "idMenu": "14387", "link": "javascript:INStoUni2C('WN3M14387QL M O4100','U20','OMINJCHC9DOK','C6B42DF27F661E3A72E20EA87387235924B7A4C59FF6C1F6B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Alterar dados de boletos emitidos no dia", "peso": "2478", "idMenu": "15076", "link": "", "favorito": "N"},{"label": "Mastercard Secure Code - Segurança nas Compras pela Internet", "peso": "2472", "idMenu": "15313", "link": "javascript:INStoUni2C('WN3M15313QL M O4100','U20','FGIPJCIC2DPH','96BDBF4DEFA5459603CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757D813DB3BC1718F4059F91774B5F3DCF257FA9FEAB0C557B5'); ", "favorito": "N"},{"label": "Verified By Visa - Segurança nas compras pela Internet", "peso": "2468", "idMenu": "15310", "link": "javascript:INStoUni2C('WN3M15310QL M O4100','U20','JLIJJCIC1DHG','96B22816BE20095003CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757B9DD6297125C91B9937848E1813C18257598EF520FBA1616'); ", "favorito": "N"},{"label": "O que é Programa Acelerador de pontos?", "peso": "2463", "idMenu": "16431", "link": "javascript:INStoUni2C('WN3M16431QL M O4100','U20','MHIPJCJC3EKK','FF1BEE545484548203CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB7572CB311013CE582B41F5635942C07E0514C4E56919A5772D3'); ", "favorito": "N"},{"label": "Conheça 'Seus cartões dentro do seu celular'", "peso": "2438", "idMenu": "14979", "link": "javascript:INStoUni2C('WN3M14979QL M O4100','U20','MFIPJCHC8JKI','A384188A59E935601AB4074B8DF4461B9C188214DDD1A6E61CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "O que é Serviço de consultas por SMS?", "peso": "2431", "idMenu": "16406", "link": "javascript:INStoUni2C('WN3M16406QL M O4100','U20','JLIPJCJC1EKF','B0CD3C62D16E1DB103CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757BDB697D61C33C1BA16F0C387277DC60A8C454854C0F6A75D'); ", "favorito": "N"},{"label": "O que é Seguro Itauvida Mulher?", "peso": "2429", "idMenu": "1824", "link": "javascript:INStoUni2C('WN3M1824 QL M O4100','U20','MFINJCEB2IJM','826AC69D4677805C03CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB7576C566EF043140A4E80644E04B49920DF'); ", "favorito": "N"},{"label": "Transferências de Conta Corrente para Conta corrente", "peso": "2429", "idMenu": "194", "link": "", "favorito": "N"},{"label": "Subscrição de ações", "peso": "2424", "idMenu": "16189", "link": "javascript:INStoUni2C('WN3ACOSUBQL M O4100','U20','GEIJJCJC9BMK','BCD74D2FD3A0772F2097ABE53F049FC742CFD3A55030F80375556A9C0D82637B41540FB82F35315B'); ", "favorito": "N"},{"label": "O que é ConstruShop Itaú?", "peso": "2421", "idMenu": "7042", "link": "javascript:INStoUni2C('WN3M7042 QL M O4100','U20','JMIPJCKB4AKL','F0CC7C217DD6B46703CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB7576451A3E6EA9E14BACC7B302F00C5ABD1'); ", "favorito": "N"},{"label": "Consultar idade de saída do Plano de Previdência", "peso": "2418", "idMenu": "13848", "link": "javascript:INStoUni2C('WN3M13848QL M O4100','U20','FLIPJCGC5IPM','32C0E57E9DBA054115B7848A16F04894A40825B170A0DDCBA60A0481DE5969614EDD696980F1A03CAB2AE94EA526AF0C3AE8CC4EA474A543'); ", "favorito": "N"},{"label": "Consultar lançamentos do Cartão Pré-Pago - em Reais", "peso": "2409", "idMenu": "15728", "link": "javascript:INStoUni2C('WN3M15728QL M O4100','U20','FJIHJCIC2HGN','76F2CB3D6C3027912A7F6E39048CC1E2D6080B998CC8EF6EF5BA217D74F26267D862F33D107578A3E0BD056023619D3BDDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Recarregar moeda estrangeira no Cartão de Crédito", "peso": "2386", "idMenu": "14474", "link": "javascript:INStoUni2C('WN3M14474QL M O4100','U20','OIIPJCHC8EPI','DD9EF798795FB16165AED3BF3445D21BEFE3EAECF59999B8704CA13CD2454A0AC6BF24616B5C71AD4067F1ED943A2657DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Cancelar Serviço de consultas por SMS", "peso": "2384", "idMenu": "16388", "link": "javascript:INStoUni2C('WN3M16388QL M O4100','U20','NIIJJCJC9DMJ','7D4B4BDDC675A843CDFE27F83D801ACE10086C05CAFF809D4796FA944F51D20DDEDE7B975E4EC94A41540FB82F35315B7BF28F9DD3FB397B1992338183A2FB06'); ", "favorito": "N"},{"label": "E-mails enviados ao cliente nos últimos 30 dias", "peso": "2376", "idMenu": "14255", "link": "javascript:INStoUni2C('WN3M14255QL M O4100','U20','OMIPJCHC5CKO','8F7308ED0826B02ED106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "O que é renegociação de empréstimos e saldo devedor?", "peso": "2375", "idMenu": "12865", "link": "javascript:INStoUni2C('WN3M12865QL M O4100','U20','LJIPJCFC7IPJ','411F5A465D2C3A9E03CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB75707A940597B68BFAAAB517738BDA475BC'); ", "favorito": "N"},{"label": "Trocar seus empréstimos por um Consignado", "peso": "2363", "idMenu": "6186", "link": "", "favorito": "N"},{"label": "Acompanhar Ordens", "peso": "2351", "idMenu": "14533", "link": "javascript:INStoUni2C('WN3M14533QL M O4100','U20','MJIJJCHC3FHJ','08536753C61E6E1A7BA455633F89D0C9DE8DD705419C8F9034FFF7E5F9CA86A827E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Simular contratação do Seguro Itauvida Mulher", "peso": "2338", "idMenu": "1827", "link": "javascript:INStoUni2C('WN3M1827 QL M O4100','U20','FEIPJCEB3IKG','CFC193FE8C37C0B31AB4074B8DF4461B891C3D0D89CCA3A916459844BDC135D4'); ", "favorito": "N"},{"label": "Consultar Saldo da Poupança Multidata Personnalité", "peso": "2336", "idMenu": "64", "link": "javascript:INStoUni2C('WN3M64   QL M O4100','U20','GKIJJCDB6AHK','3A389DDE552CBB36A5B59F0563700A03A41DB852500BE15C1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Migre entre planos (Previdência)", "peso": "2294", "idMenu": "14831", "link": "javascript:INStoUni2C('WN3M14831QL M O4100','U20','FHINJCHC3IJJ','AFB5CB1CFCED30BE04756D9A188CF52101D66F646FACD70AFFAF2F5330853218DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consultar forma de tributação da Previdência", "peso": "2289", "idMenu": "13849", "link": "javascript:INStoUni2C('WN3M13849QL M O4100','U20','MGINJCGC5IJH','0316C5D872AC1C7515B7848A16F04894A40825B170A0DDCBA60A0481DE596961502AFDC8E6E52759AB2AE94EA526AF0C3AE8CC4EA474A543'); ", "favorito": "N"},{"label": "Consultar Empréstimos contratados no Unibanco", "peso": "2278", "idMenu": "6055", "link": "javascript:INStoUni2C('WN3M6055 QL M O4100','U20','OJIPJCJB6APJ','B5A1390F65AD91A11AB4074B8DF4461B0BC4F6C2608F9C00EF9E52D4855BAA809CA5BD37DC09C6E22A71BE43346753763FFC84A197A41B0D301BC88845EA05952AABE53DB60D55025A39CA1F6D3B5C5145DDA0DA82397608'); ", "favorito": "N"},{"label": "Avaliação Emergencial de Crédito", "peso": "2271", "idMenu": "13144", "link": "javascript:INStoUni2C('WN3M13144QL M O4100','U20','NKIPJCGC5BPI','F8CFA20B9EEAE99ED106A24EAFAAC3FEDD1FD5B972AD08AE499689F69B6A4BA827E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Enviar código de ativação para 'Seus cartões dentro do seu celular'", "peso": "2253", "idMenu": "14981", "link": "javascript:INStoUni2C('WN3M14981QL M O4100','U20','HMIHJCHC8JLL','F0B350C08DE04135C37460484A328BDB8D2A1BC060D6E1CE7A3D806D801A9C07B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Desbloquear cartão de crédito para compras no exterior", "peso": "2251", "idMenu": "15698", "link": "javascript:INStoUni2C('WN3M15698QL M O4100','U20','NHIPJCIC0HPM','36E0233767244CDF2238DFC2C7CFCD9672C997F4F50012EE853DA591AB725A4A83BD1235ABED0E281CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Dados cadastrais - Plano para menores", "peso": "2246", "idMenu": "13850", "link": "javascript:INStoUni2C('WN3M13850QL M O4100','U20','LKINJCGC5IJI','CE93A731142BA7F91AB4074B8DF4461BF8B2888DB0A0CC1AB6FAD1FC0BBD15B77D6D13347DD48F2741540FB82F35315B'); ", "favorito": "N"},{"label": "Cadastrar pagadores e sacadores avalistas", "peso": "2235", "idMenu": "14138", "link": "", "favorito": "N"},{"label": "Saiba mais sobre o Cartão Pré-Pago - em Reais", "peso": "2231", "idMenu": "15727", "link": "javascript:INStoUni2C('WN3M15727QL M O4100','U20','FMIPJCIC3HPL','3BC01A92405EE704C81F4A4BEB98F8B85EA4E00FF3378FF215D3D0394DBE44DBDDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Cancelar 'Alertas por e-mail e SMS'", "peso": "2225", "idMenu": "10492", "link": "javascript:INStoUni2C('WN3M10492QL M O4100','U20','FHINJCDC9EJK','47D7570A1EC4B68FD106A24EAFAAC3FE34410C22AA4F41CA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Alterar cadastro 'Seus cartões dentro do seu celular'", "peso": "2210", "idMenu": "14982", "link": "javascript:INStoUni2C('WN3M14982QL M O4100','U20','MLIHJCHC8JLM','0C766CF424E989C4F878F69B4F866B938D2A1BC060D6E1CE7A3D806D801A9C07B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Portabilidade entre Planos de Previdência", "peso": "2208", "idMenu": "13865", "link": "javascript:INStoUni2C('WN3M13865QL M O4100','U20','OEINJCGC6IJN','4DCDF506AD6ADA4603CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB7574BD571556F5B88B14ED3D18E086679E6F94A7161F48DD9AD'); ", "favorito": "N"},{"label": "Solicitar Assistência Seguro Residencial 24 horas", "peso": "2205", "idMenu": "6724", "link": "javascript:INStoUni2C('WN3M6724 QL M O4100','U20','GHIJJCJB2HHK','36202764DD86A9EE1AB4074B8DF4461B01DE38158E999682B5F13566833FB8E88D04153D8610DE749CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Acompanhar a entrega de talões do Unibanco", "peso": "2200", "idMenu": "10609", "link": "", "favorito": "N"},{"label": "Consultar Cheque Especial Personnalité", "peso": "2174", "idMenu": "3967", "link": "javascript:INStoUni2C('WN3M3967 QL M O4100','U20','JFILJCGB7JNJ','B2D01A1333C9478AD106A24EAFAAC3FE047F1C77AFB7D9909CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Resgatar Título de Capitalização", "peso": "2172", "idMenu": "13953", "link": "javascript:INStoUni2C('WN3M13953QL M O4100','U20','OEINJCGC5JJL','81F5008ABD6577148C9BBAADA1951B74D7646D55E10B79EA4213F7D3A81E68F4572B1148C88FDDED'); ", "favorito": "N"},{"label": "Cancelar alertas de débitos automáticos pendentes de aprovação", "peso": "2162", "idMenu": "14530", "link": "javascript:INStoUni2C('WN3M14530QL M O4100','U20','IKIHJCHC3FLK','392FAEA12F790EFACDFE27F83D801ACE0CC94800F59C935A46FC567DF97477CD33EB899DDD8AB3B9DDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Consulte lançamentos em moeda estrangeira", "peso": "2155", "idMenu": "14476", "link": "javascript:INStoUni2C('WN3M14476QL M O4100','U20','OHIPJCHC8EPK','343A4E1E618B88ED499F9D33F84C92D5D6080B998CC8EF6EF5BA217D74F26267D862F33D107578A3E0BD056023619D3BDDA8A2D78002A75D'); ", "favorito": "N"},{"label": "Cadastrar ou cancelar Itaucard Mobile Shop", "peso": "2120", "idMenu": "14912", "link": "javascript:INStoUni2C('WN3M14912QL M O4100','U20','FLILJCHC1JNO','E95CA60417CD0B2ED106A24EAFAAC3FE4EB16F43B74972A49CA5BD37DC09C6E258C56339BD04B176'); ", "favorito": "N"},{"label": "Consultar Demonstrativos de operações de crédito contratadas", "peso": "2099", "idMenu": "16293", "link": "javascript:INStoUni2C('WN3M16293QL M O4100','U20','LLINJCJC0DOG','A93E5AB21E76CA4F1AB4074B8DF4461B01A56995297C95D27A3D806D801A9C07B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Adquirir Acelerador de pontos", "peso": "2094", "idMenu": "16432", "link": "javascript:INStoUni2C('WN3M16432QL M O4100','U20','IMILJCJC3ENO','078DEB085A9E3FCEC2630483D16F2193270BF3DE28FF6775681E33BCA2A28CC74F5933BFBE01C982E4714DAF94650EC9B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Alterar instruções de boletos emitidos", "peso": "2092", "idMenu": "14147", "link": "", "favorito": "N"},{"label": "Boletim de Subscrição", "peso": "2087", "idMenu": "16190", "link": "javascript:INStoUni2C('WN3M16190QL M O4100','U20','LNIJJCJC9BML','95738377C0DF286046CF79475521CE861C40DAC683A89C36F85746A358DB8CFD4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Resgatar saldo do Itaú Travel Money (pré-pago Mastercard e Visa)", "peso": "2085", "idMenu": "14481", "link": "javascript:INStoUni2C('WN3M14481QL M O4100','U20','JHIPJCHC9EPF','7D32402EE916A469E2AA91430B70B1BADD0AAC53B3E46A9FA566223B31C2E6A38066B4D6E62A195227E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Desbloquear Itaú Travel Money (pré-pago Mastercard e Visa)", "peso": "2072", "idMenu": "14479", "link": "javascript:INStoUni2C('WN3M14479QL M O4100','U20','JHINJCHC8EOM','42435FFFCF327A5FD106A24EAFAAC3FEDB221E54BE1512804C40D530D6761A8CD8BC1A95B53605C723C5BE3197602E2AF5AABEAA98FB7CBA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "O que é Assistência Seguro Residencial 24 horas?", "peso": "2070", "idMenu": "6701", "link": "javascript:INStoUni2C('WN3M6701 QL M O4100','U20','HNIPJCJB1HPF','43FB5BED366AE77F03CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB7572BB4A297AF2FC8AE48A22D30C744A1FC'); ", "favorito": "N"},{"label": "Acompanhar contratos do Crédito Rural", "peso": "2068", "idMenu": "4137", "link": "javascript:INStoUni2C('WN3M4137 QL M O4100','U20','GKILJCHB4BNJ','18DAE7C081AB49671AB4074B8DF4461B4B71B631E38C6123CAD7A73301324A7816459844BDC135D4'); ", "favorito": "N"},{"label": "Cancelar 'Seus cartões dentro do seu celular'", "peso": "2066", "idMenu": "14983", "link": "javascript:INStoUni2C('WN3M14983QL M O4100','U20','IEIHJCHC8JLN','588D2EBFAC8A56A3305DA95EF079448B8D2A1BC060D6E1CE7A3D806D801A9C07B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Consultar Demonstrativo ConstruShop Itaú", "peso": "2048", "idMenu": "7044", "link": "javascript:INStoUni2C('WN3M7044 QL M O4100','U20','HJIHJCKB4AGJ','F6AC6E1CFE2FC632D106A24EAFAAC3FE7488DCA575281DD91CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Resgatar saldo disponível em moeda estrangeira", "peso": "2041", "idMenu": "14505", "link": "javascript:INStoUni2C('WN3M14505QL M O4100','U20','ONINJCHC1FOI','8A6146B5ED8A7303CC35A42258F3DF0EEFE3EAECF59999B8704CA13CD2454A0A1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Assinar Propostas de Seguros", "peso": "2038", "idMenu": "12984", "link": "javascript:INStoUni2C('WN3M12984QL M O4100','U20','GNIHJCFC8JLO','2563988FB837B39DEED33DB0B3149C0E513CA176E5841D5499BF069F7ED0706C98410D586A2B4E6A1DE59A9FA52AE40141540FB82F35315B'); ", "favorito": "N"},{"label": "O que é Itaucard Mobile Shop?", "peso": "2011", "idMenu": "14909", "link": "javascript:INStoUni2C('WN3M14909QL M O4100','U20','MHIHJCHC0JGO','5751AF095ED70D381AB4074B8DF4461B154FCB44DC7859B81CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "Cancelar Alertas (por e-mail e SMS)  sobre a Conta Corrente", "peso": "1964", "idMenu": "14109", "link": "javascript:INStoUni2C('WN3M14109QL M O4100','U20','GKIJJCHC1BMK','47D7570A1EC4B68FD106A24EAFAAC3FE34410C22AA4F41CA4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Alterar recebimento dos comunicados de fundos", "peso": "1961", "idMenu": "14406", "link": "javascript:INStoUni2C('WN3M14406QL M O4100','U20','KNILJCHC0EIN','4AEEAEC4BF4080EF96BB9BEB8489955846178E962101F65CB0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Fale com um especialista (Planos de Previdência)", "peso": "1920", "idMenu": "13863", "link": "javascript:INStoUni2C('WN3M13863QL M O4100','U20','MGINJCGC6IJL','45BB9F42BAB62FAF2238DFC2C7CFCD9663B8EDCEE4FAA466C5E7F01FE0F50E8CD99F624F2AF9552E1CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "O que é Saldo Parcelado?", "peso": "1920", "idMenu": "7124", "link": "javascript:INStoUni2C('WN3M7124 QL M O4100','U20','IHINJCKB3BOH','F3D14852D0194B3803CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757D2243EBF5661E866F07C1DC028DF2CB9'); ", "favorito": "N"},{"label": "Desbloquear Cartão de Crédito", "peso": "1905", "idMenu": "16322", "link": "", "favorito": "N"},{"label": "Trocar a modalidade do CEP/CEP Plus", "peso": "1896", "idMenu": "13521", "link": "javascript:INStoUni2C('WN3M13521QL M O4100','U20','GJINJCGC2FOO','305E834DDF04C059C81F4A4BEB98F8B83A31AB5451102B78B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Simular ConstruShop Itaú", "peso": "1883", "idMenu": "12770", "link": "javascript:INStoUni2C('WN3M12770QL M O4100','U20','IHILJCFC7HNM','FFA7E43353D307EAD106A24EAFAAC3FE70FE987B58FC6855B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Falar agora com um consultor", "peso": "1882", "idMenu": "12586", "link": "javascript:INStoUni2C('WN3M12586QL M O4100','U20','KKIPJCFC9FPK','39A6D3C7C3EB6E152238DFC2C7CFCD9663B8EDCEE4FAA46679F2F8664882468BB4311BF9EC6390BF41540FB82F35315B'); ", "favorito": "N"},{"label": "Consultar Saldo da Poupança Livre Movimento", "peso": "1735", "idMenu": "65", "link": "javascript:INStoUni2C('WN3M65   QL M O4100','U20','IIILJCDB6AIM','C2CD1531AE02ABB18C9BBAADA1951B745EBC96B6C78170D541540FB82F35315BB034235F01FD43EB'); ", "favorito": "N"},{"label": "Cancelar Alertas (por e-mail e SMS)  sobre o Cartão de Crédito", "peso": "1729", "idMenu": "14110", "link": "javascript:INStoUni2C('WN3M14110QL M O4100','U20','GIIPJCHC1BPO','CA4BF913A9CB275330BB175697383184FDB965E4E53AC25FA9A2AB1B7769E2C67E2F90003C6DA16527E41E9D0C29F33A53589F09EFBFB906'); ", "favorito": "N"},{"label": "Consultar as condições do contrato Cheque Especial Personnalité", "peso": "1712", "idMenu": "13250", "link": "javascript:INStoUni2C('WN3M13250QL M O4100','U20','JFIJJCGC5CML','26B03E7F3EC9EBD6D106A24EAFAAC3FECBCF4AD251D448839CA5BD37DC09C6E2A2BCD23AD30F2FA4'); ", "favorito": "N"},{"label": "Consultar outros programas de recompensa", "peso": "1675", "idMenu": "10364", "link": "", "favorito": "N"},{"label": "Bloquear Cartão ConstruShop Itaú", "peso": "1632", "idMenu": "7045", "link": "javascript:INStoUni2C('WN3M7045 QL M O4100','U20','MFIJJCKB5AMG','BA26CA7FE08FA1BE1AB4074B8DF4461B408EF945C1BF3E421CFB2993D04009D9333A4A4767895284'); ", "favorito": "N"},{"label": "O que é Orientador de Crédito Personnalité?", "peso": "1606", "idMenu": "4453", "link": "javascript:INStoUni2C('WN3M4453 QL M O4100','U20','LLIHJCHB5EGI','D164CAEECF30C43506FE8339A68F5F6DC3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757D3B87148CE670ED2FA8B3ACF2F3EE73B8CD7C03EE4395BE6'); ", "favorito": "N"},{"label": "O que é Despesas com Operações de Crédito", "peso": "1561", "idMenu": "12903", "link": "javascript:INStoUni2C('WN3M12903QL M O4100','U20','FKIHJCFC0JGI','504433CC147ACD3B03CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB757B6D3DCE300BBECDB7CF1DAD923590661A4C6016C551BEB26'); ", "favorito": "N"},{"label": "Emitir boletos", "peso": "1513", "idMenu": "3515", "link": "", "favorito": "N"},{"label": "Opções de recebimento do Extrato Mensal Consolidado", "peso": "875", "idMenu": "1773", "link": "", "favorito": "N"},{"label": "Tabela de rentabilidades personalizada", "peso": "791", "idMenu": "903", "link": "", "favorito": "N"},{"label": "Acompanhar a solicitação de 2a via do Extrato Mensal Consolidado", "peso": "791", "idMenu": "2780", "link": "", "favorito": "N"},{"label": "Cancelar Programa Acelerador de pontos", "peso": "791", "idMenu": "16433", "link": "javascript:INStoUni2C('WN3M16433QL M O4100','U20','OLIHJCJC3EGI','E43C653BA2DCD11ED0BAA3C43CC132C0270BF3DE28FF6775681E33BCA2A28CC74F5933BFBE01C982E4714DAF94650EC9B0C457A5BCE325CFC04080BAE86F2EC5'); ", "favorito": "N"},{"label": "Transferir de Conta Corrente para Conta Private", "peso": "418", "idMenu": "16278", "link": "", "favorito": "N"},{"label": "Consultar Condições gerais da Senha Eletrônica", "peso": "418", "idMenu": "48", "link": "", "favorito": "N"},{"label": "Pagar Fatura Diners", "peso": "0", "idMenu": "3239", "link": "", "favorito": "N"},{"label": "Pagar Fatura Visa", "peso": "0", "idMenu": "3240", "link": "", "favorito": "N"},{"label": "Acompanhar proposta do Financiamento Imobiliário", "peso": "0", "idMenu": "3324", "link": "", "favorito": "N"},{"label": "Consultar demonstrativo de pagamento", "peso": "0", "idMenu": "1704", "link": "", "favorito": "N"},{"label": "Comprar Leitor de código de barras", "peso": "0", "idMenu": "858", "link": "", "favorito": "N"},{"label": "O que é Seguro Residencial Itaú?", "peso": "0", "idMenu": "671", "link": "", "favorito": "N"},{"label": "Opção de recebimento de extrato de fundos", "peso": "0", "idMenu": "2333", "link": "", "favorito": "N"},{"label": "Sem Papel", "peso": "0", "idMenu": "2338", "link": "", "favorito": "N"},{"label": "Solicitar resgate", "peso": "0", "idMenu": "2736", "link": "", "favorito": "N"},{"label": "Pagar Fatura MasterCard", "peso": "0", "idMenu": "3345", "link": "", "favorito": "N"},{"label": "Pagar fatura do Cartão de Crédito", "peso": "0", "idMenu": "585", "link": "", "favorito": "N"},{"label": "Acompanhar o pedido do seu cartão de crédito", "peso": "0", "idMenu": "6388", "link": "", "favorito": "N"},{"label": "O que é Parcelamento da Fatura?", "peso": "0", "idMenu": "2633", "link": "", "favorito": "N"},{"label": "Simular Parcelamento da Fatura", "peso": "0", "idMenu": "2634", "link": "", "favorito": "N"},{"label": "Consultar demonstrativo gráfico da Fatura", "peso": "0", "idMenu": "4269", "link": "", "favorito": "N"},{"label": "Bloquear Cartão de Crédito (Aviso de Perda ou Roubo)", "peso": "0", "idMenu": "4281", "link": "", "favorito": "N"},{"label": "Solicitar 2a via de Cartão de Crédito", "peso": "0", "idMenu": "4282", "link": "", "favorito": "N"},{"label": "Consultar Parcelamento da Fatura", "peso": "0", "idMenu": "4303", "link": "", "favorito": "N"},{"label": "Comparativo gráfico da fatura por período", "peso": "0", "idMenu": "6158", "link": "", "favorito": "N"},{"label": "O que é Pague Contas?", "peso": "0", "idMenu": "4331", "link": "", "favorito": "N"},{"label": "O que é Pague Contas Automático?", "peso": "0", "idMenu": "10527", "link": "", "favorito": "N"},{"label": "Cadastrar Pague Contas Automático", "peso": "0", "idMenu": "10528", "link": "", "favorito": "N"},{"label": "Suspender próximo débito", "peso": "0", "idMenu": "10529", "link": "", "favorito": "N"},{"label": "Cancelar Pague Contas Automático", "peso": "0", "idMenu": "10530", "link": "", "favorito": "N"},{"label": "Reativar Pague Contas Automático", "peso": "0", "idMenu": "10531", "link": "", "favorito": "N"},{"label": "Consultar Empresas Conveniadas  - 'Pague Contas Automático'", "peso": "0", "idMenu": "10533", "link": "", "favorito": "N"},{"label": "Consultar lançamentos efetivados e futuros", "peso": "0", "idMenu": "10534", "link": "", "favorito": "N"},{"label": "Consultar Pague Contas Automático", "peso": "0", "idMenu": "10535", "link": "", "favorito": "N"},{"label": "Enviar recursos ao exterior", "peso": "0", "idMenu": "10135", "link": "", "favorito": "N"},{"label": "Consultar DARFs recolhidos", "peso": "0", "idMenu": "10140", "link": "", "favorito": "N"},{"label": "Recebimento de recursos do exterior", "peso": "0", "idMenu": "10142", "link": "", "favorito": "N"},{"label": "Consultar Ordens de Pagamento recebidas", "peso": "0", "idMenu": "10143", "link": "", "favorito": "N"},{"label": "Consultor de câmbio online (chat)", "peso": "0", "idMenu": "10147", "link": "", "favorito": "N"},{"label": "O que é Recebimento de recursos do exterior?", "peso": "0", "idMenu": "10148", "link": "", "favorito": "N"},{"label": "Saiba mais sobre transferências em moeda estrangeira", "peso": "0", "idMenu": "10149", "link": "", "favorito": "N"},{"label": "Consultar documentação necessária para transferências em moeda estrangeira", "peso": "0", "idMenu": "10200", "link": "", "favorito": "N"},{"label": "Consultar recursos enviados ao exterior", "peso": "0", "idMenu": "10356", "link": "", "favorito": "N"},{"label": "Consultar recursos recebidos", "peso": "0", "idMenu": "10357", "link": "", "favorito": "N"},{"label": "Consultar Ordens de Pagamento enviadas", "peso": "0", "idMenu": "10548", "link": "", "favorito": "N"},{"label": "Consultar extrato Redecard / Redeshop", "peso": "0", "idMenu": "6809", "link": "", "favorito": "N"},{"label": "Cadastrar dados de Aviso de Viagem", "peso": "0", "idMenu": "6815", "link": "", "favorito": "N"},{"label": "Consultar formulário com dados cadastrados para viagem", "peso": "0", "idMenu": "6816", "link": "", "favorito": "N"},{"label": "Consultar protocolo de Atendimento por E-mail", "peso": "0", "idMenu": "7030", "link": "", "favorito": "N"},{"label": "Contestar Compras por perda ou roubo do cartão", "peso": "0", "idMenu": "10225", "link": "", "favorito": "N"},{"label": "O que é Renegociações de operações em atraso?", "peso": "0", "idMenu": "10296", "link": "", "favorito": "N"},{"label": "Simular Renegociações de operações em atraso", "peso": "0", "idMenu": "10297", "link": "", "favorito": "N"},{"label": "Pagar uma conta", "peso": "0", "idMenu": "11273", "link": "", "favorito": "N"},{"label": "Avaliação Emergencial de Crédito", "peso": "0", "idMenu": "13028", "link": "", "favorito": "N"},{"label": "O que é Mobile Banking?", "peso": "0", "idMenu": "13124", "link": "", "favorito": "N"},{"label": "Alterar cadastro do Mobile Banking", "peso": "0", "idMenu": "13126", "link": "", "favorito": "N"},{"label": "Enviar código de ativação para Mobile Banking", "peso": "0", "idMenu": "13129", "link": "", "favorito": "N"},{"label": "Simular Crédito Pessoal", "peso": "0", "idMenu": "6648", "link": "", "favorito": "N"},{"label": "Consultar Crédito Pessoal Contratado", "peso": "0", "idMenu": "6649", "link": "", "favorito": "N"},{"label": "Simular Antecipação da Restituição do IR", "peso": "0", "idMenu": "384", "link": "", "favorito": "N"},{"label": "Consultar limites e taxas da Antecipação da Restituição do IR", "peso": "0", "idMenu": "6018", "link": "", "favorito": "N"},{"label": "Simular Consórcio de Imóveis", "peso": "0", "idMenu": "11339", "link": "", "favorito": "N"},{"label": "Simular Consórcio de Veículos", "peso": "0", "idMenu": "11340", "link": "", "favorito": "N"},{"label": "Simular Consórcio de Motos", "peso": "0", "idMenu": "11341", "link": "", "favorito": "N"},{"label": "Finalizar contratação", "peso": "0", "idMenu": "11343", "link": "", "favorito": "N"},{"label": "Consultar 2a via de propostas", "peso": "0", "idMenu": "11345", "link": "", "favorito": "N"},{"label": "Consultar consórcios contratados", "peso": "0", "idMenu": "11130", "link": "", "favorito": "N"},{"label": "Consultar Calendário de Assembléias", "peso": "0", "idMenu": "11197", "link": "", "favorito": "N"},{"label": "Informe de Rendimentos Consórcio", "peso": "0", "idMenu": "11201", "link": "", "favorito": "N"},{"label": "Consultar posição consolidada (Consórcios)", "peso": "0", "idMenu": "11202", "link": "", "favorito": "N"},{"label": "Consultar extrato de Consórcio", "peso": "0", "idMenu": "11203", "link": "", "favorito": "N"},{"label": "Consultar resultados de Assembleias", "peso": "0", "idMenu": "11204", "link": "", "favorito": "N"},{"label": "Solicitar ou substituir lance", "peso": "0", "idMenu": "11205", "link": "", "favorito": "N"},{"label": "Cancelar lance de consórcio", "peso": "0", "idMenu": "11206", "link": "", "favorito": "N"},{"label": "Consultar Parcelas pendentes", "peso": "0", "idMenu": "11208", "link": "", "favorito": "N"},{"label": "Escritório de cobrança", "peso": "0", "idMenu": "11210", "link": "", "favorito": "N"},{"label": "Valores a receber de grupos encerrados", "peso": "0", "idMenu": "11211", "link": "", "favorito": "N"},{"label": "Pagamentos avulsos de Consórcio", "peso": "0", "idMenu": "11213", "link": "", "favorito": "N"},{"label": "Alterar código de acesso do Consórcio", "peso": "0", "idMenu": "11219", "link": "", "favorito": "N"},{"label": "Consultar contratos e documentos (Consórcio)", "peso": "0", "idMenu": "11220", "link": "", "favorito": "N"},{"label": "Contratos e documentos - Veículos", "peso": "0", "idMenu": "11221", "link": "", "favorito": "N"},{"label": "Fale conosco (Consórcio)", "peso": "0", "idMenu": "11222", "link": "", "favorito": "N"},{"label": "Termo de Segurança", "peso": "0", "idMenu": "14254", "link": "", "favorito": "N"},{"label": "O que é Aviso Viagem", "peso": "0", "idMenu": "14176", "link": "", "favorito": "N"},{"label": "Cadastrar Aviso Viagem", "peso": "0", "idMenu": "14177", "link": "", "favorito": "N"},{"label": "Consultar Aviso Viagem", "peso": "0", "idMenu": "14178", "link": "", "favorito": "N"},{"label": "Cancelar Aviso Viagem", "peso": "0", "idMenu": "14179", "link": "", "favorito": "N"},{"label": "Validar cadastro BACEN (Registrato)", "peso": "0", "idMenu": "16385", "link": "javascript:INStoUni2C('WN3M16385QL M O4100','U20','JEIPJCJC8DKO','347706D7A2DFA2B31AB4074B8DF4461B898FECFA80D24596B8C2DB90C78B837A4213F7D3A81E68F4978C0C18FBF54052'); ", "favorito": "N"},{"label": "Informe de Empréstimos e Financiamentos", "peso": "0", "idMenu": "16183", "link": "", "favorito": "N"},{"label": "Consultar Documentos", "peso": "0", "idMenu": "14834", "link": "", "favorito": "N"},{"label": "Pague quem precisar com o Itaú tokpag - Saiba mais", "peso": "<NULL>", "idMenu": "16560", "link": "javascript:INStoUni2C('WN3M16560QL M O4100','U20','FMIJJCJC6FML','14E0971130F63A1E03CAE0BC3E203626C3F31132F3C0534627E41E9D0C29F33AEF32766D901EB7579C3CB2EE718E9094'); ", "favorito": "N"},{"label": "Itaú tokpag - Cadastrar / Alterar", "peso": "<NULL>", "idMenu": "16561", "link": "javascript:INStoUni2C('WN3M16561QL M O4100','U20','LLINJCJC6FOO','CD797E52BCA7E53CFDF7179FC93E6390EF3567CE5727AC0962D88F6730F6BBFC1CFB2993D04009D9938F863A9F416E398800BE110C644A21'); ", "favorito": "N"},{"label": "Itaú tokpag - Cancelar", "peso": "<NULL>", "idMenu": "16562", "link": "javascript:INStoUni2C('WN3M16562QL M O4100','U20','HLINJCJC7FOF','4CA241EE4E493EC3FDF7179FC93E6390EF3567CE5727AC0962D88F6730F6BBFC1CFB2993D04009D9938F863A9F416E3965ECA42CA48977F3'); ", "favorito": "N"}];function VisualizouTutorial(){javascript:INStoUni2C('WN3M12989QL M O4100','U20','LLIPJCFC9JKI','85C1D719FBB11E5AA1C987A560D071D737E2247AA175F9BB9FE63C1A513DDBE853589F09EFBFB906'); ;}semMenu=true;var mostraFavoritos=true;var mostraPostit=false;mostraTutorial=false;try{sessionStorage['mostraTutorial']=mostraTutorial;sessionStorage['semMenu']=semMenu;sessionStorage['AutoCompleteC'] = decodeHTML(JSON.stringify(opAutoCompleteC));  } catch(excessao){}function BuscaAtualizaFavoritos(itens){INStoUni2Ajax('U20','WN3T00000HO   O4100','1A66512D70B845F63F403FEB4ADA77007F32FCC33DFA21DAE0124A29CBAE423F3D1292CBC6EA4199A2BCD23AD30F2FA4' + '@' + itens); }</script><script language="javascript" src="https://www.itau.com.br/_arquivosestaticos/Itau/defaultTheme/js/jquery-ui.min-autocomplete.js"></script>
+<script type="text/javascript" charset="UTF-8" src="/vsnet/css/v1/Busca.js?21112014"></script></body></html>
