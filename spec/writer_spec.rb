@@ -1,3 +1,4 @@
+require 'spec_helper'
 require './lib/writer'
 require './lib/transaction'
 
@@ -5,18 +6,17 @@ RSpec.describe Writer do
   subject(:writer) { Writer.new }
 
   let(:expected_csv_file_name) { './spec/fixtures/expected.csv' }
-  let(:transactions) do
-    [
-      Transaction.new(*["10/12", "Bar", "-9.876,54"]),
-      Transaction.new(*["10/06", "Foo", "1.234,56"])
-    ]
+  let(:credit) { build(:credit) }
+  let(:debit) { build(:debit) }
+  let(:transactions) { [debit, credit] }
+  let(:transactions_array) { [debit.to_array, credit.to_array] }
+
+  before do
+    Timecop.freeze(Date.new(2014,12,02))
   end
 
-  let(:transactions_array) do
-    [
-      ["10/06/2014", "Foo", "1234.56"],
-      ["10/12/2014", "Bar", "-9876.54"]
-    ]
+  after do
+    Timecop.return
   end
 
   describe '#write_to_csv' do

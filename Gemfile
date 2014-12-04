@@ -5,4 +5,6 @@ gem 'nokogiri'
 
 group :development, :test do
   gem 'rspec'
+  gem 'factory_girl'
+  gem 'timecop'
 end

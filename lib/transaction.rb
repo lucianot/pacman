@@ -29,7 +29,12 @@ class Transaction
   private
 
     def parse_date(date)
-      Date.strptime(date, '%d/%m')
+      date = Date.strptime(date, '%d/%m')
+      if date > Date.today
+        Date.new(date.year - 1, date.month, date.day)
+      else
+        date
+      end
     end
 
     def parse_value(value)
