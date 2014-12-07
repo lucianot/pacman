@@ -9,6 +9,11 @@
 /test/version_tmp/
 /tmp/
 
+## Personal data
+/spec/fixtures/card.html
+/spec/fixtures/expected_response.csv
+
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
