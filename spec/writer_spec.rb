@@ -9,7 +9,6 @@ RSpec.describe Writer do
   let(:credit) { build(:credit) }
   let(:debit) { build(:debit) }
   let(:transactions) { [debit, credit] }
-  let(:transactions_array) { [debit.to_array, credit.to_array] }
 
   before do
     Timecop.freeze(Date.new(2014,12,02))
@@ -23,7 +22,7 @@ RSpec.describe Writer do
     it 'formats the data' do
       allow(File).to receive(:open) # avoid csv file write
 
-      expect(writer).to receive(:generate_csv).with(transactions_array)
+      expect(writer).to receive(:generate_csv).with(transactions)
       writer.write_to_csv(transactions, 'trans.csv')
     end
   end
@@ -31,7 +30,7 @@ RSpec.describe Writer do
   describe '#generate_csv' do
     it 'generates a CSV file' do
       expected_csv = File.read(expected_csv_file_name)
-      generated_csv = writer.generate_csv(transactions_array)
+      generated_csv = writer.generate_csv(transactions)
       expect(generated_csv).to eq(expected_csv)
     end
   end

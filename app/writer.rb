@@ -6,14 +6,14 @@ class Writer
   end
 
   def write_to_csv(transactions, file_name)
-    formatted_transactions = format_transactions(transactions)
-    csv = generate_csv(formatted_transactions)
+    csv = generate_csv(transactions)
     File.open(file_name, 'w') { |file| file.write(csv) }
   end
 
   def generate_csv(transactions)
+    formatted_transactions = format_transactions(transactions)
     CSV.generate do |csv|
-      transactions.each do |transaction|
+      formatted_transactions.each do |transaction|
         csv << transaction
       end
     end

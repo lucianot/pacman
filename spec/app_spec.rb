@@ -9,24 +9,15 @@ describe 'App' do
 	  end
 	end
 
-	describe 'POST /munch' do
-		let(:file_name) { "public/files/cat.jpg" }
-
-		before do
-	    File.delete(file_name) if File.exists?(file_name)
-		end
+	describe 'POST /upload' do
+		let(:input_file) { "./spec/fixtures/card.html" }
+		let(:expected_csv_file_name) { "./spec/fixtures/expected_response.csv" }
 
 		it 'uploads successfully' do
-			post '/munch', {:file =>{:filename=>"cat.jpg"}}
-	    # expect(last_response.status).to eq(201)
-	  	expect(last_response.body).to include("Uploaded")
-		end
-
-		it 'saves files' do
-		  files_before = load_files.length
-		  post '/munch', {:file =>{:filename=>"cat.jpg"}}
-		  files_after = load_files.length
-		  expect(files_after).to eq(files_before + 1)
+			post '/upload', "file" => Rack::Test::UploadedFile.new(input_file, "text")
+			expected_csv = File.read(expected_csv_file_name)
+	    expect(last_response).to be_ok
+	  	expect(last_response.body).to eq(expected_csv)
 		end
 	end
 end
