@@ -1,5 +1,5 @@
 require 'spec_helper'
-require './lib/transaction.rb'
+require './app/transaction.rb'
 
 RSpec.describe Transaction do
   let(:credit) { build(:credit) }

@@ -1,6 +1,6 @@
 require 'spec_helper'
-require './lib/writer'
-require './lib/transaction'
+require './app/writer'
+require './app/transaction'
 
 RSpec.describe Writer do
   subject(:writer) { Writer.new }

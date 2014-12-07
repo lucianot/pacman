@@ -1,4 +1,4 @@
-require './lib/parser.rb'
+require './app/parser.rb'
 
 RSpec.describe Parser do
   subject(:parser) { Parser.new }

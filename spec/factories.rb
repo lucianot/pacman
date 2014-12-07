@@ -1,5 +1,5 @@
 require 'factory_girl'
-require './lib/transaction'
+require './app/transaction'
 
 FactoryGirl.define do
   factory :credit, class: Transaction do
