@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sass'
 require './app/parser'
 require './app/writer'
 
@@ -25,3 +26,8 @@ post '/upload' do
     "You need to select a file"
   end
 end
+
+# get '/stylesheets/:name.css' do
+#  content_type 'text/css', :charset => 'utf-8'
+#  scss(:"stylesheets/#{params[:name]}")
+# end

@@ -1,0 +1,29 @@
+{
+  "name": "pacman",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lucianot/pacman",
+  "authors": [
+    "Luciano Tavares <lucianomt@gmail.com>"
+  ],
+  "description": "Eat your vitamins",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "itau",
+    "credit",
+    "card",
+    "statement",
+    "csv",
+    "conversion"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
