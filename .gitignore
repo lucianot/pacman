@@ -1,5 +1,6 @@
 *.gem
 *.rbc
+*.sass-cache
 /.config
 /coverage/
 /InstalledFiles
@@ -12,7 +13,6 @@
 ## Personal data
 /spec/fixtures/card.html
 /spec/fixtures/expected_response.csv
-
 
 ## Specific to RubyMotion:
 .dat*

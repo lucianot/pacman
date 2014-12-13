@@ -3,8 +3,14 @@ require 'sass'
 require './app/parser'
 require './app/writer'
 
-def load_files
-  Dir.glob("public/files/*")
+set :views, :scss => 'app/public/stylesheets', :default => 'app/views'
+
+helpers do
+  def find_template(views, name, engine, &block)
+    _, folder = views.detect { |k,v| engine == Tilt[k] }
+    folder ||= views[:default]
+    super(folder, name, engine, &block)
+  end
 end
 
 get '/' do
@@ -27,7 +33,6 @@ post '/upload' do
   end
 end
 
-# get '/stylesheets/:name.css' do
-#  content_type 'text/css', :charset => 'utf-8'
-#  scss(:"stylesheets/#{params[:name]}")
-# end
+get "/stylesheets/:stylesheet.css" do
+  scss :"#{params[:stylesheet]}"
+end
