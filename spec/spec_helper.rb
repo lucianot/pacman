@@ -2,13 +2,13 @@ require 'factory_girl'
 require 'timecop'
 require 'rack/test'
 
-require File.expand_path '../../app/app.rb', __FILE__
+require File.expand_path '../../app.rb', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
 module RSpecMixin
   include Rack::Test::Methods
-  def app() Sinatra::Application end
+  def app() Pacman end
 end
 
 RSpec.configure do |config|
