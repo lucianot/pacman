@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * Base values
+ */
+
+$disclaimer-color: #6FC9C0;
+$headline-color: #3F5EAE;
+$button-font-color: #fff;
+
+div,
+input,
+p {
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.logo {
+  margin: 40px auto 0 auto;
+  width: 225px;
+}
+
+/* ==========================================================================
+   Headline
+   ========================================================================== */
+
+.title {
+  color: $headline-color;
+  font-size: 18px;
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+
+.form {
+  margin: 40px auto 0 auto;
+  width: 225px;
+}
+
+
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+.button {
+  background-color: $headline-color;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 6px;
+  border: none;
+  color: $button-font-color;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 20px 20px;
+  margin: 20px 0 0 0;
+}
+
+.button:hover {
+    border: none;
+    opacity: 0.8;
+    box-shadow: 0px 0px 1px #777;
+}
+
+/* ==========================================================================
+   Disclaimer
+   ========================================================================== */
+
+.disclaimer {
+  font-size: 10px;
+  color: $disclaimer-color;
+  margin: 100px 0 0 0;
+  text-align: center;
+}
